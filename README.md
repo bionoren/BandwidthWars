@@ -1,9 +1,9 @@
 Bandwidth Wars is a turn-based game that you play by writing a computer program to play it on your behalf.
 
-Meta Rules
+Policy
 ---
 
-1.1 There is no rule that restricts a human player to entering a single bot into a game. The bot(s) may be distinct or they may be identical.  
+1.1 There is no rule that restricts a human player to entering a single bot into a game. Tokens will be allocated in equal number to every player.  The bot(s) may be distinct or they may be identical.  
 
 1.2 There is no rule that prevents a human from playing in a game.  In this sense play can progress while a bot is being written or improved.
 
@@ -14,7 +14,7 @@ Meta Rules
 1.5 Unlike other games, which have a strong sense of "fair play", this game should follow the hacker ethos of "thinking outside the box".  If there is something you can exploit to win, use it, and then we will fix it later with a rules update.
 
 
-Overview
+Scenario
 ---
 
 Your bot controls "nanites" that are wrestling for control over a foreign planet.  Your goal is to be the last man standing.
@@ -37,12 +37,20 @@ These resources are available
 * nanomaterial - Used in the creation and maintenance of nanites.
 * plutonium - Fired as a projectile weapon at another nanite
 
-A resource is mined by a nanite that stands in the square and uses the "mine" command.  The player receives approximately half of the tile's resource according to the following pseudocode:
+A resource is mined by a nanite that stands in the square and uses the "mine" command.  The player receives approximately half of the tile's resources according to the following pseudocode:
 
 ```
 player.bandwidth += random_gaussian(mean = tile.bandwidth / 2.0, stdev = tile.bandwidth / 4.0)
-tile.bandwidth = tile.bandwidth / 2.0
+tile.bandwidth /= 2.0
 ```
+
+In this way the resources of the tile decays.  This code is repeated for each kind of resource in response for any single mine command.
+
+The initial resource allocation is as follows: 15 bandwidth, 15 nanomaterial, 0 plutonium.
+
+Each bot begins with a single nanite in a random position.
+
+The resource distribution on the map is specified by the server's reference implementation, but in general it is a design goal to place nanomaterial near the center of the playing area to prevent a player from simply moving its nanites infinitely far in one direction and thereby winning the game.
 
 Nanites
 ---
@@ -52,16 +60,16 @@ A nanite may perform any of the following operations:
 * Move.  The nanite may move either N, S, E, or W.  
 * Mine.  The nanite may mine the tile underneath it.
 * Scan.  The nanite may scan all 8 tiles (N,S,E,W,NE,NW,SE,SW).  If any nanites are present in these spaces, then exactly one will be reported to the bot.
-* Fire.  The nanite may fire a projectile in any of 8 directions.  This action consumes 1 plutonium.  The projectile moves at the rate of 1 square per tick.  If at any time any nanite is in the space with the projectile, it is killed.
+* Fire.  The nanite may fire a projectile in any of 8 directions.  This action consumes 1 plutonium.  The projectile moves at the rate of 1 square per tick infinitely far.  If at any time any nanite is in the space with the projectile, it is killed.
 * Duplicate.  The nanite spawns another nanite in any of 8 directions.  This action consumes 1 nanomaterial.  This operation fails silently if the requested space is obstructed by another nanite.
 
 A nanite may only perform one command per tick.
 
 Each command has a "times" flag which will cause the action to be performed once (immediately), twice (immediately and on the subsequent tick), or three times (immediately and on the two subsequent ticks).  Regardless of the value of the "times" flag, sending a command to a nanite consumes 1 bandwidth.  If the command is "scan", it costs 2 bandwidth.
 
-If the nanite currently has orders, providing a new command to the nanite erases any previous orders.
+If the nanite currently has orders, providing a new command to the nanite replaces any previous orders.
 
-At each tick, one nanomaterial for each living nanite is deducted from the player's resources.  Following this, if the player has less than zero nanomaterial, a nanite is selected at random and is killed.  A dead nanite's commands fail silently.
+At each tick, one nanomaterial for each living nanite is deducted from the player's resources.  Following this, if the player has less than zero nanomaterial, a nanite is selected at random and is killed.  A dead nanite's commands fail silently.  If a nanite died during the previous tick, this fact is reported to you at the next tick.
 
 Global commands
 ---
@@ -83,7 +91,7 @@ Cooperative considerations
 
 If you are playing multiple bots in a cooperative strategy, you should be aware of the following implementation details:
 
-1.  The X and Y coordinates are randomly translated for each player.  In this way, map data is difficult to share between bots.
+1.  The X and Y coordinates are randomly translated for each player.  The X and Y axes may be exchanged.  The X or Y axes may be mirrored in orientation.  In this way, map data is difficult to share between bots.
 2.  Similarly, the nanite identifiers and player identifiers are not portable between bots.
 
 
