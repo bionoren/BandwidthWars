@@ -11,7 +11,14 @@ Policy
 
 1.4 In order to discourage "nerdsniping", there will be a mandatory waiting period of 7 days from the conclusion of one game to the next.
 
-1.5 Unlike other games, which have a strong sense of "fair play", this game should follow the hacker ethos of "thinking outside the box".  If there is something you can exploit to win, use it, and then we will fix it later with a rules update.
+1.5 Unlike other games, which have a strong sense of "fair play", this game should follow the hacker ethos of "thinking outside the box".  If there is something you can exploit to win, use it, and then we will fix it later with a rules/code update.
+
+1.6 Except in cases where a bug prevents the game concluding with one winner or that prevent all players from opening a socket to the server, the server will not be updated during an active game, even if the server's behavior is absurd.  You are welcome to open an issue in http://github.com/drewcrawford/BandwidthWars/issues to report issues that may be fixed before the subsequent game.
+
+1.6.1 To implement the previous rule, a player should report a severe outage to drew@sealedabstract.com.  Play will resume from the tick prior to the outage notice, at a time specified by the server administrator with at least 24 hours' notice.
+
+
+
 
 
 Scenario
@@ -77,9 +84,12 @@ Global commands
 The following commands are of "global scope"
 
 
-* Hello - this command is used at the beginning (and only then) of the game to indicate the name of the bot playing.  This command is free.
+* Hello - this command is used at the beginning (and only then) of the connection to indicate which bot is playing.  This command is free.
 * Count resource - returns the player's holdings in the specified resource.  This consumes 2 bandwidths (one for send and one for receive)
 * Message - this sends a message to all the other players.  The format of the message is unspecified.  This command is free.
+* Bye - this message signals your intent to disconnect.  Using this message is optional but can resolve a race condition in receiving special messages.
+* Ready - this is a special message that indicates you are done with your turn.  If all clients support "ready" and do not do a lot of computation, games are much faster.
+* Mail - This command delivers messages to the player.  Certain events such as game ticks, nanite death, and so on, might occur while you are not paying attention.  Rather than require you to futz about with responding to messages at literally any time (which is hard), you simply poll for these messages when you are interested in processing them.
 
 Game windup
 ---
@@ -103,11 +113,17 @@ This session is provided for reference.  Each command consists of a single-line 
 ```
 {"msg":"Welcome to Bandwidth Wars","ver":1.0}
 
-> {"cmd":"hello",name:"AwesomeBot","gameToken":"dc7b39c0-b2ee-11e2-9e96-0800200c9a66"}
-{"msg":"Hello AwesomeBot.  Here's your initial nanite","nanite":"cd264700-b2ec-11e2-9e96-0800200c9a66","x":24,"y":25,"nextTick":"2013-05-02T05:59:17Z"}
+> {"cmd":"hello","name":"AwesomeBot","gameToken":"dc7b39c0-b2ee-11e2-9e96-0800200c9a66"}
+{"msg": "Welcome back AwesomeBot.  Use 'mail' to check your messages."}
+
+> {"cmd":"mail"}
+[{"msg": "Hello.  Here's your initial nanite", "x": 7, "nanite": "70816e39-28c1-4bbc-9cc3-11b9c22b31c1", "y": -14, "special": "initial"}, {"msg": "A new tick has arrived.", "nextTick": "2013-05-08 22:57:35.890330", "tick": 1, "special": "tick"}]
+
+> {"cmd":"mail"}
+[]
 
 > {"cmd":"move","nanite":"cd264700-b2ec-11e2-9e96-0800200c9a66","times":1,"dir":"N"}
-{"nanite":"cd264700-b2ec-11e2-9e96-0800200c9a66",x:24,"y":24}
+{"nanite":"cd264700-b2ec-11e2-9e96-0800200c9a66",x:24,"y":24,"special":"move"}
 > {"cmd":"move","nanite":"cd264700-b2ec-11e2-9e96-0800200c9a66","times":1,"dir":"N"}
 {"error":"This nanite cannot move until the next tick."}
 ^H
@@ -132,7 +148,7 @@ Sample requests and responses for commands are also provided (assuming they are 
 
 #duplicating
 > {"cmd":"fire","nanite":"cd264700-b2ec-11e2-9e96-0800200c9a66","dir":"N"}
-{}
+{"special":"duplicate","nanite":"631cc280-b634-11e2-9e96-0800200c9a66","x":25,"y":26}
 
 #count resource
 > {"cmd":"count","resource":"plutonium"}
@@ -141,4 +157,12 @@ Sample requests and responses for commands are also provided (assuming they are 
 #message
 > {"cmd":"message","msg":"Hello other players!"}
 {"player":"215511c0-b2ee-11e2-9e96-0800200c9a66","msg":"Hello other players!"}
+
+#bye
+> {"cmd":"bye"}
+{"special":"bye"}
+
+#ready
+> {"cmd":"ready"}
+{}
 ```
