@@ -49,5 +49,6 @@ if __name__=="__main__":
         def buildProtocol(self, addr):
             return BW()
 
+    logging.info("Listening on port %d",args.port)
     reactor.listenTCP(args.port, BWFactory())
     reactor.run()
