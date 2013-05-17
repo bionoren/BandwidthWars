@@ -71,7 +71,10 @@ class Game(object):
         try:
             if str==INITIAL_COMMAND:
                 return json.dumps({"msg":"Welcome to Bandwidth Wars","ver":0.1})
-            struct = json.loads(str)
+            try:
+                struct = json.loads(str)
+            except:
+                return json.dumps({"error":"The provided string is not a valid JSON object.  Unescape the string and then paste into http://json.parser.online.fr to see for yourself.","string":str})
             result = self.process_json_command(struct,session)
             if result==None:
                 result = {}
