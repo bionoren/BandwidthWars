@@ -9,7 +9,7 @@ INITIAL_COMMAND = "INITIAL_COMMAND"
 
 
 class Game(object):
-    def __init__(self,open_play=False,max_interval=60,tokens=0):
+    def __init__(self,open_play=False,max_interval=60,tokens=1):
         self.open_play = open_play
         self.players = []
         self.map = Map.Map()

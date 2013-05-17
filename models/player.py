@@ -104,7 +104,7 @@ class Player(object):
 			self.game.check_for_tick()
 			return {}
 
-		raise Exception("Don't know command")
+		raise Exception("Command not known or not acceptable now: %s" % json["cmd"])
 
 
 
