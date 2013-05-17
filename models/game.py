@@ -90,22 +90,27 @@ class Game(object):
         elif json["cmd"]=="hello":
             #let's try and look up an existing player with that gametoken
             p = filter(lambda player: player.gameToken==json["gameToken"],self.players)
+            currentPlayer = None
             if len(p)==1:
-                session.player = p[0]
+                currentPlayer = p[0]
+                session.player = player
                 session.player.session = session
                 if not session.player.name:
                     session.player.name = json["name"]
-                return {"msg":"Welcome back %s.  Use 'mail' to check your messages." % session.player.name}
-                return {}
-            if self.open_play:
+            elif self.open_play:
                 session.player = player.Player(self)
+                currentPlayer = session.player
                 session.player.session = session
                 session.player.name = json["name"]
                 session.player.gameToken = json["gameToken"]
                 self.players.append(session.player)
-                return {"msg":"Welcome back."}
             else:
-                raise NotImplemented()
+                raise Exception("Can't find player or token invalid")
+            if not currentPlayer.has_signed_in:
+                currentPlayer.has_signed_in = True
+                currentPlayer.threshold = json["threshold"]
+            return {"msg":"Welcome back %s.  Use 'mail' to check your messages." % session.player.name}
+
 
         raise Exception("Can't understand command")
 

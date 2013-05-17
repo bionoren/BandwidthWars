@@ -19,6 +19,8 @@ class Player(object):
 		self.globalUUID = str(uuid.uuid4())
 		self.ready = False
 		self.name = None
+		self.threshold = None
+		self.has_signed_in = False
 
 		#create an initial nanite
 		tile = game.map.get(x=random.randint(-Map.PLAY_AREA,Map.PLAY_AREA),y=random.randint(-Map.PLAY_AREA,Map.PLAY_AREA))

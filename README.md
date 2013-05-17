@@ -46,12 +46,22 @@ These resources are available
 
 A resource is mined by a nanite that stands in the square and uses the "mine" command.  The player receives approximately half of the tile's resources according to the following pseudocode:
 
-```
+```python
 player.bandwidth += random_gaussian(mean = tile.bandwidth / 2.0, stdev = tile.bandwidth / 4.0)
 tile.bandwidth /= 2.0
 ```
 
 In this way the resources of the tile decays.  This code is repeated for each kind of resource in response for any single mine command.
+
+Following this decay, the mine command will return whether the sum of all resources is below the player's specified threshold.  e.g.
+
+```python
+if tile.bandwidth + tile.plutonium + tile.nanometerial < threshold:
+    return "<"
+else:
+    return ">="
+```
+
 
 The initial resource allocation is as follows: 15 bandwidth, 15 nanomaterial, 0 plutonium.
 
@@ -84,7 +94,7 @@ Global commands
 The following commands are of "global scope"
 
 
-* Hello - this command is used at the beginning (and only then) of the connection to indicate which bot is playing.  This command is free.
+* Hello - this command is used at the beginning (and only then) of the connection to indicate which bot is playing.  This command is free.  The command specifies the resource threshold for mining responses.  Currently, the threshold cannot be changed.
 * Count resource - returns the player's holdings in the specified resource.  This consumes 2 bandwidths (one for send and one for receive)
 * Message - this sends a message to all the other players.  The format of the message is unspecified.  This command is free.
 * Bye - this message signals your intent to disconnect.  Using this message is optional but can resolve a race condition in receiving special messages.
@@ -113,7 +123,7 @@ This session is provided for reference.  Each command consists of a single-line 
 ```
 {"msg":"Welcome to Bandwidth Wars","ver":1.0}
 
-> {"cmd":"hello","name":"AwesomeBot","gameToken":"dc7b39c0-b2ee-11e2-9e96-0800200c9a66"}
+> {"cmd":"hello","name":"AwesomeBot","gameToken":"dc7b39c0-b2ee-11e2-9e96-0800200c9a66","threshold":25}
 {"msg": "Welcome back AwesomeBot.  Use 'mail' to check your messages."}
 
 > {"cmd":"mail"}
@@ -134,7 +144,7 @@ Sample requests and responses for commands are also provided (assuming they are 
 ```
 #mining
 > {"cmd":"mine","nanite":"cd264700-b2ec-11e2-9e96-0800200c9a66"}
-{}
+{"threshold":"<"}
 
 #scanning
 > {"cmd":"scan","nanite":"cd264700-b2ec-11e2-9e96-0800200c9a66"}
@@ -147,7 +157,7 @@ Sample requests and responses for commands are also provided (assuming they are 
 {}
 
 #duplicating
-> {"cmd":"fire","nanite":"cd264700-b2ec-11e2-9e96-0800200c9a66","dir":"N"}
+> {"cmd":"duplicate","nanite":"cd264700-b2ec-11e2-9e96-0800200c9a66","dir":"N"}
 {"special":"duplicate","nanite":"631cc280-b634-11e2-9e96-0800200c9a66","x":25,"y":26}
 
 #count resource

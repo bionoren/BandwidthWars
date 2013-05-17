@@ -84,6 +84,11 @@ class Nanite(object):
         self.player.nanomaterial += random.normalvariate(mu = self.tile.nanomaterial / 2.0, sigma = self.tile.nanomaterial / 4.0)
         self.tile.nanomaterial /= 2.0
 
+        if self.tile.bandwidth + self.tile.plutonium + self.tile.nanomaterial < self.player.threshold:
+            return {"threshold":"<"}
+        else:
+            return {"threshold":">="}
+
     @require_not_moved()
     def fire(self,dir):
         p = projectile.Projectile(direction=dir,game=self.player.game,tile=self.tile)
