@@ -3,6 +3,7 @@ import Map
 import random
 import json
 import uuid
+import logging
 
 
 class Player(object):
@@ -49,8 +50,9 @@ class Player(object):
 		
 		self.deadpool = []
 		for nanite in self.nanites:
-			self.nanomaterial -= 1
-			print "losing 1 nanomaterial for nanite ",nanite
+			if self.game.ticks != 1:
+				self.nanomaterial -= 1
+				logging.info("losing 1 nanomaterial for nanite "+str(nanite))
 			self.tick_notifications.extend(nanite.tick())
 		if self.nanomaterial <= 0:
 			kill = random.choice(self.nanites)

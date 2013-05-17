@@ -59,6 +59,17 @@ class Game(object):
         if len(playing)<=0:
             raise Exception("End of game condition.")
 
+        logging.info("Below is the state of the current players.")
+        for player in self.players:
+            logging.info("A player named %s has gameToken %s and globalUUID %s." % (player.name,player.gameToken,player.globalUUID))
+            logging.info("     They have %d nanomaterial, %d bandwidth, and %d plutnoium" % (player.nanomaterial, player.bandwidth, player.plutonium))
+            logging.info("     Let me tell you about their nanites:")
+            for nanite in player.nanites:
+                logging.info("          They have a nanite called %s located at %d, %d" % (nanite.globalUUID, nanite.tile.x,nanite.tile.y))
+            if len(player.nanites)==0:
+                logging.info("          They have no nanites.")
+
+
 
     def check_for_tick(self):
         ready_players = [p for p in self.players if p.ready]
