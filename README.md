@@ -3,7 +3,7 @@ Bandwidth Wars is a turn-based game that you play by writing a computer program 
 Policy
 ---
 
-1.1 There is no rule that restricts a human player to entering a single bot into a game. Tokens will be allocated in equal number to every player.  The bot(s) may be distinct or they may be identical.  
+1.1 There is no rule that restricts a human player to entering a single bot into a game. Tokens will be allocated in equal number to every player.  The bot(s) may be distinct or they may be identical.
 
 1.2 There is no rule that prevents a human from playing in a game.  In this sense play can progress while a bot is being written or improved.
 
@@ -74,7 +74,7 @@ Nanites
 
 A nanite may perform any of the following operations:
 
-* Move.  The nanite may move either N, S, E, or W.  
+* Move.  The nanite may move either N, S, E, or W.
 * Mine.  The nanite may mine the tile underneath it.
 * Scan.  The nanite may scan all 8 tiles (N,S,E,W,NE,NW,SE,SW).  If any nanites are present in these spaces, then exactly one will be reported to the bot.
 * Fire.  The nanite may fire a projectile in any of 8 directions.  This action consumes 1 plutonium.  The projectile moves at the rate of 1 square per tick infinitely far.  If at any time any nanite is in the space with the projectile, it is killed.
@@ -100,6 +100,16 @@ The following commands are of "global scope"
 * Bye - this message signals your intent to disconnect.  Using this message is optional but can resolve a race condition in receiving special messages.
 * Ready - this is a special message that indicates you are done with your turn.  If all clients support "ready" and do not do a lot of computation, games are much faster.
 * Mail - This command delivers messages to the player.  Certain events such as game ticks, nanite death, and so on, might occur while you are not paying attention.  Rather than require you to futz about with responding to messages at literally any time (which is hard), you simply poll for these messages when you are interested in processing them.
+
+Debug commands
+---
+The following commands are valid if the server was started in debug mode. These commands cost no resources.
+
+* listNanites - Returns a list of all your nanites, their UIDs, positions, and their current command queue.
+```
+> {"cmd": "listNanites"}
+{"nanites": [{"tile": [-14, -4], "commands": [], "uid": "b69b3f98-9978-4a16-bb4e-30791b212475"}]}
+```
 
 Game windup
 ---
