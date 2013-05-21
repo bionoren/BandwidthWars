@@ -29,7 +29,7 @@ if __name__=="__main__":
         def __init__(self):
             self.delimiter = '\n'
         def connectionMade(self):
-            self.transport.write('{"msg":"Welcome to Bandwidth Wars","ver":0.1}')
+            self.transport.write('{"msg":"Welcome to Bandwidth Wars","ver":0.1}\n')
         def lineReceived(self, data):
             print "received line",data
             if hasattr(self,"player"):
