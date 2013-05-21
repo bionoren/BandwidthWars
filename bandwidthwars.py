@@ -42,7 +42,7 @@ if __name__=="__main__":
             self.send_raw(result)
 
         def send_raw(self,data):
-            if hasattr(self,"player"):
+            if hasattr(self,"player") and self.player != None:
                 player = self.player.gameToken
             else:
                 player = "???"
