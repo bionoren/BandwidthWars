@@ -47,7 +47,7 @@ class Player(object):
 		for notification in self.tick_notifications:
 			self.send_or_schedule(notification)
 		self.tick_notifications = []
-		
+
 		self.deadpool = []
 		for nanite in self.nanites:
 			if self.game.ticks != 1:
@@ -73,7 +73,7 @@ class Player(object):
 		nanite = None
 		if json.has_key("nanite"):
 			nanite = [nanite for nanite in self.nanites if nanite.globalUUID==json["nanite"]][0]
-		
+
 
 		if json["cmd"]=="message":
 			for player in self.game.players:
@@ -107,11 +107,8 @@ class Player(object):
 			self.ready = True
 			self.game.check_for_tick()
 			return {}
+		elif self.game.debug:
+			if json["cmd"] == "listNanites":
+				return {"nanites": map(lambda n: n.json(), self.nanites)}
 
 		raise Exception("Command not known or not acceptable now: %s" % json["cmd"])
-
-
-
-
-
-

@@ -20,12 +20,12 @@ class require_not_moved(object):
 
     def __get__(self, instance, instancetype):
         import functools
-        """Implement the descriptor protocol to make decorating instance 
+        """Implement the descriptor protocol to make decorating instance
         method possible.
 
         """
 
-        # Return a partial function with the first argument is the instance 
+        # Return a partial function with the first argument is the instance
         #   of the class decorated.
         return functools.partial(self.__call__, instance)
 
@@ -102,7 +102,8 @@ class Nanite(object):
         new_nanite = Nanite(tile=newTile,player=self.player)
         return {"special":"duplicate","nanite":new_nanite.globalUUID,"x":new_nanite.tile.x,"y":new_nanite.tile.y}
 
-
+    def json(self):
+        return {"uid": self.globalUUID, "tile": [self.tile.x, self.tile.y], "commands": self.commandQueue}
 
 
 
@@ -117,7 +118,3 @@ class Nanite(object):
             command = self.commandQueue.pop(0)
             tick_notifications.append(command())
         return tick_notifications
-
-
-
-

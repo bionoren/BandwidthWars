@@ -9,7 +9,7 @@ INITIAL_COMMAND = "INITIAL_COMMAND"
 
 
 class Game(object):
-    def __init__(self,open_play=False,max_interval=60,tokens=1):
+    def __init__(self,open_play=False,max_interval=60,tokens=1, debug=False):
         self.open_play = open_play
         self.players = []
         self.map = Map.Map()
@@ -18,6 +18,8 @@ class Game(object):
         self.ticks = 0
         self.nextTick = None
         self.tokens = []
+        self.debug = debug
+
         logging.info("Game starting up")
         for i in range(0,tokens):
             u = uuid.uuid4()
@@ -95,12 +97,15 @@ class Game(object):
             traceback.print_exc()
             return json.dumps({"error":e.message})
 
-    def process_json_command(self,json,session):            
+    def process_json_command(self,json,session):
         if hasattr(session,"player") and session.player:
             return session.player.process_json_command(json,session)
         elif json["cmd"]=="hello":
             #let's try and look up an existing player with that gametoken
-            p = filter(lambda player: player.gameToken==json["gameToken"],self.players)
+            if self.debug and len(self.players) == 1:
+                p = self.players
+            else:
+                p = filter(lambda player: player.gameToken==json["gameToken"],self.players)
             currentPlayer = None
             if len(p)==1:
                 currentPlayer = p[0]
@@ -124,5 +129,3 @@ class Game(object):
 
 
         raise Exception("Can't understand command")
-
-

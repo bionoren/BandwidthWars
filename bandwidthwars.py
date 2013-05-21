@@ -15,11 +15,12 @@ if __name__=="__main__":
     parser.add_argument('--turn_max',default=60,help="The maximum time allocated per turn",type=int)
     parser.add_argument('--tokens',default=2,help="How many tokens should be generated for this game.",type=int)
     parser.add_argument('--open-play',dest='open_play',action='store_true',help="Whether the server allows just anyone to play.")
+    parser.add_argument('--debug', dest='debug', action='store_true', help="Enables extra debugging commands for clients (see readme)")
     parser.set_defaults(open_play=False)
     args = parser.parse_args()
 
     import models.game
-    game = models.game.Game(max_interval=args.turn_max,tokens=args.tokens,open_play=args.open_play)
+    game = models.game.Game(max_interval=args.turn_max,tokens=args.tokens,open_play=args.open_play, debug=args.debug)
 
     from twisted.internet import protocol, reactor
     import twisted.protocols.basic
