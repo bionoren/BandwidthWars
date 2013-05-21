@@ -22,12 +22,16 @@ if __name__=="__main__":
     game = models.game.Game(max_interval=args.turn_max,tokens=args.tokens,open_play=args.open_play)
 
     from twisted.internet import protocol, reactor
+    import twisted.protocols.basic
 
-    class BW(protocol.Protocol):
+    class BW(twisted.protocols.basic.LineReceiver):
 
+        def __init__(self):
+            self.delimiter = '\n'
         def connectionMade(self):
             self.transport.write('{"msg":"Welcome to Bandwidth Wars","ver":0.1}')
-        def dataReceived(self, data):
+        def lineReceived(self, data):
+            print "received line",data
             if hasattr(self,"player"):
                 player = self.player.gameToken
             else:
