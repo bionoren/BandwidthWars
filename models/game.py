@@ -104,7 +104,7 @@ class Game(object):
             currentPlayer = None
             if len(p)==1:
                 currentPlayer = p[0]
-                session.player = player
+                session.player = currentPlayer
                 session.player.session = session
                 if not session.player.name:
                     session.player.name = json["name"]
