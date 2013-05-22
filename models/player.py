@@ -54,11 +54,12 @@ class Player(object):
 				self.nanomaterial -= 1
 				logging.info("losing 1 nanomaterial for nanite "+str(nanite))
 			self.tick_notifications.extend(nanite.tick())
-		if self.nanomaterial <= 0:
+		while self.nanomaterial < 0:
 			kill = random.choice(self.nanites)
 			self.nanites.remove(kill)
 			self.deadpool.append(kill)
 			self.tick_notifications.append({"msg":"a nanite was killed","nanite":kill.globalUUID})
+			self.nanomaterial += 1
 			print "killed nanite",kill.globalUUID
 		self.send_or_schedule({"special":"tick","msg":"A new tick has arrived.","tick":self.game.ticks,"nextTick":str(self.game.nextTick)})
 
