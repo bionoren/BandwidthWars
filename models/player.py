@@ -7,7 +7,7 @@ import logging
 
 
 class Player(object):
-	def __init__(self,game):
+	def __init__(self,game,tile=None):
 		self.bandwidth = 15
 		self.nanomaterial = 15
 		self.plutonium = 0
@@ -24,7 +24,8 @@ class Player(object):
 		self.has_signed_in = False
 
 		#create an initial nanite
-		tile = game.map.get_good_tile()
+		if not tile:
+			tile = game.map.get_good_tile()
 		n = nanite.Nanite(player=self,tile=tile)
 		assert len(self.nanites)==1
 		self.send_or_schedule({"msg":"Hello.  Here's your initial nanite","nanite":self.nanites[0].globalUUID,"x":self.nanites[0].tile.x,"y":self.nanites[0].tile.y,"special":"initial"})
