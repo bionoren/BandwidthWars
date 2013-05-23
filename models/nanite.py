@@ -72,7 +72,7 @@ class Nanite(object):
             if len(s):
                 scan_result = s[0]
                 break
-        return scan_result
+        return {"nanite":self.globalUUID,"special":"scan","scan_result":scan_result}
 
     @require_not_moved()
     def mine(self):
@@ -85,10 +85,12 @@ class Nanite(object):
         self.player.nanomaterial += random.normalvariate(mu = self.tile.nanomaterial / 2.0, sigma = self.tile.nanomaterial / 4.0)
         self.tile.nanomaterial /= 2.0
 
+        result = {"nanite":self.globalUUID,"special":"mine"}
+
         if self.tile.bandwidth + self.tile.plutonium + self.tile.nanomaterial < self.player.threshold:
-            return {"threshold":"<"}
+            result["threshold"] = "<"
         else:
-            return {"threshold":">="}
+            result["threshold"] = ">="
 
     @require_not_moved()
     def fire(self,dir):
@@ -101,7 +103,7 @@ class Nanite(object):
         if self.player.game.nanite_for_tile(newTile):
             return {"error":"This tile is occupied."}
         new_nanite = Nanite(tile=newTile,player=self.player)
-        return {"special":"duplicate","nanite":new_nanite.globalUUID,"x":new_nanite.tile.x,"y":new_nanite.tile.y}
+        return {"special":"duplicate","nanite":new_nanite.globalUUID,"x":new_nanite.tile.x,"y":new_nanite.tile.y,"oldNanite":self.globalUUID}
 
     def json(self):
         return {"uid": self.globalUUID, "tile": [self.tile.x, self.tile.y], "commands": self.commandQueue}
