@@ -61,8 +61,8 @@ class Map(object):
 		return (self.get(x,y) for x in range(-PLAY_AREA,PLAY_AREA) for y in range(-PLAY_AREA,PLAY_AREA))
 
 	def get_good_tile(self):
-		good_tiles = filter(lambda t: t.immediate_count("nanomaterial") > 10 and t.immediate_count("nanomaterial") < 20,self.playable_tiles())
-		good_tiles = filter(lambda t: t.immediate_count("bandwidth") > 10 and t.immediate_count("bandwidth") < 20,good_tiles)
+		good_tiles = filter(lambda t: t.immediate_count("nanomaterial") > 30 and t.immediate_count("nanomaterial") < 50,self.playable_tiles())
+		good_tiles = filter(lambda t: t.immediate_count("bandwidth") > 30 and t.immediate_count("bandwidth") < 50,good_tiles)
 		from random import choice
 		return choice(good_tiles)
 
