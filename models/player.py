@@ -69,6 +69,10 @@ class Player(object):
 
 
 	def process_json_command(self,json,session):
+		if json["cmd"]=="mail":
+			value =  self.player_notifications
+			self.player_notifications = []
+			return value
 		if self.lost:
 			return {"error":"You have lost the game."}
 		nanite = None
@@ -80,10 +84,6 @@ class Player(object):
 			for player in self.game.players:
 				player.send_or_schedule({"msg":json["msg"],"special":"message","player":player.globalUUID})
 			return {}
-		if json["cmd"]=="mail":
-			value =  self.player_notifications
-			self.player_notifications = []
-			return value
 		elif json["cmd"]=="move":
 			return nanite.immediate_or_schedule(nanite.move,json["times"],1,json["dir"])
 		elif json["cmd"]=="mine":

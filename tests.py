@@ -1,5 +1,12 @@
 import models.game
 import unittest
+import json
+
+import logging
+FORMAT = '%(asctime)-15s %(message)s'
+logging.basicConfig(level=logging.INFO,format=FORMAT)
+
+
 class TestSequence(unittest.TestCase):
 	def test_hello_twice(self):
 		g = models.game.Game(open_play=True)
@@ -16,3 +23,53 @@ class TestSequence(unittest.TestCase):
 		print result
 		result = g.process_raw_command('{"cmd":"bye"}',self)
 		print result
+
+	def test_end_game_condition(self):
+		g = models.game.Game(tokens=2)
+		class Session:
+			pass
+		p1 = Session()
+		p2 = Session()
+
+		result = g.process_json_command({"cmd":"hello","name":"p1","gameToken":g.tokens[0],"threshold":2}, p1)
+		result = g.process_json_command({"cmd":"hello","name":"p1","gameToken":g.tokens[1],"threshold":2}, p2)
+
+		#p1 duplicates a bunch of times
+		result = g.process_json_command({"cmd":"duplicate","nanite":p1.player.nanites[0].globalUUID,"dir":"N","times":1}, p1)
+		result = g.process_json_command({"cmd":"ready"},p1)
+
+		result = g.process_json_command({"cmd":"ready"},p2)
+
+		#
+		result = g.process_json_command({"cmd":"duplicate","nanite":p1.player.nanites[0].globalUUID,"dir":"S","times":1}, p1)
+		result = g.process_json_command({"cmd":"ready"},p1)
+
+		result = g.process_json_command({"cmd":"ready"},p2)
+
+		p1.endgame = False
+		p2.endgame = False
+		for i in range(0,15):
+			mail = g.process_raw_command('{"cmd":"mail"}',p1)
+			mail = json.loads(mail)
+			if not isinstance(mail,list): mail = [mail] #the error case isn't a list
+			for msg in mail:
+				print msg,"that was the message"
+				if msg.has_key("special") and msg["special"]=="endgame":
+					p1.endgame = True
+
+			mail = g.process_raw_command('{"cmd":"mail"}',p2)
+			mail = json.loads(mail)
+			for msg in mail:
+				if msg["special"]=="endgame":
+					p2.endgame = True
+
+			result = g.process_raw_command('{"cmd":"ready"}',p1)
+			result = g.process_raw_command('{"cmd":"ready"}',p2)
+
+		self.assertTrue(p1.endgame)
+		self.assertTrue(p2.endgame)
+
+
+
+
+

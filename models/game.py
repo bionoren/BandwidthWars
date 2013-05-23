@@ -19,6 +19,7 @@ class Game(object):
         self.ticks = 0
         self.nextTick = None
         self.tokens = []
+        self.originalNumberOfTokens = tokens
         logging.info("Game starting up")
         for i in range(0,tokens):
             u = uuid.uuid4()
@@ -58,7 +59,9 @@ class Game(object):
         for player in self.players:
             player.tick()
         playing = [p for p in self.players if not p.lost]
-        if len(playing)<=0:
+        if (len(playing)<=1 and self.originalNumberOfTokens > 1) or (self.originalNumberOfTokens == 1 and len(playing)==0):
+            for player in self.players:
+                player.send_or_schedule({"special":"endgame","msg":"The game has ended."})
             raise Exception("End of game condition.")
 
         logging.info("Below is the state of the current players.")
