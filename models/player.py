@@ -111,5 +111,7 @@ class Player(object):
 		elif self.game.debug:
 			if json["cmd"] == "listNanites":
 				return {"nanites": map(lambda n: n.json(), self.nanites)}
+			if json["cmd"] == "listResources":
+				return {"nanomaterial": self.nanomaterial, "bandwidth": self.bandwidth, "plutonium": self.plutonium}
 
 		raise Exception("Command not known or not acceptable now: %s" % json["cmd"])
