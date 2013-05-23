@@ -1,0 +1,497 @@
+Writing to game.log
+Game starting up
+created token d22e452e-7840-4312-895e-48e5fda881da
+created token b8281a6b-a208-4c13-b7c9-c0f84d11c55a
+Below is the state of the current players.
+A player named None has gameToken d22e452e-7840-4312-895e-48e5fda881da and globalUUID ea9a15fb-3647-4715-b5fe-76e5ff2b8641.
+     They have 15 nanomaterial, 15 bandwidth, and 0 plutnoium
+     Let me tell you about their nanites:
+          They have a nanite called 053c2fe2-7e4b-41f5-97aa-9f5f28604966 located at 5, 13
+A player named None has gameToken b8281a6b-a208-4c13-b7c9-c0f84d11c55a and globalUUID 1e91150e-5716-40d8-8fb9-a0a15f7d3ee1.
+     They have 15 nanomaterial, 15 bandwidth, and 0 plutnoium
+     Let me tell you about their nanites:
+          They have a nanite called 865176b4-8349-403f-87ec-16b77a2ac8e4 located at 0, 8
+Listening on port 7171
+from ???> {"cmd":"hello","name":"AwesomeBot","gameToken":"dc7b39c0-b2ee-11e2-9e96-0800200c9a66","threshold":75}
+to ???> {"error": "Can't find player or token invalid"}
+from ???> {"cmd":"hello","name":"AwesomeBot","gameToken":"d22e452e-7840-4312-895e-48e5fda881da","threshold":75}
+to d22e452e-7840-4312-895e-48e5fda881da> {"msg": "Welcome back AwesomeBot.  Use 'mail' to check your messages.", "tick": 1}
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "mail"}
+to d22e452e-7840-4312-895e-48e5fda881da> [{"msg": "Hello.  Here's your initial nanite", "x": 5, "nanite": "053c2fe2-7e4b-41f5-97aa-9f5f28604966", "y": 13, "special": "initial"}, {"msg": "A new tick has arrived.", "nextTick": "2013-05-23 21:25:03.387376+00:00", "tick": 1, "special": "tick"}]
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "mail"}
+to d22e452e-7840-4312-895e-48e5fda881da> []
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "move", "nanite": "053c2fe2-7e4b-41f5-97aa-9f5f28604966", "dir": "N", "times": 3}
+to d22e452e-7840-4312-895e-48e5fda881da> {"y": 14, "x": 5, "nanite": "053c2fe2-7e4b-41f5-97aa-9f5f28604966", "special": "move"}
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "ready"}
+to d22e452e-7840-4312-895e-48e5fda881da> {}
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "mail"}
+to d22e452e-7840-4312-895e-48e5fda881da> []
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "ready"}
+to d22e452e-7840-4312-895e-48e5fda881da> {}
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "mail"}
+to d22e452e-7840-4312-895e-48e5fda881da> []
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "ready"}
+to d22e452e-7840-4312-895e-48e5fda881da> {}
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "mail"}
+to d22e452e-7840-4312-895e-48e5fda881da> []
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "ready"}
+to d22e452e-7840-4312-895e-48e5fda881da> {}
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "mail"}
+to d22e452e-7840-4312-895e-48e5fda881da> []
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "ready"}
+to d22e452e-7840-4312-895e-48e5fda881da> {}
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "mail"}
+to d22e452e-7840-4312-895e-48e5fda881da> []
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "ready"}
+to d22e452e-7840-4312-895e-48e5fda881da> {}
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "mail"}
+to d22e452e-7840-4312-895e-48e5fda881da> []
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "ready"}
+to d22e452e-7840-4312-895e-48e5fda881da> {}
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "mail"}
+to d22e452e-7840-4312-895e-48e5fda881da> []
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "ready"}
+to d22e452e-7840-4312-895e-48e5fda881da> {}
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "mail"}
+to d22e452e-7840-4312-895e-48e5fda881da> []
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "ready"}
+to d22e452e-7840-4312-895e-48e5fda881da> {}
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "mail"}
+to d22e452e-7840-4312-895e-48e5fda881da> []
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "ready"}
+to d22e452e-7840-4312-895e-48e5fda881da> {}
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "mail"}
+to d22e452e-7840-4312-895e-48e5fda881da> []
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "ready"}
+to d22e452e-7840-4312-895e-48e5fda881da> {}
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "mail"}
+to d22e452e-7840-4312-895e-48e5fda881da> []
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "ready"}
+to d22e452e-7840-4312-895e-48e5fda881da> {}
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "mail"}
+to d22e452e-7840-4312-895e-48e5fda881da> []
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "ready"}
+to d22e452e-7840-4312-895e-48e5fda881da> {}
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "mail"}
+to d22e452e-7840-4312-895e-48e5fda881da> []
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "ready"}
+to d22e452e-7840-4312-895e-48e5fda881da> {}
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "mail"}
+to d22e452e-7840-4312-895e-48e5fda881da> []
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "ready"}
+to d22e452e-7840-4312-895e-48e5fda881da> {}
+from ???> {"cmd":"hello","name":"\u307b\u3093\u3068\u3070\u304bAI","gameToken":"b8281a6b-a208-4c13-b7c9-c0f84d11c55a","threshold":1}
+to b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"msg": "Welcome back \u307b\u3093\u3068\u3070\u304bAI.  Use 'mail' to check your messages.", "tick": 1}
+from b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"cmd":"mail"}
+to b8281a6b-a208-4c13-b7c9-c0f84d11c55a> [{"msg": "Hello.  Here's your initial nanite", "x": 0, "nanite": "865176b4-8349-403f-87ec-16b77a2ac8e4", "y": 8, "special": "initial"}, {"msg": "A new tick has arrived.", "nextTick": "2013-05-23 21:25:03.387376+00:00", "tick": 1, "special": "tick"}]
+from b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"cmd":"duplicate","nanite":"865176b4-8349-403f-87ec-16b77a2ac8e4","dir":"N","times":1}
+to b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"y": 9, "x": 0, "nanite": "73a2d8bb-9f79-4896-9492-7392588daed2", "special": "duplicate", "oldNanite": "865176b4-8349-403f-87ec-16b77a2ac8e4"}
+from b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"cmd":"ready"}
+losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x10ee0a690>
+losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x10ee0a750>
+losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x10f1ef410>
+Below is the state of the current players.
+A player named AwesomeBot has gameToken d22e452e-7840-4312-895e-48e5fda881da and globalUUID ea9a15fb-3647-4715-b5fe-76e5ff2b8641.
+     They have 14 nanomaterial, 14 bandwidth, and 0 plutnoium
+     Let me tell you about their nanites:
+          They have a nanite called 053c2fe2-7e4b-41f5-97aa-9f5f28604966 located at 5, 15
+A player named ほんとばかAI has gameToken b8281a6b-a208-4c13-b7c9-c0f84d11c55a and globalUUID 1e91150e-5716-40d8-8fb9-a0a15f7d3ee1.
+     They have 13 nanomaterial, 14 bandwidth, and 0 plutnoium
+     Let me tell you about their nanites:
+          They have a nanite called 865176b4-8349-403f-87ec-16b77a2ac8e4 located at 0, 8
+          They have a nanite called 73a2d8bb-9f79-4896-9492-7392588daed2 located at 0, 9
+to b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {}
+from b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"cmd":"bye"}
+to ???> {"special": "bye"}
+from ???> {"cmd":"hello","name":"\u307b\u3093\u3068\u3070\u304bAI","gameToken":"b8281a6b-a208-4c13-b7c9-c0f84d11c55a","threshold":1}
+to b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"msg": "Welcome back \u307b\u3093\u3068\u3070\u304bAI.  Use 'mail' to check your messages.", "tick": 2}
+from b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"cmd":"mail"}
+to b8281a6b-a208-4c13-b7c9-c0f84d11c55a> [{"msg": "A new tick has arrived.", "nextTick": "2013-05-23 21:26:44.610592+00:00", "tick": 2, "special": "tick"}]
+from b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"cmd":"duplicate","nanite":"865176b4-8349-403f-87ec-16b77a2ac8e4","dir":"NE","times":1}
+to b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"y": 9, "x": 1, "nanite": "ef4adf2d-3f43-4223-8bdd-80f5f8c228dd", "special": "duplicate", "oldNanite": "865176b4-8349-403f-87ec-16b77a2ac8e4"}
+from b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"cmd":"duplicate","nanite":"73a2d8bb-9f79-4896-9492-7392588daed2","dir":"N","times":1}
+to b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"y": 10, "x": 0, "nanite": "9baae77d-9dea-49af-8776-58d18c788882", "special": "duplicate", "oldNanite": "73a2d8bb-9f79-4896-9492-7392588daed2"}
+from b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"cmd":"ready"}
+to b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {}
+from b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"cmd":"bye"}
+to ???> {"special": "bye"}
+from ???> {"cmd":"hello","name":"\u307b\u3093\u3068\u3070\u304bAI","gameToken":"b8281a6b-a208-4c13-b7c9-c0f84d11c55a","threshold":1}
+to b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"msg": "Welcome back \u307b\u3093\u3068\u3070\u304bAI.  Use 'mail' to check your messages.", "tick": 2}
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "mail"}
+to d22e452e-7840-4312-895e-48e5fda881da> [{"msg": "A new tick has arrived.", "nextTick": "2013-05-23 21:26:44.610592+00:00", "tick": 2, "special": "tick"}]
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "ready"}
+losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x10ee0a690>
+losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x10ee0a750>
+losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x10f1ef410>
+losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x10f1ef490>
+losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x10f1ef910>
+Below is the state of the current players.
+A player named AwesomeBot has gameToken d22e452e-7840-4312-895e-48e5fda881da and globalUUID ea9a15fb-3647-4715-b5fe-76e5ff2b8641.
+     They have 13 nanomaterial, 14 bandwidth, and 0 plutnoium
+     Let me tell you about their nanites:
+          They have a nanite called 053c2fe2-7e4b-41f5-97aa-9f5f28604966 located at 5, 16
+A player named ほんとばかAI has gameToken b8281a6b-a208-4c13-b7c9-c0f84d11c55a and globalUUID 1e91150e-5716-40d8-8fb9-a0a15f7d3ee1.
+     They have 9 nanomaterial, 12 bandwidth, and 0 plutnoium
+     Let me tell you about their nanites:
+          They have a nanite called 865176b4-8349-403f-87ec-16b77a2ac8e4 located at 0, 8
+          They have a nanite called 73a2d8bb-9f79-4896-9492-7392588daed2 located at 0, 9
+          They have a nanite called ef4adf2d-3f43-4223-8bdd-80f5f8c228dd located at 1, 9
+          They have a nanite called 9baae77d-9dea-49af-8776-58d18c788882 located at 0, 10
+to d22e452e-7840-4312-895e-48e5fda881da> {}
+from ???> {"cmd":"hello","name":"\u307b\u3093\u3068\u3070\u304bAI","gameToken":"b8281a6b-a208-4c13-b7c9-c0f84d11c55a","threshold":1}
+to b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"msg": "Welcome back \u307b\u3093\u3068\u3070\u304bAI.  Use 'mail' to check your messages.", "tick": 3}
+from b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"cmd":"mail"}
+to b8281a6b-a208-4c13-b7c9-c0f84d11c55a> [{"msg": "A new tick has arrived.", "nextTick": "2013-05-23 21:26:48.136335+00:00", "tick": 3, "special": "tick"}]
+from b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"cmd":"mine","nanite":"865176b4-8349-403f-87ec-16b77a2ac8e4","times":3}
+to b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {}
+from b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"cmd":"mine","nanite":"73a2d8bb-9f79-4896-9492-7392588daed2","times":3}
+to b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {}
+from b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"cmd":"mine","nanite":"9baae77d-9dea-49af-8776-58d18c788882","times":3}
+to b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {}
+from b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"cmd":"mine","nanite":"ef4adf2d-3f43-4223-8bdd-80f5f8c228dd","times":3}
+to b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {}
+from b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"cmd":"ready"}
+to b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {}
+from b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"cmd":"bye"}
+to ???> {"special": "bye"}
+from ???> {"cmd":"hello","name":"\u307b\u3093\u3068\u3070\u304bAI","gameToken":"b8281a6b-a208-4c13-b7c9-c0f84d11c55a","threshold":1}
+to b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"msg": "Welcome back \u307b\u3093\u3068\u3070\u304bAI.  Use 'mail' to check your messages.", "tick": 3}
+from ???> {"cmd":"hello","name":"\u307b\u3093\u3068\u3070\u304bAI","gameToken":"b8281a6b-a208-4c13-b7c9-c0f84d11c55a","threshold":1}
+to b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"msg": "Welcome back \u307b\u3093\u3068\u3070\u304bAI.  Use 'mail' to check your messages.", "tick": 3}
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "mail"}
+to d22e452e-7840-4312-895e-48e5fda881da> [{"y": 15, "x": 5, "nanite": "053c2fe2-7e4b-41f5-97aa-9f5f28604966", "special": "move"}, {"msg": "A new tick has arrived.", "nextTick": "2013-05-23 21:26:48.136335+00:00", "tick": 3, "special": "tick"}]
+from ???> {"cmd":"hello","name":"\u307b\u3093\u3068\u3070\u304bAI","gameToken":"b8281a6b-a208-4c13-b7c9-c0f84d11c55a","threshold":1}
+to b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"msg": "Welcome back \u307b\u3093\u3068\u3070\u304bAI.  Use 'mail' to check your messages.", "tick": 3}
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "ready"}
+losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x10ee0a690>
+losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x10ee0a750>
+losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x10f1ef410>
+losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x10f1ef490>
+losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x10f1ef910>
+Below is the state of the current players.
+A player named AwesomeBot has gameToken d22e452e-7840-4312-895e-48e5fda881da and globalUUID ea9a15fb-3647-4715-b5fe-76e5ff2b8641.
+     They have 12 nanomaterial, 14 bandwidth, and 0 plutnoium
+     Let me tell you about their nanites:
+          They have a nanite called 053c2fe2-7e4b-41f5-97aa-9f5f28604966 located at 5, 16
+A player named ほんとばかAI has gameToken b8281a6b-a208-4c13-b7c9-c0f84d11c55a and globalUUID 1e91150e-5716-40d8-8fb9-a0a15f7d3ee1.
+     They have 5 nanomaterial, 24 bandwidth, and 10 plutnoium
+     Let me tell you about their nanites:
+          They have a nanite called 865176b4-8349-403f-87ec-16b77a2ac8e4 located at 0, 8
+          They have a nanite called 73a2d8bb-9f79-4896-9492-7392588daed2 located at 0, 9
+          They have a nanite called ef4adf2d-3f43-4223-8bdd-80f5f8c228dd located at 1, 9
+          They have a nanite called 9baae77d-9dea-49af-8776-58d18c788882 located at 0, 10
+to d22e452e-7840-4312-895e-48e5fda881da> {}
+from ???> {"cmd":"hello","name":"\u307b\u3093\u3068\u3070\u304bAI","gameToken":"b8281a6b-a208-4c13-b7c9-c0f84d11c55a","threshold":1}
+to b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"msg": "Welcome back \u307b\u3093\u3068\u3070\u304bAI.  Use 'mail' to check your messages.", "tick": 4}
+from b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"cmd":"mail"}
+to b8281a6b-a208-4c13-b7c9-c0f84d11c55a> [{"msg": "A new tick has arrived.", "nextTick": "2013-05-23 21:26:53.107953+00:00", "tick": 4, "special": "tick"}]
+from b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"cmd":"mine","nanite":"865176b4-8349-403f-87ec-16b77a2ac8e4","times":3}
+to b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"error": "Already moved this turn.  The command queue was altered anyway."}
+from b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"cmd":"mine","nanite":"73a2d8bb-9f79-4896-9492-7392588daed2","times":3}
+to b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"error": "Already moved this turn.  The command queue was altered anyway."}
+from b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"cmd":"mine","nanite":"9baae77d-9dea-49af-8776-58d18c788882","times":3}
+to b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"error": "Already moved this turn.  The command queue was altered anyway."}
+from b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"cmd":"mine","nanite":"ef4adf2d-3f43-4223-8bdd-80f5f8c228dd","times":3}
+to b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"error": "Already moved this turn.  The command queue was altered anyway."}
+from b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"cmd":"ready"}
+to b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {}
+from b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"cmd":"bye"}
+to ???> {"special": "bye"}
+from ???> {"cmd":"hello","name":"\u307b\u3093\u3068\u3070\u304bAI","gameToken":"b8281a6b-a208-4c13-b7c9-c0f84d11c55a","threshold":1}
+to b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"msg": "Welcome back \u307b\u3093\u3068\u3070\u304bAI.  Use 'mail' to check your messages.", "tick": 4}
+from ???> {"cmd":"hello","name":"\u307b\u3093\u3068\u3070\u304bAI","gameToken":"b8281a6b-a208-4c13-b7c9-c0f84d11c55a","threshold":1}
+to b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"msg": "Welcome back \u307b\u3093\u3068\u3070\u304bAI.  Use 'mail' to check your messages.", "tick": 4}
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "mail"}
+to d22e452e-7840-4312-895e-48e5fda881da> [{"y": 16, "x": 5, "nanite": "053c2fe2-7e4b-41f5-97aa-9f5f28604966", "special": "move"}, {"msg": "A new tick has arrived.", "nextTick": "2013-05-23 21:26:53.107953+00:00", "tick": 4, "special": "tick"}]
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "ready"}
+losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x10ee0a690>
+losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x10ee0a750>
+losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x10f1ef410>
+losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x10f1ef490>
+losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x10f1ef910>
+Below is the state of the current players.
+A player named AwesomeBot has gameToken d22e452e-7840-4312-895e-48e5fda881da and globalUUID ea9a15fb-3647-4715-b5fe-76e5ff2b8641.
+     They have 11 nanomaterial, 14 bandwidth, and 0 plutnoium
+     Let me tell you about their nanites:
+          They have a nanite called 053c2fe2-7e4b-41f5-97aa-9f5f28604966 located at 5, 16
+A player named ほんとばかAI has gameToken b8281a6b-a208-4c13-b7c9-c0f84d11c55a and globalUUID 1e91150e-5716-40d8-8fb9-a0a15f7d3ee1.
+     They have 1 nanomaterial, 24 bandwidth, and 11 plutnoium
+     Let me tell you about their nanites:
+          They have a nanite called 865176b4-8349-403f-87ec-16b77a2ac8e4 located at 0, 8
+          They have a nanite called 73a2d8bb-9f79-4896-9492-7392588daed2 located at 0, 9
+          They have a nanite called ef4adf2d-3f43-4223-8bdd-80f5f8c228dd located at 1, 9
+          They have a nanite called 9baae77d-9dea-49af-8776-58d18c788882 located at 0, 10
+to d22e452e-7840-4312-895e-48e5fda881da> {}
+from ???> {"cmd":"hello","name":"\u307b\u3093\u3068\u3070\u304bAI","gameToken":"b8281a6b-a208-4c13-b7c9-c0f84d11c55a","threshold":1}
+to b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"msg": "Welcome back \u307b\u3093\u3068\u3070\u304bAI.  Use 'mail' to check your messages.", "tick": 5}
+from b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"cmd":"mail"}
+to b8281a6b-a208-4c13-b7c9-c0f84d11c55a> [null, null, null, null, {"msg": "A new tick has arrived.", "nextTick": "2013-05-23 21:26:58.113732+00:00", "tick": 5, "special": "tick"}]
+from b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"cmd":"count","resource":"nanomaterial"}
+to b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"count": 1.0}
+from b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"cmd":"mine","nanite":"865176b4-8349-403f-87ec-16b77a2ac8e4","times":3}
+to b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"error": "Already moved this turn.  The command queue was altered anyway."}
+from b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"cmd":"mine","nanite":"73a2d8bb-9f79-4896-9492-7392588daed2","times":3}
+to b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"error": "Already moved this turn.  The command queue was altered anyway."}
+from b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"cmd":"mine","nanite":"9baae77d-9dea-49af-8776-58d18c788882","times":3}
+to b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"error": "Already moved this turn.  The command queue was altered anyway."}
+from b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"cmd":"mine","nanite":"ef4adf2d-3f43-4223-8bdd-80f5f8c228dd","times":3}
+to b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"error": "Already moved this turn.  The command queue was altered anyway."}
+from b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"cmd":"ready"}
+to b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {}
+from b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"cmd":"bye"}
+to ???> {"special": "bye"}
+from ???> {"cmd":"hello","name":"\u307b\u3093\u3068\u3070\u304bAI","gameToken":"b8281a6b-a208-4c13-b7c9-c0f84d11c55a","threshold":1}
+to b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"msg": "Welcome back \u307b\u3093\u3068\u3070\u304bAI.  Use 'mail' to check your messages.", "tick": 5}
+from ???> {"cmd":"hello","name":"\u307b\u3093\u3068\u3070\u304bAI","gameToken":"b8281a6b-a208-4c13-b7c9-c0f84d11c55a","threshold":1}
+to b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"msg": "Welcome back \u307b\u3093\u3068\u3070\u304bAI.  Use 'mail' to check your messages.", "tick": 5}
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "mail"}
+to d22e452e-7840-4312-895e-48e5fda881da> [{"msg": "A new tick has arrived.", "nextTick": "2013-05-23 21:26:58.113732+00:00", "tick": 5, "special": "tick"}]
+from ???> {"cmd":"hello","name":"\u307b\u3093\u3068\u3070\u304bAI","gameToken":"b8281a6b-a208-4c13-b7c9-c0f84d11c55a","threshold":1}
+to b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"msg": "Welcome back \u307b\u3093\u3068\u3070\u304bAI.  Use 'mail' to check your messages.", "tick": 5}
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "move", "nanite": "053c2fe2-7e4b-41f5-97aa-9f5f28604966", "dir": "E", "times": 3}
+to d22e452e-7840-4312-895e-48e5fda881da> {"y": 16, "x": 6, "nanite": "053c2fe2-7e4b-41f5-97aa-9f5f28604966", "special": "move"}
+from ???> {"cmd":"hello","name":"\u307b\u3093\u3068\u3070\u304bAI","gameToken":"b8281a6b-a208-4c13-b7c9-c0f84d11c55a","threshold":1}
+to b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"msg": "Welcome back \u307b\u3093\u3068\u3070\u304bAI.  Use 'mail' to check your messages.", "tick": 5}
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "ready"}
+losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x10ee0a690>
+losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x10ee0a750>
+losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x10f1ef410>
+losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x10f1ef490>
+losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x10f1ef910>
+Below is the state of the current players.
+A player named AwesomeBot has gameToken d22e452e-7840-4312-895e-48e5fda881da and globalUUID ea9a15fb-3647-4715-b5fe-76e5ff2b8641.
+     They have 10 nanomaterial, 13 bandwidth, and 0 plutnoium
+     Let me tell you about their nanites:
+          They have a nanite called 053c2fe2-7e4b-41f5-97aa-9f5f28604966 located at 7, 16
+A player named ほんとばかAI has gameToken b8281a6b-a208-4c13-b7c9-c0f84d11c55a and globalUUID 1e91150e-5716-40d8-8fb9-a0a15f7d3ee1.
+     They have 0 nanomaterial, 20 bandwidth, and 12 plutnoium
+     Let me tell you about their nanites:
+          They have a nanite called 9baae77d-9dea-49af-8776-58d18c788882 located at 0, 10
+to d22e452e-7840-4312-895e-48e5fda881da> {}
+from ???> {"cmd":"hello","name":"\u307b\u3093\u3068\u3070\u304bAI","gameToken":"b8281a6b-a208-4c13-b7c9-c0f84d11c55a","threshold":1}
+to b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"msg": "Welcome back \u307b\u3093\u3068\u3070\u304bAI.  Use 'mail' to check your messages.", "tick": 6}
+from b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"cmd":"mail"}
+to b8281a6b-a208-4c13-b7c9-c0f84d11c55a> [null, null, null, null, {"msg": "A new tick has arrived.", "nextTick": "2013-05-23 21:27:04.175131+00:00", "tick": 6, "special": "tick"}]
+from b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"cmd":"count","resource":"bandwidth"}
+to b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"count": 20.680099983715433}
+from b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"cmd":"count","resource":"nanomaterial"}
+to b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"count": 0.0}
+from b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"cmd":"mine","nanite":"865176b4-8349-403f-87ec-16b77a2ac8e4","times":3}
+to b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"error": "list index out of range"}
+from b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"cmd":"mine","nanite":"73a2d8bb-9f79-4896-9492-7392588daed2","times":3}
+to b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"error": "list index out of range"}
+from b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"cmd":"mine","nanite":"9baae77d-9dea-49af-8776-58d18c788882","times":3}
+to b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"error": "Already moved this turn.  The command queue was altered anyway."}
+from b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"cmd":"mine","nanite":"ef4adf2d-3f43-4223-8bdd-80f5f8c228dd","times":3}
+to b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"error": "list index out of range"}
+from b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"cmd":"ready"}
+to b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {}
+from b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"cmd":"bye"}
+to ???> {"special": "bye"}
+from ???> {"cmd":"hello","name":"\u307b\u3093\u3068\u3070\u304bAI","gameToken":"b8281a6b-a208-4c13-b7c9-c0f84d11c55a","threshold":1}
+to b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"msg": "Welcome back \u307b\u3093\u3068\u3070\u304bAI.  Use 'mail' to check your messages.", "tick": 6}
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "mail"}
+to d22e452e-7840-4312-895e-48e5fda881da> [{"msg": "A new tick has arrived.", "nextTick": "2013-05-23 21:27:04.175131+00:00", "tick": 6, "special": "tick"}]
+from ???> {"cmd":"hello","name":"\u307b\u3093\u3068\u3070\u304bAI","gameToken":"b8281a6b-a208-4c13-b7c9-c0f84d11c55a","threshold":1}
+to b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"msg": "Welcome back \u307b\u3093\u3068\u3070\u304bAI.  Use 'mail' to check your messages.", "tick": 6}
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "ready"}
+losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x10ee0a690>
+losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x10f1ef910>
+Below is the state of the current players.
+A player named AwesomeBot has gameToken d22e452e-7840-4312-895e-48e5fda881da and globalUUID ea9a15fb-3647-4715-b5fe-76e5ff2b8641.
+     They have 9 nanomaterial, 13 bandwidth, and 0 plutnoium
+     Let me tell you about their nanites:
+          They have a nanite called 053c2fe2-7e4b-41f5-97aa-9f5f28604966 located at 8, 16
+A player named ほんとばかAI has gameToken b8281a6b-a208-4c13-b7c9-c0f84d11c55a and globalUUID 1e91150e-5716-40d8-8fb9-a0a15f7d3ee1.
+     They have 0 nanomaterial, 17 bandwidth, and 12 plutnoium
+     Let me tell you about their nanites:
+          They have no nanites.
+to d22e452e-7840-4312-895e-48e5fda881da> {}
+from ???> {"cmd":"hello","name":"\u307b\u3093\u3068\u3070\u304bAI","gameToken":"b8281a6b-a208-4c13-b7c9-c0f84d11c55a","threshold":1}
+to b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"msg": "Welcome back \u307b\u3093\u3068\u3070\u304bAI.  Use 'mail' to check your messages.", "tick": 7}
+from b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"cmd":"mail"}
+to b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"error": "You have lost the game."}
+from ???> {"cmd":"hello","name":"\u307b\u3093\u3068\u3070\u304bAI","gameToken":"b8281a6b-a208-4c13-b7c9-c0f84d11c55a","threshold":1}
+to b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"msg": "Welcome back \u307b\u3093\u3068\u3070\u304bAI.  Use 'mail' to check your messages.", "tick": 7}
+from b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"cmd":"mail"}
+to b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"error": "You have lost the game."}
+from ???> {"cmd":"hello","name":"\u307b\u3093\u3068\u3070\u304bAI","gameToken":"b8281a6b-a208-4c13-b7c9-c0f84d11c55a","threshold":1}
+to b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"msg": "Welcome back \u307b\u3093\u3068\u3070\u304bAI.  Use 'mail' to check your messages.", "tick": 7}
+from b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"cmd":"mail"}
+to b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"error": "You have lost the game."}
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "mail"}
+to d22e452e-7840-4312-895e-48e5fda881da> [{"y": 16, "x": 7, "nanite": "053c2fe2-7e4b-41f5-97aa-9f5f28604966", "special": "move"}, {"msg": "A new tick has arrived.", "nextTick": "2013-05-23 21:27:08.128999+00:00", "tick": 7, "special": "tick"}]
+from ???> {"cmd":"hello","name":"\u307b\u3093\u3068\u3070\u304bAI","gameToken":"b8281a6b-a208-4c13-b7c9-c0f84d11c55a","threshold":1}
+to b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"msg": "Welcome back \u307b\u3093\u3068\u3070\u304bAI.  Use 'mail' to check your messages.", "tick": 7}
+from b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"cmd":"mail"}
+to b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"error": "You have lost the game."}
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "ready"}
+to d22e452e-7840-4312-895e-48e5fda881da> {}
+from ???> {"cmd":"hello","name":"\u307b\u3093\u3068\u3070\u304bAI","gameToken":"b8281a6b-a208-4c13-b7c9-c0f84d11c55a","threshold":1}
+to b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"msg": "Welcome back \u307b\u3093\u3068\u3070\u304bAI.  Use 'mail' to check your messages.", "tick": 7}
+from b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"cmd":"mail"}
+to b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"error": "You have lost the game."}
+from ???> {"cmd":"hello","name":"\u307b\u3093\u3068\u3070\u304bAI","gameToken":"b8281a6b-a208-4c13-b7c9-c0f84d11c55a","threshold":1}
+to b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"msg": "Welcome back \u307b\u3093\u3068\u3070\u304bAI.  Use 'mail' to check your messages.", "tick": 7}
+from b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"cmd":"mail"}
+to b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"error": "You have lost the game."}
+from ???> {"cmd":"hello","name":"\u307b\u3093\u3068\u3070\u304bAI","gameToken":"b8281a6b-a208-4c13-b7c9-c0f84d11c55a","threshold":1}
+to b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"msg": "Welcome back \u307b\u3093\u3068\u3070\u304bAI.  Use 'mail' to check your messages.", "tick": 7}
+from b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"cmd":"mail"}
+to b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"error": "You have lost the game."}
+from ???> {"cmd":"hello","name":"\u307b\u3093\u3068\u3070\u304bAI","gameToken":"b8281a6b-a208-4c13-b7c9-c0f84d11c55a","threshold":1}
+to b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"msg": "Welcome back \u307b\u3093\u3068\u3070\u304bAI.  Use 'mail' to check your messages.", "tick": 7}
+from b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"cmd":"mail"}
+to b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"error": "You have lost the game."}
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "mail"}
+to d22e452e-7840-4312-895e-48e5fda881da> []
+from ???> {"cmd":"hello","name":"\u307b\u3093\u3068\u3070\u304bAI","gameToken":"b8281a6b-a208-4c13-b7c9-c0f84d11c55a","threshold":1}
+to b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"msg": "Welcome back \u307b\u3093\u3068\u3070\u304bAI.  Use 'mail' to check your messages.", "tick": 7}
+from b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"cmd":"mail"}
+to b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"error": "You have lost the game."}
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "ready"}
+to d22e452e-7840-4312-895e-48e5fda881da> {}
+from ???> {"cmd":"hello","name":"\u307b\u3093\u3068\u3070\u304bAI","gameToken":"b8281a6b-a208-4c13-b7c9-c0f84d11c55a","threshold":1}
+to b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"msg": "Welcome back \u307b\u3093\u3068\u3070\u304bAI.  Use 'mail' to check your messages.", "tick": 7}
+from b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"cmd":"mail"}
+to b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"error": "You have lost the game."}
+from ???> {"cmd":"hello","name":"\u307b\u3093\u3068\u3070\u304bAI","gameToken":"b8281a6b-a208-4c13-b7c9-c0f84d11c55a","threshold":1}
+to b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"msg": "Welcome back \u307b\u3093\u3068\u3070\u304bAI.  Use 'mail' to check your messages.", "tick": 7}
+from b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"cmd":"mail"}
+to b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"error": "You have lost the game."}
+from ???> {"cmd":"hello","name":"\u307b\u3093\u3068\u3070\u304bAI","gameToken":"b8281a6b-a208-4c13-b7c9-c0f84d11c55a","threshold":1}
+to b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"msg": "Welcome back \u307b\u3093\u3068\u3070\u304bAI.  Use 'mail' to check your messages.", "tick": 7}
+from b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"cmd":"mail"}
+to b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"error": "You have lost the game."}
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "mail"}
+to d22e452e-7840-4312-895e-48e5fda881da> []
+from ???> {"cmd":"hello","name":"\u307b\u3093\u3068\u3070\u304bAI","gameToken":"b8281a6b-a208-4c13-b7c9-c0f84d11c55a","threshold":1}
+to b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"msg": "Welcome back \u307b\u3093\u3068\u3070\u304bAI.  Use 'mail' to check your messages.", "tick": 7}
+from b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"cmd":"mail"}
+to b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"error": "You have lost the game."}
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "ready"}
+to d22e452e-7840-4312-895e-48e5fda881da> {}
+from ???> {"cmd":"hello","name":"\u307b\u3093\u3068\u3070\u304bAI","gameToken":"b8281a6b-a208-4c13-b7c9-c0f84d11c55a","threshold":1}
+to b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"msg": "Welcome back \u307b\u3093\u3068\u3070\u304bAI.  Use 'mail' to check your messages.", "tick": 7}
+from b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"cmd":"mail"}
+to b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"error": "You have lost the game."}
+from ???> {"cmd":"hello","name":"\u307b\u3093\u3068\u3070\u304bAI","gameToken":"b8281a6b-a208-4c13-b7c9-c0f84d11c55a","threshold":1}
+to b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"msg": "Welcome back \u307b\u3093\u3068\u3070\u304bAI.  Use 'mail' to check your messages.", "tick": 7}
+from b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"cmd":"mail"}
+to b8281a6b-a208-4c13-b7c9-c0f84d11c55a> {"error": "You have lost the game."}
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "mail"}
+to d22e452e-7840-4312-895e-48e5fda881da> []
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "ready"}
+to d22e452e-7840-4312-895e-48e5fda881da> {}
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "mail"}
+to d22e452e-7840-4312-895e-48e5fda881da> []
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "ready"}
+to d22e452e-7840-4312-895e-48e5fda881da> {}
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "mail"}
+to d22e452e-7840-4312-895e-48e5fda881da> []
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "ready"}
+to d22e452e-7840-4312-895e-48e5fda881da> {}
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "mail"}
+to d22e452e-7840-4312-895e-48e5fda881da> []
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "ready"}
+to d22e452e-7840-4312-895e-48e5fda881da> {}
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "mail"}
+to d22e452e-7840-4312-895e-48e5fda881da> []
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "ready"}
+to d22e452e-7840-4312-895e-48e5fda881da> {}
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "mail"}
+to d22e452e-7840-4312-895e-48e5fda881da> []
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "ready"}
+to d22e452e-7840-4312-895e-48e5fda881da> {}
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "mail"}
+to d22e452e-7840-4312-895e-48e5fda881da> []
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "ready"}
+to d22e452e-7840-4312-895e-48e5fda881da> {}
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "mail"}
+to d22e452e-7840-4312-895e-48e5fda881da> []
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "ready"}
+to d22e452e-7840-4312-895e-48e5fda881da> {}
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "mail"}
+to d22e452e-7840-4312-895e-48e5fda881da> []
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "ready"}
+to d22e452e-7840-4312-895e-48e5fda881da> {}
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "mail"}
+to d22e452e-7840-4312-895e-48e5fda881da> []
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "ready"}
+to d22e452e-7840-4312-895e-48e5fda881da> {}
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "mail"}
+to d22e452e-7840-4312-895e-48e5fda881da> []
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "ready"}
+to d22e452e-7840-4312-895e-48e5fda881da> {}
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "mail"}
+to d22e452e-7840-4312-895e-48e5fda881da> []
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "ready"}
+to d22e452e-7840-4312-895e-48e5fda881da> {}
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "mail"}
+to d22e452e-7840-4312-895e-48e5fda881da> []
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "ready"}
+to d22e452e-7840-4312-895e-48e5fda881da> {}
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "mail"}
+to d22e452e-7840-4312-895e-48e5fda881da> []
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "ready"}
+to d22e452e-7840-4312-895e-48e5fda881da> {}
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "mail"}
+to d22e452e-7840-4312-895e-48e5fda881da> []
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "ready"}
+to d22e452e-7840-4312-895e-48e5fda881da> {}
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "mail"}
+to d22e452e-7840-4312-895e-48e5fda881da> []
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "ready"}
+to d22e452e-7840-4312-895e-48e5fda881da> {}
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "mail"}
+to d22e452e-7840-4312-895e-48e5fda881da> []
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "ready"}
+to d22e452e-7840-4312-895e-48e5fda881da> {}
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "mail"}
+to d22e452e-7840-4312-895e-48e5fda881da> []
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "ready"}
+to d22e452e-7840-4312-895e-48e5fda881da> {}
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "mail"}
+to d22e452e-7840-4312-895e-48e5fda881da> []
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "ready"}
+to d22e452e-7840-4312-895e-48e5fda881da> {}
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "mail"}
+to d22e452e-7840-4312-895e-48e5fda881da> []
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "ready"}
+to d22e452e-7840-4312-895e-48e5fda881da> {}
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "mail"}
+to d22e452e-7840-4312-895e-48e5fda881da> []
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "ready"}
+to d22e452e-7840-4312-895e-48e5fda881da> {}
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "mail"}
+to d22e452e-7840-4312-895e-48e5fda881da> []
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "ready"}
+to d22e452e-7840-4312-895e-48e5fda881da> {}
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "mail"}
+to d22e452e-7840-4312-895e-48e5fda881da> []
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "ready"}
+to d22e452e-7840-4312-895e-48e5fda881da> {}
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "mail"}
+to d22e452e-7840-4312-895e-48e5fda881da> []
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "ready"}
+to d22e452e-7840-4312-895e-48e5fda881da> {}
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "mail"}
+to d22e452e-7840-4312-895e-48e5fda881da> []
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "ready"}
+to d22e452e-7840-4312-895e-48e5fda881da> {}
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "mail"}
+to d22e452e-7840-4312-895e-48e5fda881da> []
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "ready"}
+to d22e452e-7840-4312-895e-48e5fda881da> {}
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "mail"}
+to d22e452e-7840-4312-895e-48e5fda881da> []
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "ready"}
+to d22e452e-7840-4312-895e-48e5fda881da> {}
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "mail"}
+to d22e452e-7840-4312-895e-48e5fda881da> []
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "ready"}
+to d22e452e-7840-4312-895e-48e5fda881da> {}
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "mail"}
+to d22e452e-7840-4312-895e-48e5fda881da> []
+from d22e452e-7840-4312-895e-48e5fda881da> {"cmd": "ready"}
+to d22e452e-7840-4312-895e-48e5fda881da> {}

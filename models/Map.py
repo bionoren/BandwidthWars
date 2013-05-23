@@ -17,6 +17,19 @@ class Tile(object):
 		self.bandwidth = 0
 		self.map = map
 
+	def __repr__(self):
+		return "<Tile %d, %d>" % (self.x,self.y)
+
+	"""Counts the specified resource in the immediate tile and also the 4 immediately reachable tiles."""
+	def immediate_count(self,resourcename):
+		dist = 0
+		dist += getattr(self,resourcename)
+		dist += getattr(self.next("N"),resourcename)
+		dist += getattr(self.next("S"),resourcename)
+		dist += getattr(self.next("E"),resourcename)
+		dist += getattr(self.next("W"),resourcename)
+		return dist
+
 	def next(self,str_dir,cardinal_only=False):
 		if str_dir=="N":
 			return self.map.get(self.x,self.y+1)
@@ -43,6 +56,17 @@ class Tile(object):
 class Map(object):
 	def __init__(self):
 		self.tiles = {}
+
+	def playable_tiles(self):
+		return (self.get(x,y) for x in range(-PLAY_AREA,PLAY_AREA) for y in range(-PLAY_AREA,PLAY_AREA))
+
+	def get_good_tile(self):
+		good_tiles = filter(lambda t: t.immediate_count("nanomaterial") > 10 and t.immediate_count("nanomaterial") < 20,self.playable_tiles())
+		good_tiles = filter(lambda t: t.immediate_count("bandwidth") > 10 and t.immediate_count("bandwidth") < 20,good_tiles)
+		from random import choice
+		return choice(good_tiles)
+
+
 	def get(self,x,y):
 		if not self.tiles.has_key(x):
 			self.tiles[x] = {}
@@ -50,6 +74,7 @@ class Map(object):
 		if not row.has_key(y):
 			row[y] = Tile(x,y,self)
 		return row[y]
+
 
 	def distribute_resources(self):
 		import simplexnoise

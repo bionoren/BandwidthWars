@@ -91,6 +91,7 @@ class Nanite(object):
             result["threshold"] = "<"
         else:
             result["threshold"] = ">="
+        return result
 
     @require_not_moved()
     def fire(self,dir):
