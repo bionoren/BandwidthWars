@@ -122,7 +122,7 @@ class Game(object):
             if not currentPlayer.has_signed_in:
                 currentPlayer.has_signed_in = True
                 currentPlayer.threshold = json["threshold"]
-            return {"msg":"Welcome back %s.  Use 'mail' to check your messages." % session.player.name}
+            return {"msg":"Welcome back %s.  Use 'mail' to check your messages." % session.player.name,"tick":self.ticks}
 
 
         raise Exception("Can't understand command")
