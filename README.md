@@ -144,21 +144,21 @@ Sample requests and responses for commands are also provided (assuming they are 
 ```
 #mining
 > {"cmd":"mine","nanite":"cd264700-b2ec-11e2-9e96-0800200c9a66"}
-{"threshold":"<"}
+{"threshold":"<","nanite":"cd264700-b2ec-11e2-9e96-0800200c9a66","special":"mine"}
 
 #scanning
 > {"cmd":"scan","nanite":"cd264700-b2ec-11e2-9e96-0800200c9a66"}
-{"x":25,"y":24,"nanite":"1b8110a0-b2ee-11e2-9e96-0800200c9a66","player":"215511c0-b2ee-11e2-9e96-0800200c9a66"}
+{"nanite":"cd264700-b2ec-11e2-9e96-0800200c9a66","special":"scan","scan_result":{"x":25,"y":24,"nanite":"1b8110a0-b2ee-11e2-9e96-0800200c9a66","player":"215511c0-b2ee-11e2-9e96-0800200c9a66"}}
 #or
 {}
 
 #firing
 > {"cmd":"fire","nanite":"cd264700-b2ec-11e2-9e96-0800200c9a66","dir":"N"}
-{}
+{"nanite":"cd264700-b2ec-11e2-9e96-0800200c9a66","special":"fire"}
 
 #duplicating
 > {"cmd":"duplicate","nanite":"cd264700-b2ec-11e2-9e96-0800200c9a66","dir":"N"}
-{"special":"duplicate","nanite":"631cc280-b634-11e2-9e96-0800200c9a66","x":25,"y":26}
+{"special":"duplicate","nanite":"631cc280-b634-11e2-9e96-0800200c9a66","x":25,"y":26,"oldNanite":"cd264700-b2ec-11e2-9e96-0800200c9a66"}
 
 #count resource
 > {"cmd":"count","resource":"plutonium"}
