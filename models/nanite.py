@@ -11,7 +11,7 @@ class require_not_moved(object):
     def __call__(dself, f):
         def _require_not_moved(self,*args,**kwargs):
             if self.moved_this_turn:
-                    return {"error":"Already moved this turn."}
+                    return {"error":"Already moved this turn.  The command queue was altered anyway."}
             returnValue = f(self,*args,**kwargs)
             if returnValue and returnValue.has_key("error"): return returnValue
             self.moved_this_turn = True
@@ -45,9 +45,10 @@ class Nanite(object):
         self.commandQueue = []
         def wrap():
             return func(*args,**kwargs)
-        result = wrap()
         for t in range(1,times):
             self.commandQueue.append(wrap)
+        result = wrap()
+        
         return result
 
 
