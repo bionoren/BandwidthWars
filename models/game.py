@@ -4,6 +4,7 @@ import json
 import datetime
 import uuid
 import logging
+import pytz
 
 INITIAL_COMMAND = "INITIAL_COMMAND"
 
@@ -53,6 +54,7 @@ class Game(object):
     def tick(self):
         self.ticks += 1
         self.nextTick = datetime.datetime.utcnow() + datetime.timedelta(minutes=self.max_interval)
+        self.nextTick = self.nextTick.replace(tzinfo=pytz.utc)
         for player in self.players:
             player.tick()
         playing = [p for p in self.players if not p.lost]
