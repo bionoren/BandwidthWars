@@ -54,7 +54,9 @@ class Player(object):
 			if self.game.ticks != 1:
 				self.nanomaterial -= 1
 				logging.info("losing 1 nanomaterial for nanite "+str(nanite))
-			self.tick_notifications.extend(nanite.tick())
+			notifications = nanite.tick()
+			for notification in notifications:
+				self.send_or_schedule(notification)
 		while self.nanomaterial < 0:
 			kill = random.choice(self.nanites)
 			self.nanites.remove(kill)
