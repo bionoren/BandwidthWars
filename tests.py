@@ -24,6 +24,25 @@ class TestSequence(unittest.TestCase):
 		result = g.process_raw_command('{"cmd":"bye"}',self)
 		print result
 
+	def test_alter_command_Q(self):
+		g = models.game.Game(open_play=True,tokens=0)
+		result = g.process_raw_command('{"cmd":"hello","name":"TestBot","gameToken":"...","threshold":2}',self)
+
+		#mail
+		result = g.process_json_command({"cmd":"mail"},self)
+		#start with a move
+		result = g.process_json_command({"cmd":"move","nanite":self.player.nanites[0].globalUUID,"dir":"N","times":3}, self)
+		#now perform a mine
+		result = g.process_json_command({"cmd":"mine","nanite":self.player.nanites[0].globalUUID,"times":3}, self)
+		#now we're ready
+		result = g.process_json_command({"cmd":"ready"},self)
+
+		result = g.process_json_command({"cmd":"mail"},self)
+		result = filter(lambda c: c.has_key("special") and c["special"]=="mine",result)
+		self.assertGreater(len(result), 0, "Didn't get mine notification as expected")
+
+
+
 	def test_end_game_condition(self):
 		g = models.game.Game(tokens=2)
 		class Session:

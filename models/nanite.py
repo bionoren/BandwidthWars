@@ -2,6 +2,7 @@ import uuid
 import Map
 import random
 import projectile
+import logging
 
 
 class require_not_moved(object):
@@ -47,6 +48,7 @@ class Nanite(object):
             return func(*args,**kwargs)
         for t in range(1,times):
             self.commandQueue.append(wrap)
+        print "cq is",self.commandQueue
         result = wrap()
         
         return result
@@ -121,4 +123,5 @@ class Nanite(object):
         if len(self.commandQueue):
             command = self.commandQueue.pop(0)
             tick_notifications.append(command())
+            logging.info("nanite generating tick notifications called %s" % tick_notifications)
         return tick_notifications

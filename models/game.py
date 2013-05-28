@@ -19,7 +19,8 @@ class Game(object):
         self.ticks = 0
         self.nextTick = None
         self.tokens = []
-        self.originalNumberOfTokens = tokens
+        ##This holds the maximum number of tokens.  e.g., how many players have there ever been, including open_play players.
+        self.maxNumberOfTokens = tokens
         self.debug = debug
 
         logging.info("Game starting up")
@@ -61,7 +62,7 @@ class Game(object):
         for player in self.players:
             player.tick()
         playing = [p for p in self.players if not p.lost]
-        if (len(playing)<=1 and self.originalNumberOfTokens > 1) or (self.originalNumberOfTokens == 1 and len(playing)==0):
+        if (len(playing)<=1 and self.maxNumberOfTokens > 1) or (self.maxNumberOfTokens == 1 and len(playing)==0):
             for player in self.players:
                 player.send_or_schedule({"special":"endgame","msg":"The game has ended."})
             raise Exception("End of game condition.")
@@ -119,6 +120,7 @@ class Game(object):
                 if not session.player.name:
                     session.player.name = json["name"]
             elif self.open_play:
+                self.maxNumberOfTokens += 1 #since a new token is effectively created for the player
                 session.player = player.Player(self)
                 currentPlayer = session.player
                 session.player.session = session
