@@ -1,0 +1,678 @@
+2013-05-30 16:58:03,697 Writing to game.log
+2013-05-30 16:58:04,210 Game starting up
+2013-05-30 16:58:04,210 created token 505bea86-a6c1-462e-b26f-66db710793c0
+2013-05-30 16:58:04,229 created token ee6cebc6-7620-4706-bd5f-b6d5a311cd6c
+2013-05-30 16:58:04,248 Below is the state of the current players.
+2013-05-30 16:58:04,248 A player named None has gameToken 505bea86-a6c1-462e-b26f-66db710793c0 and globalUUID 824ecbf8-354a-4606-859a-8fceab2ff310.
+2013-05-30 16:58:04,248      They have 15 nanomaterial, 15 bandwidth, and 0 plutnoium
+2013-05-30 16:58:04,248      Let me tell you about their nanites:
+2013-05-30 16:58:04,248           They have a nanite called e2320b1e-29d2-423c-9b2c-6a17012ae302 located at -5, -7
+2013-05-30 16:58:04,248 A player named None has gameToken ee6cebc6-7620-4706-bd5f-b6d5a311cd6c and globalUUID c12885ec-713b-4fa3-a7c2-c76990224b0b.
+2013-05-30 16:58:04,248      They have 15 nanomaterial, 15 bandwidth, and 0 plutnoium
+2013-05-30 16:58:04,248      Let me tell you about their nanites:
+2013-05-30 16:58:04,248           They have a nanite called a8ea6970-d47c-4321-85e2-5ef5926613f4 located at -8, -8
+2013-05-30 16:58:04,420 Listening on port 7171
+2013-05-30 16:58:29,159 from ???> {"cmd":"hello","name":"AwesomeBot","gameToken":"dc7b39c0-b2ee-11e2-9e96-0800200c9a66","threshold":5}
+2013-05-30 16:58:29,160 to ???> {"error": "Can't find player or token invalid"}
+2013-05-30 16:58:40,268 from ???> {"cmd":"hello","name":"AwesomeBot","gameToken":"ee6cebc6-7620-4706-bd5f-b6d5a311cd6c","threshold":5}
+2013-05-30 16:58:40,268 to ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> {"msg": "Welcome back AwesomeBot.  Use 'mail' to check your messages.", "tick": 1}
+2013-05-30 16:58:42,250 from ???> {"cmd":"hello","name":"\u307b\u3093\u3068\u3070\u304bAI","gameToken":"505bea86-a6c1-462e-b26f-66db710793c0","threshold":4}
+2013-05-30 16:58:42,250 to 505bea86-a6c1-462e-b26f-66db710793c0> {"msg": "Welcome back \u307b\u3093\u3068\u3070\u304bAI.  Use 'mail' to check your messages.", "tick": 1}
+2013-05-30 16:58:42,254 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"mail"}
+2013-05-30 16:58:42,254 to 505bea86-a6c1-462e-b26f-66db710793c0> [{"msg": "Hello.  Here's your initial nanite", "x": -5, "nanite": "e2320b1e-29d2-423c-9b2c-6a17012ae302", "y": -7, "special": "initial"}, {"msg": "A new tick has arrived.", "nextTick": "2013-05-30 22:03:04.247964+00:00", "tick": 1, "special": "tick"}]
+2013-05-30 16:58:42,260 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"duplicate","nanite":"e2320b1e-29d2-423c-9b2c-6a17012ae302","dir":"N","times":1}
+2013-05-30 16:58:42,260 to 505bea86-a6c1-462e-b26f-66db710793c0> {"y": -6, "x": -5, "nanite": "c6b1690f-0bee-44b3-9172-6f272fb96ab7", "special": "duplicate", "oldNanite": "e2320b1e-29d2-423c-9b2c-6a17012ae302"}
+2013-05-30 16:58:42,264 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"listResources"}
+2013-05-30 16:58:42,265 to 505bea86-a6c1-462e-b26f-66db710793c0> {"error": "Command not known or not acceptable now: listResources"}
+2013-05-30 16:58:42,268 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"ready"}
+2013-05-30 16:58:42,269 to 505bea86-a6c1-462e-b26f-66db710793c0> {}
+2013-05-30 16:58:42,271 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"bye"}
+2013-05-30 16:58:42,271 to ???> {"special": "bye"}
+2013-05-30 16:58:47,880 from ???> {"cmd":"hello","name":"\u307b\u3093\u3068\u3070\u304bAI","gameToken":"505bea86-a6c1-462e-b26f-66db710793c0","threshold":4}
+2013-05-30 16:58:47,881 to 505bea86-a6c1-462e-b26f-66db710793c0> {"msg": "Welcome back \u307b\u3093\u3068\u3070\u304bAI.  Use 'mail' to check your messages.", "tick": 1}
+2013-05-30 16:58:48,282 from ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> {"cmd": "mail"}
+2013-05-30 16:58:48,282 to ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> [{"msg": "Hello.  Here's your initial nanite", "x": -8, "nanite": "a8ea6970-d47c-4321-85e2-5ef5926613f4", "y": -8, "special": "initial"}, {"msg": "A new tick has arrived.", "nextTick": "2013-05-30 22:03:04.247964+00:00", "tick": 1, "special": "tick"}]
+2013-05-30 16:58:52,965 from ???> {"cmd":"hello","name":"\u307b\u3093\u3068\u3070\u304bAI","gameToken":"505bea86-a6c1-462e-b26f-66db710793c0","threshold":4}
+2013-05-30 16:58:52,965 to 505bea86-a6c1-462e-b26f-66db710793c0> {"msg": "Welcome back \u307b\u3093\u3068\u3070\u304bAI.  Use 'mail' to check your messages.", "tick": 1}
+2013-05-30 16:58:54,333 from ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> {"cmd": "mail"}
+2013-05-30 16:58:54,333 to ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> []
+2013-05-30 16:58:55,396 from ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> {"cmd": "mine", "nanite": "a8ea6970-d47c-4321-85e2-5ef5926613f4", "times": 3}
+2013-05-30 16:58:55,396 to ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> {"threshold": "<", "nanite": "a8ea6970-d47c-4321-85e2-5ef5926613f4", "special": "mine"}
+2013-05-30 16:58:56,446 from ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> {"cmd": "move", "nanite": "a8ea6970-d47c-4321-85e2-5ef5926613f4", "dir": "W", "times": 3}
+2013-05-30 16:58:56,447 to ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> {"error": "Already moved this turn.  The command queue was altered anyway."}
+2013-05-30 16:58:57,493 from ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> {"cmd": "ready"}
+2013-05-30 16:58:57,494 losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x100a0ea50>
+2013-05-30 16:58:57,494 losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x100df1750>
+2013-05-30 16:58:57,494 losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x100a0eb10>
+2013-05-30 16:58:57,494 Below is the state of the current players.
+2013-05-30 16:58:57,494 A player named ほんとばかAI has gameToken 505bea86-a6c1-462e-b26f-66db710793c0 and globalUUID 824ecbf8-354a-4606-859a-8fceab2ff310.
+2013-05-30 16:58:57,494      They have 13 nanomaterial, 14 bandwidth, and 0 plutnoium
+2013-05-30 16:58:57,494      Let me tell you about their nanites:
+2013-05-30 16:58:57,494           They have a nanite called e2320b1e-29d2-423c-9b2c-6a17012ae302 located at -5, -7
+2013-05-30 16:58:57,494           They have a nanite called c6b1690f-0bee-44b3-9172-6f272fb96ab7 located at -5, -6
+2013-05-30 16:58:57,494 A player named AwesomeBot has gameToken ee6cebc6-7620-4706-bd5f-b6d5a311cd6c and globalUUID c12885ec-713b-4fa3-a7c2-c76990224b0b.
+2013-05-30 16:58:57,495      They have 14 nanomaterial, 18 bandwidth, and 0 plutnoium
+2013-05-30 16:58:57,495      Let me tell you about their nanites:
+2013-05-30 16:58:57,495           They have a nanite called a8ea6970-d47c-4321-85e2-5ef5926613f4 located at -9, -8
+2013-05-30 16:58:57,495 to ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> {}
+2013-05-30 16:58:58,336 from ???> {"cmd":"hello","name":"\u307b\u3093\u3068\u3070\u304bAI","gameToken":"505bea86-a6c1-462e-b26f-66db710793c0","threshold":4}
+2013-05-30 16:58:58,336 to 505bea86-a6c1-462e-b26f-66db710793c0> {"msg": "Welcome back \u307b\u3093\u3068\u3070\u304bAI.  Use 'mail' to check your messages.", "tick": 2}
+2013-05-30 16:58:58,339 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"mail"}
+2013-05-30 16:58:58,339 to 505bea86-a6c1-462e-b26f-66db710793c0> [{"msg": "A new tick has arrived.", "nextTick": "2013-05-30 22:03:57.493965+00:00", "tick": 2, "special": "tick"}]
+2013-05-30 16:58:58,346 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"duplicate","nanite":"e2320b1e-29d2-423c-9b2c-6a17012ae302","dir":"NE","times":1}
+2013-05-30 16:58:58,346 to 505bea86-a6c1-462e-b26f-66db710793c0> {"y": -6, "x": -4, "nanite": "01e39fc9-2e8f-46fa-8409-264c8da1adfe", "special": "duplicate", "oldNanite": "e2320b1e-29d2-423c-9b2c-6a17012ae302"}
+2013-05-30 16:58:58,350 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"mine","nanite":"c6b1690f-0bee-44b3-9172-6f272fb96ab7","times":3}
+2013-05-30 16:58:58,350 to 505bea86-a6c1-462e-b26f-66db710793c0> {"threshold": ">=", "nanite": "c6b1690f-0bee-44b3-9172-6f272fb96ab7", "special": "mine"}
+2013-05-30 16:58:58,355 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"listResources"}
+2013-05-30 16:58:58,355 to 505bea86-a6c1-462e-b26f-66db710793c0> {"error": "Command not known or not acceptable now: listResources"}
+2013-05-30 16:58:58,358 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"ready"}
+2013-05-30 16:58:58,358 to 505bea86-a6c1-462e-b26f-66db710793c0> {}
+2013-05-30 16:58:58,361 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"bye"}
+2013-05-30 16:58:58,361 to ???> {"special": "bye"}
+2013-05-30 16:59:03,526 from ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> {"cmd": "mail"}
+2013-05-30 16:59:03,526 to ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> [{"msg": "A new tick has arrived.", "nextTick": "2013-05-30 22:03:57.493965+00:00", "tick": 2, "special": "tick"}]
+2013-05-30 16:59:04,582 from ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> {"cmd": "ready"}
+2013-05-30 16:59:04,582 losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x100a0ea50>
+2013-05-30 16:59:04,582 losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x100df1750>
+2013-05-30 16:59:04,583 losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x100dead50>
+2013-05-30 16:59:04,583 losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x100a0eb10>
+2013-05-30 16:59:04,583 Below is the state of the current players.
+2013-05-30 16:59:04,583 A player named ほんとばかAI has gameToken 505bea86-a6c1-462e-b26f-66db710793c0 and globalUUID 824ecbf8-354a-4606-859a-8fceab2ff310.
+2013-05-30 16:59:04,583      They have 22 nanomaterial, 12 bandwidth, and 0 plutnoium
+2013-05-30 16:59:04,583      Let me tell you about their nanites:
+2013-05-30 16:59:04,583           They have a nanite called e2320b1e-29d2-423c-9b2c-6a17012ae302 located at -5, -7
+2013-05-30 16:59:04,583           They have a nanite called c6b1690f-0bee-44b3-9172-6f272fb96ab7 located at -5, -6
+2013-05-30 16:59:04,583           They have a nanite called 01e39fc9-2e8f-46fa-8409-264c8da1adfe located at -4, -6
+2013-05-30 16:59:04,583 A player named AwesomeBot has gameToken ee6cebc6-7620-4706-bd5f-b6d5a311cd6c and globalUUID c12885ec-713b-4fa3-a7c2-c76990224b0b.
+2013-05-30 16:59:04,584      They have 13 nanomaterial, 18 bandwidth, and 0 plutnoium
+2013-05-30 16:59:04,584      Let me tell you about their nanites:
+2013-05-30 16:59:04,584           They have a nanite called a8ea6970-d47c-4321-85e2-5ef5926613f4 located at -10, -8
+2013-05-30 16:59:04,584 to ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> {}
+2013-05-30 16:59:05,079 from ???> {"cmd":"hello","name":"\u307b\u3093\u3068\u3070\u304bAI","gameToken":"505bea86-a6c1-462e-b26f-66db710793c0","threshold":4}
+2013-05-30 16:59:05,079 to 505bea86-a6c1-462e-b26f-66db710793c0> {"msg": "Welcome back \u307b\u3093\u3068\u3070\u304bAI.  Use 'mail' to check your messages.", "tick": 3}
+2013-05-30 16:59:05,691 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"mail"}
+2013-05-30 16:59:05,691 to 505bea86-a6c1-462e-b26f-66db710793c0> [{"msg": "A new tick has arrived.", "nextTick": "2013-05-30 22:04:04.582751+00:00", "tick": 3, "special": "tick"}]
+2013-05-30 16:59:06,001 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"mine","nanite":"e2320b1e-29d2-423c-9b2c-6a17012ae302","times":3}
+2013-05-30 16:59:06,001 to 505bea86-a6c1-462e-b26f-66db710793c0> {"threshold": ">=", "nanite": "e2320b1e-29d2-423c-9b2c-6a17012ae302", "special": "mine"}
+2013-05-30 16:59:06,007 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"move","nanite":"c6b1690f-0bee-44b3-9172-6f272fb96ab7","times":1,"dir":"W"}
+2013-05-30 16:59:06,007 to 505bea86-a6c1-462e-b26f-66db710793c0> {"error": "Already moved this turn.  The command queue was altered anyway."}
+2013-05-30 16:59:06,013 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"mine","nanite":"01e39fc9-2e8f-46fa-8409-264c8da1adfe","times":3}
+2013-05-30 16:59:06,013 to 505bea86-a6c1-462e-b26f-66db710793c0> {"threshold": ">=", "nanite": "01e39fc9-2e8f-46fa-8409-264c8da1adfe", "special": "mine"}
+2013-05-30 16:59:06,017 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"listResources"}
+2013-05-30 16:59:06,017 to 505bea86-a6c1-462e-b26f-66db710793c0> {"error": "Command not known or not acceptable now: listResources"}
+2013-05-30 16:59:06,022 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"ready"}
+2013-05-30 16:59:06,022 to 505bea86-a6c1-462e-b26f-66db710793c0> {}
+2013-05-30 16:59:06,026 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"bye"}
+2013-05-30 16:59:06,026 to ???> {"special": "bye"}
+2013-05-30 16:59:10,628 from ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> {"cmd": "mail"}
+2013-05-30 16:59:10,628 to ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> [{"y": -8, "x": -9, "nanite": "a8ea6970-d47c-4321-85e2-5ef5926613f4", "special": "move"}, {"msg": "A new tick has arrived.", "nextTick": "2013-05-30 22:04:04.582751+00:00", "tick": 3, "special": "tick"}]
+2013-05-30 16:59:11,229 from ???> {"cmd":"hello","name":"\u307b\u3093\u3068\u3070\u304bAI","gameToken":"505bea86-a6c1-462e-b26f-66db710793c0","threshold":4}
+2013-05-30 16:59:11,229 to 505bea86-a6c1-462e-b26f-66db710793c0> {"msg": "Welcome back \u307b\u3093\u3068\u3070\u304bAI.  Use 'mail' to check your messages.", "tick": 3}
+2013-05-30 16:59:11,678 from ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> {"cmd": "ready"}
+2013-05-30 16:59:11,678 losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x100a0ea50>
+2013-05-30 16:59:11,678 losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x100df1750>
+2013-05-30 16:59:11,678 losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x100dead50>
+2013-05-30 16:59:11,679 losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x100a0eb10>
+2013-05-30 16:59:11,679 Below is the state of the current players.
+2013-05-30 16:59:11,679 A player named ほんとばかAI has gameToken 505bea86-a6c1-462e-b26f-66db710793c0 and globalUUID 824ecbf8-354a-4606-859a-8fceab2ff310.
+2013-05-30 16:59:11,679      They have 60 nanomaterial, 18 bandwidth, and 0 plutnoium
+2013-05-30 16:59:11,679      Let me tell you about their nanites:
+2013-05-30 16:59:11,679           They have a nanite called e2320b1e-29d2-423c-9b2c-6a17012ae302 located at -5, -7
+2013-05-30 16:59:11,679           They have a nanite called c6b1690f-0bee-44b3-9172-6f272fb96ab7 located at -5, -6
+2013-05-30 16:59:11,679           They have a nanite called 01e39fc9-2e8f-46fa-8409-264c8da1adfe located at -4, -6
+2013-05-30 16:59:11,679 A player named AwesomeBot has gameToken ee6cebc6-7620-4706-bd5f-b6d5a311cd6c and globalUUID c12885ec-713b-4fa3-a7c2-c76990224b0b.
+2013-05-30 16:59:11,679      They have 12 nanomaterial, 18 bandwidth, and 0 plutnoium
+2013-05-30 16:59:11,679      Let me tell you about their nanites:
+2013-05-30 16:59:11,680           They have a nanite called a8ea6970-d47c-4321-85e2-5ef5926613f4 located at -10, -8
+2013-05-30 16:59:11,680 to ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> {}
+2013-05-30 16:59:16,311 from ???> {"cmd":"hello","name":"\u307b\u3093\u3068\u3070\u304bAI","gameToken":"505bea86-a6c1-462e-b26f-66db710793c0","threshold":4}
+2013-05-30 16:59:16,312 to 505bea86-a6c1-462e-b26f-66db710793c0> {"msg": "Welcome back \u307b\u3093\u3068\u3070\u304bAI.  Use 'mail' to check your messages.", "tick": 4}
+2013-05-30 16:59:16,314 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"mail"}
+2013-05-30 16:59:16,314 to 505bea86-a6c1-462e-b26f-66db710793c0> [{"threshold": ">=", "nanite": "c6b1690f-0bee-44b3-9172-6f272fb96ab7", "special": "mine"}, {"msg": "A new tick has arrived.", "nextTick": "2013-05-30 22:04:11.678597+00:00", "tick": 4, "special": "tick"}]
+2013-05-30 16:59:16,317 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"mine","nanite":"e2320b1e-29d2-423c-9b2c-6a17012ae302","times":3}
+2013-05-30 16:59:16,317 to 505bea86-a6c1-462e-b26f-66db710793c0> {"error": "Already moved this turn.  The command queue was altered anyway."}
+2013-05-30 16:59:16,320 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"mine","nanite":"01e39fc9-2e8f-46fa-8409-264c8da1adfe","times":3}
+2013-05-30 16:59:16,320 to 505bea86-a6c1-462e-b26f-66db710793c0> {"error": "Already moved this turn.  The command queue was altered anyway."}
+2013-05-30 16:59:16,322 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"listResources"}
+2013-05-30 16:59:16,323 to 505bea86-a6c1-462e-b26f-66db710793c0> {"error": "Command not known or not acceptable now: listResources"}
+2013-05-30 16:59:16,325 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"ready"}
+2013-05-30 16:59:16,325 to 505bea86-a6c1-462e-b26f-66db710793c0> {}
+2013-05-30 16:59:16,328 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"bye"}
+2013-05-30 16:59:16,328 to ???> {"special": "bye"}
+2013-05-30 16:59:17,716 from ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> {"cmd": "mail"}
+2013-05-30 16:59:17,716 to ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> [{"y": -8, "x": -10, "nanite": "a8ea6970-d47c-4321-85e2-5ef5926613f4", "special": "move"}, {"msg": "A new tick has arrived.", "nextTick": "2013-05-30 22:04:11.678597+00:00", "tick": 4, "special": "tick"}]
+2013-05-30 16:59:18,765 from ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> {"cmd": "mine", "nanite": "a8ea6970-d47c-4321-85e2-5ef5926613f4", "times": 3}
+2013-05-30 16:59:18,766 to ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> {"threshold": ">=", "nanite": "a8ea6970-d47c-4321-85e2-5ef5926613f4", "special": "mine"}
+2013-05-30 16:59:19,812 from ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> {"cmd": "ready"}
+2013-05-30 16:59:19,812 losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x100a0ea50>
+2013-05-30 16:59:19,812 losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x100df1750>
+2013-05-30 16:59:19,812 losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x100dead50>
+2013-05-30 16:59:19,812 losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x100a0eb10>
+2013-05-30 16:59:19,813 Below is the state of the current players.
+2013-05-30 16:59:19,813 A player named ほんとばかAI has gameToken 505bea86-a6c1-462e-b26f-66db710793c0 and globalUUID 824ecbf8-354a-4606-859a-8fceab2ff310.
+2013-05-30 16:59:19,813      They have 69 nanomaterial, 19 bandwidth, and 1 plutnoium
+2013-05-30 16:59:19,813      Let me tell you about their nanites:
+2013-05-30 16:59:19,813           They have a nanite called e2320b1e-29d2-423c-9b2c-6a17012ae302 located at -5, -7
+2013-05-30 16:59:19,813           They have a nanite called c6b1690f-0bee-44b3-9172-6f272fb96ab7 located at -5, -6
+2013-05-30 16:59:19,813           They have a nanite called 01e39fc9-2e8f-46fa-8409-264c8da1adfe located at -4, -6
+2013-05-30 16:59:19,813 A player named AwesomeBot has gameToken ee6cebc6-7620-4706-bd5f-b6d5a311cd6c and globalUUID c12885ec-713b-4fa3-a7c2-c76990224b0b.
+2013-05-30 16:59:19,813      They have 11 nanomaterial, 37 bandwidth, and 0 plutnoium
+2013-05-30 16:59:19,813      Let me tell you about their nanites:
+2013-05-30 16:59:19,814           They have a nanite called a8ea6970-d47c-4321-85e2-5ef5926613f4 located at -10, -8
+2013-05-30 16:59:19,814 to ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> {}
+2013-05-30 16:59:21,676 from ???> {"cmd":"hello","name":"\u307b\u3093\u3068\u3070\u304bAI","gameToken":"505bea86-a6c1-462e-b26f-66db710793c0","threshold":4}
+2013-05-30 16:59:21,676 to 505bea86-a6c1-462e-b26f-66db710793c0> {"msg": "Welcome back \u307b\u3093\u3068\u3070\u304bAI.  Use 'mail' to check your messages.", "tick": 5}
+2013-05-30 16:59:21,679 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"mail"}
+2013-05-30 16:59:21,680 to 505bea86-a6c1-462e-b26f-66db710793c0> [{"threshold": "<", "nanite": "e2320b1e-29d2-423c-9b2c-6a17012ae302", "special": "mine"}, {"threshold": ">=", "nanite": "01e39fc9-2e8f-46fa-8409-264c8da1adfe", "special": "mine"}, {"msg": "A new tick has arrived.", "nextTick": "2013-05-30 22:04:19.812534+00:00", "tick": 5, "special": "tick"}]
+2013-05-30 16:59:21,684 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"move","nanite":"e2320b1e-29d2-423c-9b2c-6a17012ae302","times":1,"dir":"N"}
+2013-05-30 16:59:21,685 to 505bea86-a6c1-462e-b26f-66db710793c0> {"error": "Already moved this turn.  The command queue was altered anyway."}
+2013-05-30 16:59:21,687 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"mine","nanite":"c6b1690f-0bee-44b3-9172-6f272fb96ab7","times":3}
+2013-05-30 16:59:21,687 to 505bea86-a6c1-462e-b26f-66db710793c0> {"threshold": ">=", "nanite": "c6b1690f-0bee-44b3-9172-6f272fb96ab7", "special": "mine"}
+2013-05-30 16:59:21,691 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"listResources"}
+2013-05-30 16:59:21,691 to 505bea86-a6c1-462e-b26f-66db710793c0> {"error": "Command not known or not acceptable now: listResources"}
+2013-05-30 16:59:21,696 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"ready"}
+2013-05-30 16:59:21,696 to 505bea86-a6c1-462e-b26f-66db710793c0> {}
+2013-05-30 16:59:21,700 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"bye"}
+2013-05-30 16:59:21,700 to ???> {"special": "bye"}
+2013-05-30 16:59:25,864 from ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> {"cmd": "mail"}
+2013-05-30 16:59:25,865 to ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> [{"msg": "A new tick has arrived.", "nextTick": "2013-05-30 22:04:19.812534+00:00", "tick": 5, "special": "tick"}]
+2013-05-30 16:59:26,900 from ???> {"cmd":"hello","name":"\u307b\u3093\u3068\u3070\u304bAI","gameToken":"505bea86-a6c1-462e-b26f-66db710793c0","threshold":4}
+2013-05-30 16:59:26,900 to 505bea86-a6c1-462e-b26f-66db710793c0> {"msg": "Welcome back \u307b\u3093\u3068\u3070\u304bAI.  Use 'mail' to check your messages.", "tick": 5}
+2013-05-30 16:59:26,916 from ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> {"cmd": "ready"}
+2013-05-30 16:59:26,917 losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x100a0ea50>
+2013-05-30 16:59:26,917 losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x100df1750>
+2013-05-30 16:59:26,917 losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x100dead50>
+2013-05-30 16:59:26,917 losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x100a0eb10>
+2013-05-30 16:59:26,917 Below is the state of the current players.
+2013-05-30 16:59:26,917 A player named ほんとばかAI has gameToken 505bea86-a6c1-462e-b26f-66db710793c0 and globalUUID 824ecbf8-354a-4606-859a-8fceab2ff310.
+2013-05-30 16:59:26,917      They have 75 nanomaterial, 20 bandwidth, and 1 plutnoium
+2013-05-30 16:59:26,917      Let me tell you about their nanites:
+2013-05-30 16:59:26,918           They have a nanite called e2320b1e-29d2-423c-9b2c-6a17012ae302 located at -5, -7
+2013-05-30 16:59:26,918           They have a nanite called c6b1690f-0bee-44b3-9172-6f272fb96ab7 located at -5, -6
+2013-05-30 16:59:26,918           They have a nanite called 01e39fc9-2e8f-46fa-8409-264c8da1adfe located at -4, -6
+2013-05-30 16:59:26,918 A player named AwesomeBot has gameToken ee6cebc6-7620-4706-bd5f-b6d5a311cd6c and globalUUID c12885ec-713b-4fa3-a7c2-c76990224b0b.
+2013-05-30 16:59:26,918      They have 10 nanomaterial, 39 bandwidth, and 0 plutnoium
+2013-05-30 16:59:26,918      Let me tell you about their nanites:
+2013-05-30 16:59:26,918           They have a nanite called a8ea6970-d47c-4321-85e2-5ef5926613f4 located at -10, -8
+2013-05-30 16:59:26,918 to ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> {}
+2013-05-30 16:59:32,118 from ???> {"cmd":"hello","name":"\u307b\u3093\u3068\u3070\u304bAI","gameToken":"505bea86-a6c1-462e-b26f-66db710793c0","threshold":4}
+2013-05-30 16:59:32,118 to 505bea86-a6c1-462e-b26f-66db710793c0> {"msg": "Welcome back \u307b\u3093\u3068\u3070\u304bAI.  Use 'mail' to check your messages.", "tick": 6}
+2013-05-30 16:59:32,121 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"mail"}
+2013-05-30 16:59:32,121 to 505bea86-a6c1-462e-b26f-66db710793c0> [{"threshold": "<", "nanite": "e2320b1e-29d2-423c-9b2c-6a17012ae302", "special": "mine"}, {"threshold": ">=", "nanite": "01e39fc9-2e8f-46fa-8409-264c8da1adfe", "special": "mine"}, {"msg": "A new tick has arrived.", "nextTick": "2013-05-30 22:04:26.917077+00:00", "tick": 6, "special": "tick"}]
+2013-05-30 16:59:32,124 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"move","nanite":"e2320b1e-29d2-423c-9b2c-6a17012ae302","times":1,"dir":"N"}
+2013-05-30 16:59:32,125 to 505bea86-a6c1-462e-b26f-66db710793c0> {"error": "This tile is occupied."}
+2013-05-30 16:59:32,129 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"count","resource":"nanomaterial"}
+2013-05-30 16:59:32,129 to 505bea86-a6c1-462e-b26f-66db710793c0> {"count": 75.11180621865877}
+2013-05-30 16:59:32,132 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"mine","nanite":"c6b1690f-0bee-44b3-9172-6f272fb96ab7","times":3}
+2013-05-30 16:59:32,132 to 505bea86-a6c1-462e-b26f-66db710793c0> {"error": "Already moved this turn.  The command queue was altered anyway."}
+2013-05-30 16:59:32,142 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"listResources"}
+2013-05-30 16:59:32,142 to 505bea86-a6c1-462e-b26f-66db710793c0> {"error": "Command not known or not acceptable now: listResources"}
+2013-05-30 16:59:32,166 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"ready"}
+2013-05-30 16:59:32,166 to 505bea86-a6c1-462e-b26f-66db710793c0> {}
+2013-05-30 16:59:32,168 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"bye"}
+2013-05-30 16:59:32,169 to ???> {"special": "bye"}
+2013-05-30 16:59:32,962 from ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> {"cmd": "mail"}
+2013-05-30 16:59:32,962 to ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> [{"threshold": ">=", "nanite": "a8ea6970-d47c-4321-85e2-5ef5926613f4", "special": "mine"}, {"msg": "A new tick has arrived.", "nextTick": "2013-05-30 22:04:26.917077+00:00", "tick": 6, "special": "tick"}]
+2013-05-30 16:59:34,017 from ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> {"cmd": "ready"}
+2013-05-30 16:59:34,017 losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x100a0ea50>
+2013-05-30 16:59:34,017 losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x100df1750>
+2013-05-30 16:59:34,017 losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x100dead50>
+2013-05-30 16:59:34,017 losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x100a0eb10>
+2013-05-30 16:59:34,017 Below is the state of the current players.
+2013-05-30 16:59:34,017 A player named ほんとばかAI has gameToken 505bea86-a6c1-462e-b26f-66db710793c0 and globalUUID 824ecbf8-354a-4606-859a-8fceab2ff310.
+2013-05-30 16:59:34,018      They have 72 nanomaterial, 17 bandwidth, and 1 plutnoium
+2013-05-30 16:59:34,018      Let me tell you about their nanites:
+2013-05-30 16:59:34,018           They have a nanite called e2320b1e-29d2-423c-9b2c-6a17012ae302 located at -5, -7
+2013-05-30 16:59:34,018           They have a nanite called c6b1690f-0bee-44b3-9172-6f272fb96ab7 located at -5, -6
+2013-05-30 16:59:34,018           They have a nanite called 01e39fc9-2e8f-46fa-8409-264c8da1adfe located at -4, -6
+2013-05-30 16:59:34,018 A player named AwesomeBot has gameToken ee6cebc6-7620-4706-bd5f-b6d5a311cd6c and globalUUID c12885ec-713b-4fa3-a7c2-c76990224b0b.
+2013-05-30 16:59:34,018      They have 9 nanomaterial, 39 bandwidth, and 0 plutnoium
+2013-05-30 16:59:34,018      Let me tell you about their nanites:
+2013-05-30 16:59:34,018           They have a nanite called a8ea6970-d47c-4321-85e2-5ef5926613f4 located at -10, -8
+2013-05-30 16:59:34,018 to ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> {}
+2013-05-30 16:59:38,870 from ???> {"cmd":"hello","name":"\u307b\u3093\u3068\u3070\u304bAI","gameToken":"505bea86-a6c1-462e-b26f-66db710793c0","threshold":4}
+2013-05-30 16:59:38,870 to 505bea86-a6c1-462e-b26f-66db710793c0> {"msg": "Welcome back \u307b\u3093\u3068\u3070\u304bAI.  Use 'mail' to check your messages.", "tick": 7}
+2013-05-30 16:59:39,484 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"mail"}
+2013-05-30 16:59:39,484 to 505bea86-a6c1-462e-b26f-66db710793c0> [{"threshold": "<", "nanite": "c6b1690f-0bee-44b3-9172-6f272fb96ab7", "special": "mine"}, {"threshold": ">=", "nanite": "01e39fc9-2e8f-46fa-8409-264c8da1adfe", "special": "mine"}, {"msg": "A new tick has arrived.", "nextTick": "2013-05-30 22:04:34.017345+00:00", "tick": 7, "special": "tick"}]
+2013-05-30 16:59:40,071 from ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> {"cmd": "mail"}
+2013-05-30 16:59:40,071 to ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> [{"threshold": "<", "nanite": "a8ea6970-d47c-4321-85e2-5ef5926613f4", "special": "mine"}, {"msg": "A new tick has arrived.", "nextTick": "2013-05-30 22:04:34.017345+00:00", "tick": 7, "special": "tick"}]
+2013-05-30 16:59:40,099 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"move","nanite":"c6b1690f-0bee-44b3-9172-6f272fb96ab7","times":1,"dir":"N"}
+2013-05-30 16:59:40,099 to 505bea86-a6c1-462e-b26f-66db710793c0> {"error": "Already moved this turn.  The command queue was altered anyway."}
+2013-05-30 16:59:40,711 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"mine","nanite":"e2320b1e-29d2-423c-9b2c-6a17012ae302","times":3}
+2013-05-30 16:59:40,711 to 505bea86-a6c1-462e-b26f-66db710793c0> {"threshold": "<", "nanite": "e2320b1e-29d2-423c-9b2c-6a17012ae302", "special": "mine"}
+2013-05-30 16:59:40,715 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"listResources"}
+2013-05-30 16:59:40,715 to 505bea86-a6c1-462e-b26f-66db710793c0> {"error": "Command not known or not acceptable now: listResources"}
+2013-05-30 16:59:40,718 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"ready"}
+2013-05-30 16:59:40,718 to 505bea86-a6c1-462e-b26f-66db710793c0> {}
+2013-05-30 16:59:40,721 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"bye"}
+2013-05-30 16:59:40,721 to ???> {"special": "bye"}
+2013-05-30 16:59:41,133 from ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> {"cmd": "move", "nanite": "a8ea6970-d47c-4321-85e2-5ef5926613f4", "dir": "N", "times": 3}
+2013-05-30 16:59:41,133 to ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> {"y": -7, "x": -10, "nanite": "a8ea6970-d47c-4321-85e2-5ef5926613f4", "special": "move"}
+2013-05-30 16:59:42,184 from ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> {"cmd": "ready"}
+2013-05-30 16:59:42,184 losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x100a0ea50>
+2013-05-30 16:59:42,184 losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x100df1750>
+2013-05-30 16:59:42,184 losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x100dead50>
+2013-05-30 16:59:42,185 losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x100a0eb10>
+2013-05-30 16:59:42,185 Below is the state of the current players.
+2013-05-30 16:59:42,185 A player named ほんとばかAI has gameToken 505bea86-a6c1-462e-b26f-66db710793c0 and globalUUID 824ecbf8-354a-4606-859a-8fceab2ff310.
+2013-05-30 16:59:42,185      They have 70 nanomaterial, 16 bandwidth, and 1 plutnoium
+2013-05-30 16:59:42,185      Let me tell you about their nanites:
+2013-05-30 16:59:42,185           They have a nanite called e2320b1e-29d2-423c-9b2c-6a17012ae302 located at -5, -7
+2013-05-30 16:59:42,185           They have a nanite called c6b1690f-0bee-44b3-9172-6f272fb96ab7 located at -5, -6
+2013-05-30 16:59:42,185           They have a nanite called 01e39fc9-2e8f-46fa-8409-264c8da1adfe located at -4, -6
+2013-05-30 16:59:42,185 A player named AwesomeBot has gameToken ee6cebc6-7620-4706-bd5f-b6d5a311cd6c and globalUUID c12885ec-713b-4fa3-a7c2-c76990224b0b.
+2013-05-30 16:59:42,185      They have 8 nanomaterial, 38 bandwidth, and 0 plutnoium
+2013-05-30 16:59:42,186      Let me tell you about their nanites:
+2013-05-30 16:59:42,186           They have a nanite called a8ea6970-d47c-4321-85e2-5ef5926613f4 located at -10, -6
+2013-05-30 16:59:42,186 to ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> {}
+2013-05-30 16:59:45,951 from ???> {"cmd":"hello","name":"\u307b\u3093\u3068\u3070\u304bAI","gameToken":"505bea86-a6c1-462e-b26f-66db710793c0","threshold":4}
+2013-05-30 16:59:45,952 to 505bea86-a6c1-462e-b26f-66db710793c0> {"msg": "Welcome back \u307b\u3093\u3068\u3070\u304bAI.  Use 'mail' to check your messages.", "tick": 8}
+2013-05-30 16:59:45,958 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"mail"}
+2013-05-30 16:59:45,958 to 505bea86-a6c1-462e-b26f-66db710793c0> [{"threshold": "<", "nanite": "c6b1690f-0bee-44b3-9172-6f272fb96ab7", "special": "mine"}, {"msg": "A new tick has arrived.", "nextTick": "2013-05-30 22:04:42.184631+00:00", "tick": 8, "special": "tick"}]
+2013-05-30 16:59:45,964 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"move","nanite":"c6b1690f-0bee-44b3-9172-6f272fb96ab7","times":1,"dir":"N"}
+2013-05-30 16:59:45,965 to 505bea86-a6c1-462e-b26f-66db710793c0> {"y": -5, "x": -5, "nanite": "c6b1690f-0bee-44b3-9172-6f272fb96ab7", "special": "move"}
+2013-05-30 16:59:45,967 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"count","resource":"bandwidth"}
+2013-05-30 16:59:45,968 to 505bea86-a6c1-462e-b26f-66db710793c0> {"count": 15.383379457207088}
+2013-05-30 16:59:45,971 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"move","nanite":"e2320b1e-29d2-423c-9b2c-6a17012ae302","times":1,"dir":"W"}
+2013-05-30 16:59:45,971 to 505bea86-a6c1-462e-b26f-66db710793c0> {"error": "Already moved this turn.  The command queue was altered anyway."}
+2013-05-30 16:59:45,975 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"duplicate","nanite":"01e39fc9-2e8f-46fa-8409-264c8da1adfe","dir":"N","times":1}
+2013-05-30 16:59:45,975 to 505bea86-a6c1-462e-b26f-66db710793c0> {"y": -5, "x": -4, "nanite": "b73eee05-5885-49ed-82db-32153db0cbc3", "special": "duplicate", "oldNanite": "01e39fc9-2e8f-46fa-8409-264c8da1adfe"}
+2013-05-30 16:59:45,981 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"listResources"}
+2013-05-30 16:59:45,981 to 505bea86-a6c1-462e-b26f-66db710793c0> {"error": "Command not known or not acceptable now: listResources"}
+2013-05-30 16:59:45,987 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"ready"}
+2013-05-30 16:59:45,987 to 505bea86-a6c1-462e-b26f-66db710793c0> {}
+2013-05-30 16:59:45,992 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"bye"}
+2013-05-30 16:59:45,992 to ???> {"special": "bye"}
+2013-05-30 16:59:48,235 from ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> {"cmd": "mail"}
+2013-05-30 16:59:48,235 to ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> [{"msg": "A new tick has arrived.", "nextTick": "2013-05-30 22:04:42.184631+00:00", "tick": 8, "special": "tick"}]
+2013-05-30 16:59:49,284 from ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> {"cmd": "ready"}
+2013-05-30 16:59:49,284 losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x100a0ea50>
+2013-05-30 16:59:49,284 losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x100df1750>
+2013-05-30 16:59:49,284 losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x100dead50>
+2013-05-30 16:59:49,284 losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x100df9410>
+2013-05-30 16:59:49,285 losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x100a0eb10>
+2013-05-30 16:59:49,285 Below is the state of the current players.
+2013-05-30 16:59:49,285 A player named ほんとばかAI has gameToken 505bea86-a6c1-462e-b26f-66db710793c0 and globalUUID 824ecbf8-354a-4606-859a-8fceab2ff310.
+2013-05-30 16:59:49,285      They have 66 nanomaterial, 12 bandwidth, and 1 plutnoium
+2013-05-30 16:59:49,285      Let me tell you about their nanites:
+2013-05-30 16:59:49,285           They have a nanite called e2320b1e-29d2-423c-9b2c-6a17012ae302 located at -5, -7
+2013-05-30 16:59:49,285           They have a nanite called c6b1690f-0bee-44b3-9172-6f272fb96ab7 located at -5, -5
+2013-05-30 16:59:49,285           They have a nanite called 01e39fc9-2e8f-46fa-8409-264c8da1adfe located at -4, -6
+2013-05-30 16:59:49,285           They have a nanite called b73eee05-5885-49ed-82db-32153db0cbc3 located at -4, -5
+2013-05-30 16:59:49,285 A player named AwesomeBot has gameToken ee6cebc6-7620-4706-bd5f-b6d5a311cd6c and globalUUID c12885ec-713b-4fa3-a7c2-c76990224b0b.
+2013-05-30 16:59:49,286      They have 7 nanomaterial, 38 bandwidth, and 0 plutnoium
+2013-05-30 16:59:49,286      Let me tell you about their nanites:
+2013-05-30 16:59:49,286           They have a nanite called a8ea6970-d47c-4321-85e2-5ef5926613f4 located at -10, -5
+2013-05-30 16:59:49,286 to ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> {}
+2013-05-30 16:59:51,077 from ???> {"cmd":"hello","name":"\u307b\u3093\u3068\u3070\u304bAI","gameToken":"505bea86-a6c1-462e-b26f-66db710793c0","threshold":4}
+2013-05-30 16:59:51,077 to 505bea86-a6c1-462e-b26f-66db710793c0> {"msg": "Welcome back \u307b\u3093\u3068\u3070\u304bAI.  Use 'mail' to check your messages.", "tick": 9}
+2013-05-30 16:59:51,082 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"mail"}
+2013-05-30 16:59:51,082 to 505bea86-a6c1-462e-b26f-66db710793c0> [{"threshold": "<", "nanite": "e2320b1e-29d2-423c-9b2c-6a17012ae302", "special": "mine"}, {"msg": "A new tick has arrived.", "nextTick": "2013-05-30 22:04:49.284575+00:00", "tick": 9, "special": "tick"}]
+2013-05-30 16:59:51,087 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"move","nanite":"e2320b1e-29d2-423c-9b2c-6a17012ae302","times":1,"dir":"E"}
+2013-05-30 16:59:51,087 to 505bea86-a6c1-462e-b26f-66db710793c0> {"y": -7, "x": -4, "nanite": "e2320b1e-29d2-423c-9b2c-6a17012ae302", "special": "move"}
+2013-05-30 16:59:51,090 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"mine","nanite":"c6b1690f-0bee-44b3-9172-6f272fb96ab7","times":3}
+2013-05-30 16:59:51,090 to 505bea86-a6c1-462e-b26f-66db710793c0> {"threshold": ">=", "nanite": "c6b1690f-0bee-44b3-9172-6f272fb96ab7", "special": "mine"}
+2013-05-30 16:59:51,094 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"mine","nanite":"01e39fc9-2e8f-46fa-8409-264c8da1adfe","times":3}
+2013-05-30 16:59:51,094 to 505bea86-a6c1-462e-b26f-66db710793c0> {"threshold": "<", "nanite": "01e39fc9-2e8f-46fa-8409-264c8da1adfe", "special": "mine"}
+2013-05-30 16:59:51,097 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"mine","nanite":"b73eee05-5885-49ed-82db-32153db0cbc3","times":3}
+2013-05-30 16:59:51,098 to 505bea86-a6c1-462e-b26f-66db710793c0> {"threshold": ">=", "nanite": "b73eee05-5885-49ed-82db-32153db0cbc3", "special": "mine"}
+2013-05-30 16:59:51,100 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"listResources"}
+2013-05-30 16:59:51,100 to 505bea86-a6c1-462e-b26f-66db710793c0> {"error": "Command not known or not acceptable now: listResources"}
+2013-05-30 16:59:51,103 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"ready"}
+2013-05-30 16:59:51,103 to 505bea86-a6c1-462e-b26f-66db710793c0> {}
+2013-05-30 16:59:51,105 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"bye"}
+2013-05-30 16:59:51,105 to ???> {"special": "bye"}
+2013-05-30 16:59:55,330 from ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> {"cmd": "mail"}
+2013-05-30 16:59:55,331 to ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> [{"y": -6, "x": -10, "nanite": "a8ea6970-d47c-4321-85e2-5ef5926613f4", "special": "move"}, {"msg": "A new tick has arrived.", "nextTick": "2013-05-30 22:04:49.284575+00:00", "tick": 9, "special": "tick"}]
+2013-05-30 16:59:56,286 from ???> {"cmd":"hello","name":"\u307b\u3093\u3068\u3070\u304bAI","gameToken":"505bea86-a6c1-462e-b26f-66db710793c0","threshold":4}
+2013-05-30 16:59:56,286 to 505bea86-a6c1-462e-b26f-66db710793c0> {"msg": "Welcome back \u307b\u3093\u3068\u3070\u304bAI.  Use 'mail' to check your messages.", "tick": 9}
+2013-05-30 16:59:56,384 from ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> {"cmd": "ready"}
+2013-05-30 16:59:56,385 losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x100a0ea50>
+2013-05-30 16:59:56,385 losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x100df1750>
+2013-05-30 16:59:56,385 losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x100dead50>
+2013-05-30 16:59:56,385 losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x100df9410>
+2013-05-30 16:59:56,385 losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x100a0eb10>
+2013-05-30 16:59:56,385 Below is the state of the current players.
+2013-05-30 16:59:56,385 A player named ほんとばかAI has gameToken 505bea86-a6c1-462e-b26f-66db710793c0 and globalUUID 824ecbf8-354a-4606-859a-8fceab2ff310.
+2013-05-30 16:59:56,385      They have 94 nanomaterial, 30 bandwidth, and 1 plutnoium
+2013-05-30 16:59:56,386      Let me tell you about their nanites:
+2013-05-30 16:59:56,386           They have a nanite called e2320b1e-29d2-423c-9b2c-6a17012ae302 located at -4, -7
+2013-05-30 16:59:56,386           They have a nanite called c6b1690f-0bee-44b3-9172-6f272fb96ab7 located at -5, -5
+2013-05-30 16:59:56,386           They have a nanite called 01e39fc9-2e8f-46fa-8409-264c8da1adfe located at -4, -6
+2013-05-30 16:59:56,386           They have a nanite called b73eee05-5885-49ed-82db-32153db0cbc3 located at -4, -5
+2013-05-30 16:59:56,386 A player named AwesomeBot has gameToken ee6cebc6-7620-4706-bd5f-b6d5a311cd6c and globalUUID c12885ec-713b-4fa3-a7c2-c76990224b0b.
+2013-05-30 16:59:56,386      They have 6 nanomaterial, 38 bandwidth, and 0 plutnoium
+2013-05-30 16:59:56,386      Let me tell you about their nanites:
+2013-05-30 16:59:56,386           They have a nanite called a8ea6970-d47c-4321-85e2-5ef5926613f4 located at -10, -5
+2013-05-30 16:59:56,386 to ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> {}
+2013-05-30 17:00:02,430 from ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> {"cmd": "mail"}
+2013-05-30 17:00:02,430 to ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> [{"y": -5, "x": -10, "nanite": "a8ea6970-d47c-4321-85e2-5ef5926613f4", "special": "move"}, {"msg": "A new tick has arrived.", "nextTick": "2013-05-30 22:04:56.385127+00:00", "tick": 10, "special": "tick"}]
+2013-05-30 17:00:02,530 from ???> {"cmd":"hello","name":"\u307b\u3093\u3068\u3070\u304bAI","gameToken":"505bea86-a6c1-462e-b26f-66db710793c0","threshold":4}
+2013-05-30 17:00:02,530 to 505bea86-a6c1-462e-b26f-66db710793c0> {"msg": "Welcome back \u307b\u3093\u3068\u3070\u304bAI.  Use 'mail' to check your messages.", "tick": 10}
+2013-05-30 17:00:02,533 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"mail"}
+2013-05-30 17:00:02,533 to 505bea86-a6c1-462e-b26f-66db710793c0> [{"msg": "A new tick has arrived.", "nextTick": "2013-05-30 22:04:56.385127+00:00", "tick": 10, "special": "tick"}]
+2013-05-30 17:00:02,536 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"mine","nanite":"c6b1690f-0bee-44b3-9172-6f272fb96ab7","times":3}
+2013-05-30 17:00:02,536 to 505bea86-a6c1-462e-b26f-66db710793c0> {"error": "Already moved this turn.  The command queue was altered anyway."}
+2013-05-30 17:00:02,540 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"mine","nanite":"e2320b1e-29d2-423c-9b2c-6a17012ae302","times":3}
+2013-05-30 17:00:02,540 to 505bea86-a6c1-462e-b26f-66db710793c0> {"threshold": ">=", "nanite": "e2320b1e-29d2-423c-9b2c-6a17012ae302", "special": "mine"}
+2013-05-30 17:00:02,546 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"mine","nanite":"01e39fc9-2e8f-46fa-8409-264c8da1adfe","times":3}
+2013-05-30 17:00:02,546 to 505bea86-a6c1-462e-b26f-66db710793c0> {"error": "Already moved this turn.  The command queue was altered anyway."}
+2013-05-30 17:00:02,549 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"mine","nanite":"b73eee05-5885-49ed-82db-32153db0cbc3","times":3}
+2013-05-30 17:00:02,549 to 505bea86-a6c1-462e-b26f-66db710793c0> {"error": "Already moved this turn.  The command queue was altered anyway."}
+2013-05-30 17:00:02,559 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"listResources"}
+2013-05-30 17:00:02,559 to 505bea86-a6c1-462e-b26f-66db710793c0> {"error": "Command not known or not acceptable now: listResources"}
+2013-05-30 17:00:02,562 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"ready"}
+2013-05-30 17:00:02,562 to 505bea86-a6c1-462e-b26f-66db710793c0> {}
+2013-05-30 17:00:02,566 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"bye"}
+2013-05-30 17:00:02,566 to ???> {"special": "bye"}
+2013-05-30 17:00:03,501 from ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> {"cmd": "mine", "nanite": "a8ea6970-d47c-4321-85e2-5ef5926613f4", "times": 3}
+2013-05-30 17:00:03,502 to ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> {"threshold": ">=", "nanite": "a8ea6970-d47c-4321-85e2-5ef5926613f4", "special": "mine"}
+2013-05-30 17:00:04,555 from ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> {"cmd": "ready"}
+2013-05-30 17:00:04,555 losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x100a0ea50>
+2013-05-30 17:00:04,555 losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x100df1750>
+2013-05-30 17:00:04,555 losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x100dead50>
+2013-05-30 17:00:04,555 losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x100df9410>
+2013-05-30 17:00:04,556 losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x100a0eb10>
+2013-05-30 17:00:04,556 Below is the state of the current players.
+2013-05-30 17:00:04,556 A player named ほんとばかAI has gameToken 505bea86-a6c1-462e-b26f-66db710793c0 and globalUUID 824ecbf8-354a-4606-859a-8fceab2ff310.
+2013-05-30 17:00:04,556      They have 104 nanomaterial, 41 bandwidth, and 6 plutnoium
+2013-05-30 17:00:04,556      Let me tell you about their nanites:
+2013-05-30 17:00:04,556           They have a nanite called e2320b1e-29d2-423c-9b2c-6a17012ae302 located at -4, -7
+2013-05-30 17:00:04,556           They have a nanite called c6b1690f-0bee-44b3-9172-6f272fb96ab7 located at -5, -5
+2013-05-30 17:00:04,556           They have a nanite called 01e39fc9-2e8f-46fa-8409-264c8da1adfe located at -4, -6
+2013-05-30 17:00:04,556           They have a nanite called b73eee05-5885-49ed-82db-32153db0cbc3 located at -4, -5
+2013-05-30 17:00:04,556 A player named AwesomeBot has gameToken ee6cebc6-7620-4706-bd5f-b6d5a311cd6c and globalUUID c12885ec-713b-4fa3-a7c2-c76990224b0b.
+2013-05-30 17:00:04,557      They have 5 nanomaterial, 49 bandwidth, and 0 plutnoium
+2013-05-30 17:00:04,557      Let me tell you about their nanites:
+2013-05-30 17:00:04,557           They have a nanite called a8ea6970-d47c-4321-85e2-5ef5926613f4 located at -10, -5
+2013-05-30 17:00:04,557 to ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> {}
+2013-05-30 17:00:08,060 from ???> {"cmd":"hello","name":"\u307b\u3093\u3068\u3070\u304bAI","gameToken":"505bea86-a6c1-462e-b26f-66db710793c0","threshold":4}
+2013-05-30 17:00:08,060 to 505bea86-a6c1-462e-b26f-66db710793c0> {"msg": "Welcome back \u307b\u3093\u3068\u3070\u304bAI.  Use 'mail' to check your messages.", "tick": 11}
+2013-05-30 17:00:08,063 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"mail"}
+2013-05-30 17:00:08,063 to 505bea86-a6c1-462e-b26f-66db710793c0> [{"threshold": ">=", "nanite": "c6b1690f-0bee-44b3-9172-6f272fb96ab7", "special": "mine"}, {"threshold": "<", "nanite": "01e39fc9-2e8f-46fa-8409-264c8da1adfe", "special": "mine"}, {"threshold": ">=", "nanite": "b73eee05-5885-49ed-82db-32153db0cbc3", "special": "mine"}, {"msg": "A new tick has arrived.", "nextTick": "2013-05-30 22:05:04.555381+00:00", "tick": 11, "special": "tick"}]
+2013-05-30 17:00:08,068 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"move","nanite":"01e39fc9-2e8f-46fa-8409-264c8da1adfe","times":1,"dir":"E"}
+2013-05-30 17:00:08,068 to 505bea86-a6c1-462e-b26f-66db710793c0> {"error": "Already moved this turn.  The command queue was altered anyway."}
+2013-05-30 17:00:08,071 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"move","nanite":"e2320b1e-29d2-423c-9b2c-6a17012ae302","times":1,"dir":"W"}
+2013-05-30 17:00:08,071 to 505bea86-a6c1-462e-b26f-66db710793c0> {"error": "Already moved this turn.  The command queue was altered anyway."}
+2013-05-30 17:00:08,074 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"listResources"}
+2013-05-30 17:00:08,074 to 505bea86-a6c1-462e-b26f-66db710793c0> {"error": "Command not known or not acceptable now: listResources"}
+2013-05-30 17:00:08,079 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"ready"}
+2013-05-30 17:00:08,079 to 505bea86-a6c1-462e-b26f-66db710793c0> {}
+2013-05-30 17:00:08,081 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"bye"}
+2013-05-30 17:00:08,081 to ???> {"special": "bye"}
+2013-05-30 17:00:10,604 from ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> {"cmd": "mail"}
+2013-05-30 17:00:10,604 to ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> [{"msg": "A new tick has arrived.", "nextTick": "2013-05-30 22:05:04.555381+00:00", "tick": 11, "special": "tick"}]
+2013-05-30 17:00:11,668 from ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> {"cmd": "ready"}
+2013-05-30 17:00:11,669 losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x100a0ea50>
+2013-05-30 17:00:11,669 losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x100df1750>
+2013-05-30 17:00:11,669 losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x100dead50>
+2013-05-30 17:00:11,669 losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x100df9410>
+2013-05-30 17:00:11,669 losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x100a0eb10>
+2013-05-30 17:00:11,669 Below is the state of the current players.
+2013-05-30 17:00:11,669 A player named ほんとばかAI has gameToken 505bea86-a6c1-462e-b26f-66db710793c0 and globalUUID 824ecbf8-354a-4606-859a-8fceab2ff310.
+2013-05-30 17:00:11,670      They have 104 nanomaterial, 43 bandwidth, and 6 plutnoium
+2013-05-30 17:00:11,670      Let me tell you about their nanites:
+2013-05-30 17:00:11,670           They have a nanite called e2320b1e-29d2-423c-9b2c-6a17012ae302 located at -4, -7
+2013-05-30 17:00:11,670           They have a nanite called c6b1690f-0bee-44b3-9172-6f272fb96ab7 located at -5, -5
+2013-05-30 17:00:11,670           They have a nanite called 01e39fc9-2e8f-46fa-8409-264c8da1adfe located at -4, -6
+2013-05-30 17:00:11,670           They have a nanite called b73eee05-5885-49ed-82db-32153db0cbc3 located at -4, -5
+2013-05-30 17:00:11,670 A player named AwesomeBot has gameToken ee6cebc6-7620-4706-bd5f-b6d5a311cd6c and globalUUID c12885ec-713b-4fa3-a7c2-c76990224b0b.
+2013-05-30 17:00:11,670      They have 4 nanomaterial, 50 bandwidth, and 0 plutnoium
+2013-05-30 17:00:11,670      Let me tell you about their nanites:
+2013-05-30 17:00:11,670           They have a nanite called a8ea6970-d47c-4321-85e2-5ef5926613f4 located at -10, -5
+2013-05-30 17:00:11,670 to ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> {}
+2013-05-30 17:00:13,286 from ???> {"cmd":"hello","name":"\u307b\u3093\u3068\u3070\u304bAI","gameToken":"505bea86-a6c1-462e-b26f-66db710793c0","threshold":4}
+2013-05-30 17:00:13,286 to 505bea86-a6c1-462e-b26f-66db710793c0> {"msg": "Welcome back \u307b\u3093\u3068\u3070\u304bAI.  Use 'mail' to check your messages.", "tick": 12}
+2013-05-30 17:00:13,294 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"mail"}
+2013-05-30 17:00:13,295 to 505bea86-a6c1-462e-b26f-66db710793c0> [{"threshold": ">=", "nanite": "e2320b1e-29d2-423c-9b2c-6a17012ae302", "special": "mine"}, {"threshold": "<", "nanite": "c6b1690f-0bee-44b3-9172-6f272fb96ab7", "special": "mine"}, {"threshold": "<", "nanite": "01e39fc9-2e8f-46fa-8409-264c8da1adfe", "special": "mine"}, {"threshold": ">=", "nanite": "b73eee05-5885-49ed-82db-32153db0cbc3", "special": "mine"}, {"msg": "A new tick has arrived.", "nextTick": "2013-05-30 22:05:11.669166+00:00", "tick": 12, "special": "tick"}]
+2013-05-30 17:00:13,302 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"move","nanite":"c6b1690f-0bee-44b3-9172-6f272fb96ab7","times":1,"dir":"N"}
+2013-05-30 17:00:13,303 to 505bea86-a6c1-462e-b26f-66db710793c0> {"error": "Already moved this turn.  The command queue was altered anyway."}
+2013-05-30 17:00:13,309 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"move","nanite":"01e39fc9-2e8f-46fa-8409-264c8da1adfe","times":1,"dir":"N"}
+2013-05-30 17:00:13,309 to 505bea86-a6c1-462e-b26f-66db710793c0> {"error": "This tile is occupied."}
+2013-05-30 17:00:13,314 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"count","resource":"bandwidth"}
+2013-05-30 17:00:13,314 to 505bea86-a6c1-462e-b26f-66db710793c0> {"count": 41.21058586280159}
+2013-05-30 17:00:13,320 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"listResources"}
+2013-05-30 17:00:13,321 to 505bea86-a6c1-462e-b26f-66db710793c0> {"error": "Command not known or not acceptable now: listResources"}
+2013-05-30 17:00:13,326 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"ready"}
+2013-05-30 17:00:13,326 to 505bea86-a6c1-462e-b26f-66db710793c0> {}
+2013-05-30 17:00:13,332 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"bye"}
+2013-05-30 17:00:13,332 to ???> {"special": "bye"}
+2013-05-30 17:00:17,720 from ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> {"cmd": "mail"}
+2013-05-30 17:00:17,720 to ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> [{"threshold": "<", "nanite": "a8ea6970-d47c-4321-85e2-5ef5926613f4", "special": "mine"}, {"msg": "A new tick has arrived.", "nextTick": "2013-05-30 22:05:11.669166+00:00", "tick": 12, "special": "tick"}]
+2013-05-30 17:00:18,790 from ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> {"cmd": "move", "nanite": "a8ea6970-d47c-4321-85e2-5ef5926613f4", "dir": "S", "times": 3}
+2013-05-30 17:00:18,790 to ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> {"error": "Already moved this turn.  The command queue was altered anyway."}
+2013-05-30 17:00:19,551 from ???> {"cmd":"hello","name":"\u307b\u3093\u3068\u3070\u304bAI","gameToken":"505bea86-a6c1-462e-b26f-66db710793c0","threshold":4}
+2013-05-30 17:00:19,551 to 505bea86-a6c1-462e-b26f-66db710793c0> {"msg": "Welcome back \u307b\u3093\u3068\u3070\u304bAI.  Use 'mail' to check your messages.", "tick": 12}
+2013-05-30 17:00:19,852 from ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> {"cmd": "ready"}
+2013-05-30 17:00:19,853 losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x100a0ea50>
+2013-05-30 17:00:19,853 losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x100df1750>
+2013-05-30 17:00:19,853 losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x100dead50>
+2013-05-30 17:00:19,853 losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x100df9410>
+2013-05-30 17:00:19,853 losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x100a0eb10>
+2013-05-30 17:00:19,853 Below is the state of the current players.
+2013-05-30 17:00:19,853 A player named ほんとばかAI has gameToken 505bea86-a6c1-462e-b26f-66db710793c0 and globalUUID 824ecbf8-354a-4606-859a-8fceab2ff310.
+2013-05-30 17:00:19,853      They have 100 nanomaterial, 40 bandwidth, and 6 plutnoium
+2013-05-30 17:00:19,853      Let me tell you about their nanites:
+2013-05-30 17:00:19,854           They have a nanite called e2320b1e-29d2-423c-9b2c-6a17012ae302 located at -4, -7
+2013-05-30 17:00:19,854           They have a nanite called c6b1690f-0bee-44b3-9172-6f272fb96ab7 located at -5, -5
+2013-05-30 17:00:19,854           They have a nanite called 01e39fc9-2e8f-46fa-8409-264c8da1adfe located at -4, -6
+2013-05-30 17:00:19,854           They have a nanite called b73eee05-5885-49ed-82db-32153db0cbc3 located at -4, -5
+2013-05-30 17:00:19,854 A player named AwesomeBot has gameToken ee6cebc6-7620-4706-bd5f-b6d5a311cd6c and globalUUID c12885ec-713b-4fa3-a7c2-c76990224b0b.
+2013-05-30 17:00:19,854      They have 3 nanomaterial, 49 bandwidth, and 0 plutnoium
+2013-05-30 17:00:19,854      Let me tell you about their nanites:
+2013-05-30 17:00:19,854           They have a nanite called a8ea6970-d47c-4321-85e2-5ef5926613f4 located at -10, -6
+2013-05-30 17:00:19,854 to ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> {}
+2013-05-30 17:00:24,961 from ???> {"cmd":"hello","name":"\u307b\u3093\u3068\u3070\u304bAI","gameToken":"505bea86-a6c1-462e-b26f-66db710793c0","threshold":4}
+2013-05-30 17:00:24,961 to 505bea86-a6c1-462e-b26f-66db710793c0> {"msg": "Welcome back \u307b\u3093\u3068\u3070\u304bAI.  Use 'mail' to check your messages.", "tick": 13}
+2013-05-30 17:00:24,965 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"mail"}
+2013-05-30 17:00:24,965 to 505bea86-a6c1-462e-b26f-66db710793c0> [{"threshold": "<", "nanite": "c6b1690f-0bee-44b3-9172-6f272fb96ab7", "special": "mine"}, {"threshold": ">=", "nanite": "b73eee05-5885-49ed-82db-32153db0cbc3", "special": "mine"}, {"msg": "A new tick has arrived.", "nextTick": "2013-05-30 22:05:19.853023+00:00", "tick": 13, "special": "tick"}]
+2013-05-30 17:00:24,969 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"move","nanite":"c6b1690f-0bee-44b3-9172-6f272fb96ab7","times":1,"dir":"N"}
+2013-05-30 17:00:24,969 to 505bea86-a6c1-462e-b26f-66db710793c0> {"y": -4, "x": -5, "nanite": "c6b1690f-0bee-44b3-9172-6f272fb96ab7", "special": "move"}
+2013-05-30 17:00:24,973 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"duplicate","nanite":"e2320b1e-29d2-423c-9b2c-6a17012ae302","dir":"N","times":1}
+2013-05-30 17:00:24,973 to 505bea86-a6c1-462e-b26f-66db710793c0> {"error": "This tile is occupied."}
+2013-05-30 17:00:24,978 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"duplicate","nanite":"01e39fc9-2e8f-46fa-8409-264c8da1adfe","dir":"N","times":1}
+2013-05-30 17:00:24,978 to 505bea86-a6c1-462e-b26f-66db710793c0> {"error": "This tile is occupied."}
+2013-05-30 17:00:24,982 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"listResources"}
+2013-05-30 17:00:24,982 to 505bea86-a6c1-462e-b26f-66db710793c0> {"error": "Command not known or not acceptable now: listResources"}
+2013-05-30 17:00:24,985 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"ready"}
+2013-05-30 17:00:24,985 to 505bea86-a6c1-462e-b26f-66db710793c0> {}
+2013-05-30 17:00:24,988 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"bye"}
+2013-05-30 17:00:24,988 to ???> {"special": "bye"}
+2013-05-30 17:00:25,904 from ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> {"cmd": "mail"}
+2013-05-30 17:00:25,905 to ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> [{"threshold": "<", "nanite": "a8ea6970-d47c-4321-85e2-5ef5926613f4", "special": "mine"}, {"msg": "A new tick has arrived.", "nextTick": "2013-05-30 22:05:19.853023+00:00", "tick": 13, "special": "tick"}]
+2013-05-30 17:00:26,968 from ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> {"cmd": "ready"}
+2013-05-30 17:00:26,969 losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x100a0ea50>
+2013-05-30 17:00:26,969 losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x100df1750>
+2013-05-30 17:00:26,969 losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x100dead50>
+2013-05-30 17:00:26,969 losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x100df9410>
+2013-05-30 17:00:26,969 losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x100a0eb10>
+2013-05-30 17:00:26,969 Below is the state of the current players.
+2013-05-30 17:00:26,969 A player named ほんとばかAI has gameToken 505bea86-a6c1-462e-b26f-66db710793c0 and globalUUID 824ecbf8-354a-4606-859a-8fceab2ff310.
+2013-05-30 17:00:26,969      They have 96 nanomaterial, 37 bandwidth, and 6 plutnoium
+2013-05-30 17:00:26,969      Let me tell you about their nanites:
+2013-05-30 17:00:26,970           They have a nanite called e2320b1e-29d2-423c-9b2c-6a17012ae302 located at -4, -7
+2013-05-30 17:00:26,970           They have a nanite called c6b1690f-0bee-44b3-9172-6f272fb96ab7 located at -5, -4
+2013-05-30 17:00:26,970           They have a nanite called 01e39fc9-2e8f-46fa-8409-264c8da1adfe located at -4, -6
+2013-05-30 17:00:26,970           They have a nanite called b73eee05-5885-49ed-82db-32153db0cbc3 located at -4, -5
+2013-05-30 17:00:26,970 A player named AwesomeBot has gameToken ee6cebc6-7620-4706-bd5f-b6d5a311cd6c and globalUUID c12885ec-713b-4fa3-a7c2-c76990224b0b.
+2013-05-30 17:00:26,970      They have 2 nanomaterial, 49 bandwidth, and 0 plutnoium
+2013-05-30 17:00:26,970      Let me tell you about their nanites:
+2013-05-30 17:00:26,970           They have a nanite called a8ea6970-d47c-4321-85e2-5ef5926613f4 located at -10, -7
+2013-05-30 17:00:26,970 to ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> {}
+2013-05-30 17:00:30,178 from ???> {"cmd":"hello","name":"\u307b\u3093\u3068\u3070\u304bAI","gameToken":"505bea86-a6c1-462e-b26f-66db710793c0","threshold":4}
+2013-05-30 17:00:30,179 to 505bea86-a6c1-462e-b26f-66db710793c0> {"msg": "Welcome back \u307b\u3093\u3068\u3070\u304bAI.  Use 'mail' to check your messages.", "tick": 14}
+2013-05-30 17:00:30,185 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"mail"}
+2013-05-30 17:00:30,185 to 505bea86-a6c1-462e-b26f-66db710793c0> [{"msg": "A new tick has arrived.", "nextTick": "2013-05-30 22:05:26.969056+00:00", "tick": 14, "special": "tick"}]
+2013-05-30 17:00:30,190 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"duplicate","nanite":"e2320b1e-29d2-423c-9b2c-6a17012ae302","dir":"N","times":1}
+2013-05-30 17:00:30,190 to 505bea86-a6c1-462e-b26f-66db710793c0> {"error": "This tile is occupied."}
+2013-05-30 17:00:30,195 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"duplicate","nanite":"c6b1690f-0bee-44b3-9172-6f272fb96ab7","dir":"N","times":1}
+2013-05-30 17:00:30,196 to 505bea86-a6c1-462e-b26f-66db710793c0> {"y": -3, "x": -5, "nanite": "6739f5e8-3186-4fbf-9b51-446265145c5b", "special": "duplicate", "oldNanite": "c6b1690f-0bee-44b3-9172-6f272fb96ab7"}
+2013-05-30 17:00:30,199 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"duplicate","nanite":"b73eee05-5885-49ed-82db-32153db0cbc3","dir":"N","times":1}
+2013-05-30 17:00:30,200 to 505bea86-a6c1-462e-b26f-66db710793c0> {"y": -4, "x": -4, "nanite": "255d82af-bf2b-4aaf-866e-d49bbbf448b4", "special": "duplicate", "oldNanite": "b73eee05-5885-49ed-82db-32153db0cbc3"}
+2013-05-30 17:00:30,205 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"duplicate","nanite":"01e39fc9-2e8f-46fa-8409-264c8da1adfe","dir":"N","times":1}
+2013-05-30 17:00:30,205 to 505bea86-a6c1-462e-b26f-66db710793c0> {"error": "This tile is occupied."}
+2013-05-30 17:00:30,211 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"listResources"}
+2013-05-30 17:00:30,211 to 505bea86-a6c1-462e-b26f-66db710793c0> {"error": "Command not known or not acceptable now: listResources"}
+2013-05-30 17:00:30,219 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"ready"}
+2013-05-30 17:00:30,219 to 505bea86-a6c1-462e-b26f-66db710793c0> {}
+2013-05-30 17:00:30,228 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"bye"}
+2013-05-30 17:00:30,229 to ???> {"special": "bye"}
+2013-05-30 17:00:33,015 from ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> {"cmd": "mail"}
+2013-05-30 17:00:33,015 to ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> [{"y": -6, "x": -10, "nanite": "a8ea6970-d47c-4321-85e2-5ef5926613f4", "special": "move"}, {"msg": "A new tick has arrived.", "nextTick": "2013-05-30 22:05:26.969056+00:00", "tick": 14, "special": "tick"}]
+2013-05-30 17:00:34,075 from ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> {"cmd": "move", "nanite": "a8ea6970-d47c-4321-85e2-5ef5926613f4", "dir": "W", "times": 3}
+2013-05-30 17:00:34,075 to ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> {"error": "Already moved this turn.  The command queue was altered anyway."}
+2013-05-30 17:00:35,136 from ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> {"cmd": "ready"}
+2013-05-30 17:00:35,136 losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x100a0ea50>
+2013-05-30 17:00:35,136 losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x100df1750>
+2013-05-30 17:00:35,136 losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x100dead50>
+2013-05-30 17:00:35,136 losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x100df9410>
+2013-05-30 17:00:35,136 losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x100df92d0>
+2013-05-30 17:00:35,136 losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x100df9450>
+2013-05-30 17:00:35,136 losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x100a0eb10>
+2013-05-30 17:00:35,137 Below is the state of the current players.
+2013-05-30 17:00:35,137 A player named ほんとばかAI has gameToken 505bea86-a6c1-462e-b26f-66db710793c0 and globalUUID 824ecbf8-354a-4606-859a-8fceab2ff310.
+2013-05-30 17:00:35,137      They have 90 nanomaterial, 33 bandwidth, and 6 plutnoium
+2013-05-30 17:00:35,137      Let me tell you about their nanites:
+2013-05-30 17:00:35,137           They have a nanite called e2320b1e-29d2-423c-9b2c-6a17012ae302 located at -4, -7
+2013-05-30 17:00:35,137           They have a nanite called c6b1690f-0bee-44b3-9172-6f272fb96ab7 located at -5, -4
+2013-05-30 17:00:35,137           They have a nanite called 01e39fc9-2e8f-46fa-8409-264c8da1adfe located at -4, -6
+2013-05-30 17:00:35,137           They have a nanite called b73eee05-5885-49ed-82db-32153db0cbc3 located at -4, -5
+2013-05-30 17:00:35,137           They have a nanite called 6739f5e8-3186-4fbf-9b51-446265145c5b located at -5, -3
+2013-05-30 17:00:35,137           They have a nanite called 255d82af-bf2b-4aaf-866e-d49bbbf448b4 located at -4, -4
+2013-05-30 17:00:35,137 A player named AwesomeBot has gameToken ee6cebc6-7620-4706-bd5f-b6d5a311cd6c and globalUUID c12885ec-713b-4fa3-a7c2-c76990224b0b.
+2013-05-30 17:00:35,138      They have 1 nanomaterial, 48 bandwidth, and 0 plutnoium
+2013-05-30 17:00:35,138      Let me tell you about their nanites:
+2013-05-30 17:00:35,138           They have a nanite called a8ea6970-d47c-4321-85e2-5ef5926613f4 located at -11, -7
+2013-05-30 17:00:35,138 to ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> {}
+2013-05-30 17:00:36,016 from ???> {"cmd":"hello","name":"\u307b\u3093\u3068\u3070\u304bAI","gameToken":"505bea86-a6c1-462e-b26f-66db710793c0","threshold":4}
+2013-05-30 17:00:36,016 to 505bea86-a6c1-462e-b26f-66db710793c0> {"msg": "Welcome back \u307b\u3093\u3068\u3070\u304bAI.  Use 'mail' to check your messages.", "tick": 15}
+2013-05-30 17:00:36,020 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"mail"}
+2013-05-30 17:00:36,021 to 505bea86-a6c1-462e-b26f-66db710793c0> [{"msg": "A new tick has arrived.", "nextTick": "2013-05-30 22:05:35.136262+00:00", "tick": 15, "special": "tick"}]
+2013-05-30 17:00:36,062 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"duplicate","nanite":"e2320b1e-29d2-423c-9b2c-6a17012ae302","dir":"N","times":1}
+2013-05-30 17:00:36,063 to 505bea86-a6c1-462e-b26f-66db710793c0> {"error": "This tile is occupied."}
+2013-05-30 17:00:36,065 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"mine","nanite":"c6b1690f-0bee-44b3-9172-6f272fb96ab7","times":3}
+2013-05-30 17:00:36,065 to 505bea86-a6c1-462e-b26f-66db710793c0> {"threshold": ">=", "nanite": "c6b1690f-0bee-44b3-9172-6f272fb96ab7", "special": "mine"}
+2013-05-30 17:00:36,069 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"mine","nanite":"6739f5e8-3186-4fbf-9b51-446265145c5b","times":3}
+2013-05-30 17:00:36,069 to 505bea86-a6c1-462e-b26f-66db710793c0> {"threshold": "<", "nanite": "6739f5e8-3186-4fbf-9b51-446265145c5b", "special": "mine"}
+2013-05-30 17:00:36,080 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"mine","nanite":"b73eee05-5885-49ed-82db-32153db0cbc3","times":3}
+2013-05-30 17:00:36,080 to 505bea86-a6c1-462e-b26f-66db710793c0> {"threshold": "<", "nanite": "b73eee05-5885-49ed-82db-32153db0cbc3", "special": "mine"}
+2013-05-30 17:00:36,084 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"mine","nanite":"255d82af-bf2b-4aaf-866e-d49bbbf448b4","times":3}
+2013-05-30 17:00:36,085 to 505bea86-a6c1-462e-b26f-66db710793c0> {"threshold": "<", "nanite": "255d82af-bf2b-4aaf-866e-d49bbbf448b4", "special": "mine"}
+2013-05-30 17:00:36,088 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"mine","nanite":"01e39fc9-2e8f-46fa-8409-264c8da1adfe","times":3}
+2013-05-30 17:00:36,088 to 505bea86-a6c1-462e-b26f-66db710793c0> {"threshold": "<", "nanite": "01e39fc9-2e8f-46fa-8409-264c8da1adfe", "special": "mine"}
+2013-05-30 17:00:36,092 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"listResources"}
+2013-05-30 17:00:36,093 to 505bea86-a6c1-462e-b26f-66db710793c0> {"error": "Command not known or not acceptable now: listResources"}
+2013-05-30 17:00:36,095 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"ready"}
+2013-05-30 17:00:36,096 to 505bea86-a6c1-462e-b26f-66db710793c0> {}
+2013-05-30 17:00:36,098 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"bye"}
+2013-05-30 17:00:36,098 to ???> {"special": "bye"}
+2013-05-30 17:00:41,187 from ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> {"cmd": "mail"}
+2013-05-30 17:00:41,187 to ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> [{"y": -7, "x": -10, "nanite": "a8ea6970-d47c-4321-85e2-5ef5926613f4", "special": "move"}, {"msg": "A new tick has arrived.", "nextTick": "2013-05-30 22:05:35.136262+00:00", "tick": 15, "special": "tick"}]
+2013-05-30 17:00:42,253 from ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> {"cmd": "ready"}
+2013-05-30 17:00:42,253 losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x100a0ea50>
+2013-05-30 17:00:42,253 losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x100df1750>
+2013-05-30 17:00:42,253 losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x100dead50>
+2013-05-30 17:00:42,253 losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x100df9410>
+2013-05-30 17:00:42,254 losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x100df92d0>
+2013-05-30 17:00:42,254 losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x100df9450>
+2013-05-30 17:00:42,254 losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x100a0eb10>
+2013-05-30 17:00:42,254 Below is the state of the current players.
+2013-05-30 17:00:42,254 A player named ほんとばかAI has gameToken 505bea86-a6c1-462e-b26f-66db710793c0 and globalUUID 824ecbf8-354a-4606-859a-8fceab2ff310.
+2013-05-30 17:00:42,254      They have 86 nanomaterial, 33 bandwidth, and 14 plutnoium
+2013-05-30 17:00:42,254      Let me tell you about their nanites:
+2013-05-30 17:00:42,254           They have a nanite called e2320b1e-29d2-423c-9b2c-6a17012ae302 located at -4, -7
+2013-05-30 17:00:42,254           They have a nanite called c6b1690f-0bee-44b3-9172-6f272fb96ab7 located at -5, -4
+2013-05-30 17:00:42,255           They have a nanite called 01e39fc9-2e8f-46fa-8409-264c8da1adfe located at -4, -6
+2013-05-30 17:00:42,255           They have a nanite called b73eee05-5885-49ed-82db-32153db0cbc3 located at -4, -5
+2013-05-30 17:00:42,255           They have a nanite called 6739f5e8-3186-4fbf-9b51-446265145c5b located at -5, -3
+2013-05-30 17:00:42,255           They have a nanite called 255d82af-bf2b-4aaf-866e-d49bbbf448b4 located at -4, -4
+2013-05-30 17:00:42,255 A player named AwesomeBot has gameToken ee6cebc6-7620-4706-bd5f-b6d5a311cd6c and globalUUID c12885ec-713b-4fa3-a7c2-c76990224b0b.
+2013-05-30 17:00:42,255      They have 0 nanomaterial, 48 bandwidth, and 0 plutnoium
+2013-05-30 17:00:42,255      Let me tell you about their nanites:
+2013-05-30 17:00:42,255           They have a nanite called a8ea6970-d47c-4321-85e2-5ef5926613f4 located at -12, -7
+2013-05-30 17:00:42,255 to ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> {}
+2013-05-30 17:00:43,386 from ???> {"cmd":"hello","name":"\u307b\u3093\u3068\u3070\u304bAI","gameToken":"505bea86-a6c1-462e-b26f-66db710793c0","threshold":4}
+2013-05-30 17:00:43,386 to 505bea86-a6c1-462e-b26f-66db710793c0> {"msg": "Welcome back \u307b\u3093\u3068\u3070\u304bAI.  Use 'mail' to check your messages.", "tick": 16}
+2013-05-30 17:00:43,390 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"mail"}
+2013-05-30 17:00:43,390 to 505bea86-a6c1-462e-b26f-66db710793c0> [{"msg": "A new tick has arrived.", "nextTick": "2013-05-30 22:05:42.253587+00:00", "tick": 16, "special": "tick"}]
+2013-05-30 17:00:43,393 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"mine","nanite":"e2320b1e-29d2-423c-9b2c-6a17012ae302","times":3}
+2013-05-30 17:00:43,394 to 505bea86-a6c1-462e-b26f-66db710793c0> {"threshold": ">=", "nanite": "e2320b1e-29d2-423c-9b2c-6a17012ae302", "special": "mine"}
+2013-05-30 17:00:43,396 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"move","nanite":"c6b1690f-0bee-44b3-9172-6f272fb96ab7","times":1,"dir":"E"}
+2013-05-30 17:00:43,397 to 505bea86-a6c1-462e-b26f-66db710793c0> {"error": "Already moved this turn.  The command queue was altered anyway."}
+2013-05-30 17:00:43,400 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"move","nanite":"6739f5e8-3186-4fbf-9b51-446265145c5b","times":1,"dir":"E"}
+2013-05-30 17:00:43,400 to 505bea86-a6c1-462e-b26f-66db710793c0> {"error": "Already moved this turn.  The command queue was altered anyway."}
+2013-05-30 17:00:43,405 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"move","nanite":"b73eee05-5885-49ed-82db-32153db0cbc3","times":1,"dir":"S"}
+2013-05-30 17:00:43,405 to 505bea86-a6c1-462e-b26f-66db710793c0> {"error": "Already moved this turn.  The command queue was altered anyway."}
+2013-05-30 17:00:43,410 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"move","nanite":"255d82af-bf2b-4aaf-866e-d49bbbf448b4","times":1,"dir":"W"}
+2013-05-30 17:00:43,411 to 505bea86-a6c1-462e-b26f-66db710793c0> {"error": "Already moved this turn.  The command queue was altered anyway."}
+2013-05-30 17:00:43,414 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"move","nanite":"01e39fc9-2e8f-46fa-8409-264c8da1adfe","times":1,"dir":"W"}
+2013-05-30 17:00:43,414 to 505bea86-a6c1-462e-b26f-66db710793c0> {"error": "Already moved this turn.  The command queue was altered anyway."}
+2013-05-30 17:00:43,417 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"listResources"}
+2013-05-30 17:00:43,417 to 505bea86-a6c1-462e-b26f-66db710793c0> {"error": "Command not known or not acceptable now: listResources"}
+2013-05-30 17:00:43,421 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"ready"}
+2013-05-30 17:00:43,421 to 505bea86-a6c1-462e-b26f-66db710793c0> {}
+2013-05-30 17:00:43,424 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"bye"}
+2013-05-30 17:00:43,424 to ???> {"special": "bye"}
+2013-05-30 17:00:48,305 from ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> {"cmd": "mail"}
+2013-05-30 17:00:48,305 to ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> [{"y": -7, "x": -11, "nanite": "a8ea6970-d47c-4321-85e2-5ef5926613f4", "special": "move"}, {"msg": "A new tick has arrived.", "nextTick": "2013-05-30 22:05:42.253587+00:00", "tick": 16, "special": "tick"}]
+2013-05-30 17:00:48,543 from ???> {"cmd":"hello","name":"\u307b\u3093\u3068\u3070\u304bAI","gameToken":"505bea86-a6c1-462e-b26f-66db710793c0","threshold":4}
+2013-05-30 17:00:48,543 to 505bea86-a6c1-462e-b26f-66db710793c0> {"msg": "Welcome back \u307b\u3093\u3068\u3070\u304bAI.  Use 'mail' to check your messages.", "tick": 16}
+2013-05-30 17:00:49,370 from ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> {"cmd": "ready"}
+2013-05-30 17:00:49,371 losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x100a0ea50>
+2013-05-30 17:00:49,371 losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x100df1750>
+2013-05-30 17:00:49,371 losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x100dead50>
+2013-05-30 17:00:49,371 losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x100df9410>
+2013-05-30 17:00:49,371 losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x100df92d0>
+2013-05-30 17:00:49,371 losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x100df9450>
+2013-05-30 17:00:49,371 losing 1 nanomaterial for nanite <models.nanite.Nanite object at 0x100a0eb10>
+2013-05-30 17:00:49,372 to ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> {"error": "End of game condition."}
+2013-05-30 17:00:53,632 from ???> {"cmd":"hello","name":"\u307b\u3093\u3068\u3070\u304bAI","gameToken":"505bea86-a6c1-462e-b26f-66db710793c0","threshold":4}
+2013-05-30 17:00:53,633 to 505bea86-a6c1-462e-b26f-66db710793c0> {"msg": "Welcome back \u307b\u3093\u3068\u3070\u304bAI.  Use 'mail' to check your messages.", "tick": 17}
+2013-05-30 17:00:53,635 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"mail"}
+2013-05-30 17:00:53,635 to 505bea86-a6c1-462e-b26f-66db710793c0> [{"threshold": ">=", "nanite": "c6b1690f-0bee-44b3-9172-6f272fb96ab7", "special": "mine"}, {"threshold": "<", "nanite": "01e39fc9-2e8f-46fa-8409-264c8da1adfe", "special": "mine"}, {"threshold": "<", "nanite": "b73eee05-5885-49ed-82db-32153db0cbc3", "special": "mine"}, {"threshold": "<", "nanite": "6739f5e8-3186-4fbf-9b51-446265145c5b", "special": "mine"}, {"threshold": "<", "nanite": "255d82af-bf2b-4aaf-866e-d49bbbf448b4", "special": "mine"}, {"msg": "A new tick has arrived.", "nextTick": "2013-05-30 22:05:49.371061+00:00", "tick": 17, "special": "tick"}, {"msg": "The game has ended.", "special": "endgame"}]
+2013-05-30 17:00:55,419 from ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> {"cmd": "mail"}
+2013-05-30 17:00:55,419 to ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> [{"y": -7, "x": -12, "nanite": "a8ea6970-d47c-4321-85e2-5ef5926613f4", "special": "move"}, {"msg": "A new tick has arrived.", "nextTick": "2013-05-30 22:05:49.371061+00:00", "tick": 17, "special": "tick"}, {"msg": "The game has ended.", "special": "endgame"}]
+2013-05-30 17:00:56,487 from ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> {"cmd": "mine", "nanite": "a8ea6970-d47c-4321-85e2-5ef5926613f4", "times": 3}
+2013-05-30 17:00:56,487 to ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> {"error": "You have lost the game."}
+2013-05-30 17:01:00,279 from ???> {"cmd":"hello","name":"\u307b\u3093\u3068\u3070\u304bAI","gameToken":"505bea86-a6c1-462e-b26f-66db710793c0","threshold":4}
+2013-05-30 17:01:00,279 to 505bea86-a6c1-462e-b26f-66db710793c0> {"msg": "Welcome back \u307b\u3093\u3068\u3070\u304bAI.  Use 'mail' to check your messages.", "tick": 17}
+2013-05-30 17:01:00,720 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"mail"}
+2013-05-30 17:01:00,720 to 505bea86-a6c1-462e-b26f-66db710793c0> []
+2013-05-30 17:01:00,730 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"mine","nanite":"e2320b1e-29d2-423c-9b2c-6a17012ae302","times":3}
+2013-05-30 17:01:00,730 to 505bea86-a6c1-462e-b26f-66db710793c0> {"error": "Already moved this turn.  The command queue was altered anyway."}
+2013-05-30 17:01:00,735 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"mine","nanite":"255d82af-bf2b-4aaf-866e-d49bbbf448b4","times":3}
+2013-05-30 17:01:00,735 to 505bea86-a6c1-462e-b26f-66db710793c0> {"threshold": "<", "nanite": "255d82af-bf2b-4aaf-866e-d49bbbf448b4", "special": "mine"}
+2013-05-30 17:01:00,740 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"mine","nanite":"c6b1690f-0bee-44b3-9172-6f272fb96ab7","times":3}
+2013-05-30 17:01:00,740 to 505bea86-a6c1-462e-b26f-66db710793c0> {"threshold": "<", "nanite": "c6b1690f-0bee-44b3-9172-6f272fb96ab7", "special": "mine"}
+2013-05-30 17:01:00,749 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"mine","nanite":"6739f5e8-3186-4fbf-9b51-446265145c5b","times":3}
+2013-05-30 17:01:00,749 to 505bea86-a6c1-462e-b26f-66db710793c0> {"threshold": "<", "nanite": "6739f5e8-3186-4fbf-9b51-446265145c5b", "special": "mine"}
+2013-05-30 17:01:00,755 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"mine","nanite":"b73eee05-5885-49ed-82db-32153db0cbc3","times":3}
+2013-05-30 17:01:00,756 to 505bea86-a6c1-462e-b26f-66db710793c0> {"threshold": "<", "nanite": "b73eee05-5885-49ed-82db-32153db0cbc3", "special": "mine"}
+2013-05-30 17:01:00,760 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"mine","nanite":"01e39fc9-2e8f-46fa-8409-264c8da1adfe","times":3}
+2013-05-30 17:01:00,760 to 505bea86-a6c1-462e-b26f-66db710793c0> {"threshold": "<", "nanite": "01e39fc9-2e8f-46fa-8409-264c8da1adfe", "special": "mine"}
+2013-05-30 17:01:00,762 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"listResources"}
+2013-05-30 17:01:00,763 to 505bea86-a6c1-462e-b26f-66db710793c0> {"error": "Command not known or not acceptable now: listResources"}
+2013-05-30 17:01:00,765 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"ready"}
+2013-05-30 17:01:00,766 to 505bea86-a6c1-462e-b26f-66db710793c0> {}
+2013-05-30 17:01:00,768 from 505bea86-a6c1-462e-b26f-66db710793c0> {"cmd":"bye"}
+2013-05-30 17:01:00,768 to ???> {"special": "bye"}
+2013-05-30 17:01:02,531 from ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> {"cmd": "mail"}
+2013-05-30 17:01:02,531 to ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> []
+2013-05-30 17:01:03,593 from ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> {"cmd": "mine", "nanite": "a8ea6970-d47c-4321-85e2-5ef5926613f4", "times": 3}
+2013-05-30 17:01:03,593 to ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> {"error": "You have lost the game."}
+2013-05-30 17:01:06,130 from ???> {"cmd":"hello","name":"\u307b\u3093\u3068\u3070\u304bAI","gameToken":"505bea86-a6c1-462e-b26f-66db710793c0","threshold":4}
+2013-05-30 17:01:06,130 to 505bea86-a6c1-462e-b26f-66db710793c0> {"msg": "Welcome back \u307b\u3093\u3068\u3070\u304bAI.  Use 'mail' to check your messages.", "tick": 17}
+2013-05-30 17:01:09,650 from ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> {"cmd": "mail"}
+2013-05-30 17:01:09,650 to ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> []
+2013-05-30 17:01:10,722 from ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> {"cmd": "mine", "nanite": "a8ea6970-d47c-4321-85e2-5ef5926613f4", "times": 3}
+2013-05-30 17:01:10,722 to ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> {"error": "You have lost the game."}
+2013-05-30 17:01:11,343 from ???> {"cmd":"hello","name":"\u307b\u3093\u3068\u3070\u304bAI","gameToken":"505bea86-a6c1-462e-b26f-66db710793c0","threshold":4}
+2013-05-30 17:01:11,343 to 505bea86-a6c1-462e-b26f-66db710793c0> {"msg": "Welcome back \u307b\u3093\u3068\u3070\u304bAI.  Use 'mail' to check your messages.", "tick": 17}
+2013-05-30 17:01:16,448 from ???> {"cmd":"hello","name":"\u307b\u3093\u3068\u3070\u304bAI","gameToken":"505bea86-a6c1-462e-b26f-66db710793c0","threshold":4}
+2013-05-30 17:01:16,448 to 505bea86-a6c1-462e-b26f-66db710793c0> {"msg": "Welcome back \u307b\u3093\u3068\u3070\u304bAI.  Use 'mail' to check your messages.", "tick": 17}
+2013-05-30 17:01:16,772 from ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> {"cmd": "mail"}
+2013-05-30 17:01:16,772 to ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> []
+2013-05-30 17:01:17,836 from ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> {"cmd": "mine", "nanite": "a8ea6970-d47c-4321-85e2-5ef5926613f4", "times": 3}
+2013-05-30 17:01:17,836 to ee6cebc6-7620-4706-bd5f-b6d5a311cd6c> {"error": "You have lost the game."}
+2013-05-30 17:01:21,996 from ???> {"cmd":"hello","name":"\u307b\u3093\u3068\u3070\u304bAI","gameToken":"505bea86-a6c1-462e-b26f-66db710793c0","threshold":4}
+
