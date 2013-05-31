@@ -1,5 +1,13 @@
 import unittest
 class TestSequence(unittest.TestCase):
+
+	def tiledump(self,tiles):
+		lyst = []
+		for tile in tiles:
+			toople = (tile.x,tile.y)
+			lyst.append(str(toople).replace("(","{").replace(")","}"))
+
+		print str(lyst).replace("(","{").replace(")","}").replace("'","")
 	def test_startgame(self):
 		import models.Map
 		map = models.Map.Map()
@@ -8,6 +16,8 @@ class TestSequence(unittest.TestCase):
 
 		nanomaterial_dist = []
 		starttiles = []
+
+	
 
 		def immediate_count(map,resourcename):
 			dist = 0
@@ -27,12 +37,18 @@ class TestSequence(unittest.TestCase):
 					starttiles.append(map.get(x,y))
 
 
-		lyst = []
-		for tile in starttiles:
-			toople = (tile.x,tile.y)
-			lyst.append(str(toople).replace("(","{").replace(")","}"))
+		self.tiledump(starttiles)
 
-		print str(lyst).replace("(","{").replace(")","}").replace("'","")
+	def test_nanomaterial_center(self):
+		import models.Map
+		map = models.Map.Map()
+		map.distribute_resources()
+		lyst = []
+		for x in range(-models.Map.GEN_AREA, models.Map.GEN_AREA):
+			for y in range(-models.Map.GEN_AREA,models.Map.GEN_AREA):
+				lyst.append('{%d,%d,%d}' % (x,y,map.get(x,y).nanomaterial))
+		print str(lyst).replace('[','{').replace("'","").replace(']','}')
+
 
 
 
