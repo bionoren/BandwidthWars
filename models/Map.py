@@ -79,6 +79,9 @@ class Map(object):
 	def playable_tiles(self):
 		return (self.get(x,y) for x in range(-PLAY_AREA,PLAY_AREA) for y in range(-PLAY_AREA,PLAY_AREA))
 
+	def gen_area_tiles(self):
+		return (self.get(x,y) for x in range(-GEN_AREA,GEN_AREA) for y in range(-GEN_AREA,GEN_AREA))
+
 	def get_good_tile(self):
 		good_tiles = filter(lambda t: t.immediate_count("nanomaterial") > 30 and t.immediate_count("nanomaterial") < 50,self.playable_tiles())
 		good_tiles = filter(lambda t: t.immediate_count("bandwidth") > 30 and t.immediate_count("bandwidth") < 50,good_tiles)
@@ -93,6 +96,12 @@ class Map(object):
 		if not row.has_key(y):
 			row[y] = Tile(x,y,self)
 		return row[y]
+
+	def map_structure(self):
+		lyst = []
+		for tile in self.gen_area_tiles():
+			lyst.append({"x":tile.x,"y":tile.y,"bandwidth":tile.bandwidth,"plutonium":tile.plutonium,"nanomaterial":tile.nanomaterial})
+		return lyst
 
 
 	def distribute_resources(self):
