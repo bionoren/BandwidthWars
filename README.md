@@ -79,7 +79,7 @@ A nanite may perform any of the following operations:
 * Scan.  The nanite may scan all 8 tiles (N,S,E,W,NE,NW,SE,SW).  If any nanites are present in these spaces, then exactly one will be reported to the bot.
 * Fire.  The nanite may fire a projectile in any of 8 directions.  This action consumes 1 plutonium.  The projectile moves at the rate of 1 square per tick infinitely far.  If at any time any nanite is in the space with the projectile, it is killed.
 * Duplicate.  The nanite spawns another nanite in any of 8 directions.  This action consumes 1 nanomaterial.  This operation fails silently if the requested space is obstructed by another nanite.
-* Search.  A search is conducted with an origin at your nanite and encompassing the 13 tiles that are reachable in 2 or fewer moves.  If a tile exceeds double the player's threshold in the particular specified resource, the tile is returned.  If there are multiple tiles, which one is returned is unspecified.  If there are no such tiles, the coordinate -1, -1 is returned.
+* Search.  A search is conducted with an origin at your nanite and encompassing the 13 tiles that are reachable in 2 or fewer moves.  If a tile exceeds double the player's threshold in the particular specified resource, the tile is returned.  If there are multiple tiles, which one is returned is unspecified.  If there are no such tiles, null is returned for the x and y coordinate.
 * Clear.  This command clears the current command queue without issuing a new command.  Note that this command is free and can be issued even for nanites that have already moved.
 
 A nanite may only perform one command per tick (except for clear).

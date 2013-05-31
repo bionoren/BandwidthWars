@@ -106,7 +106,7 @@ class Player(object):
 			elif json["resource"]=="bandwidth":
 				count = self.bandwidth
 			self.decrement_bandwidth()
-			return {"count":count}
+			return {"count":count,"special":"count","resource":json["resource"]}
 		elif json["cmd"]=="bye":
 			self.session.player = None
 			self.session = None

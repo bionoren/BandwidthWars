@@ -98,8 +98,8 @@ class Nanite(object):
             x = chosen_one.x
             y = chosen_one.y
         else:
-            x = -1
-            y = -1
+            x = None
+            y = None
         return {"nanite":self.globalUUID,"special":"search","x":x,"y":y,"resource":resource}
 
 
