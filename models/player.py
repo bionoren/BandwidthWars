@@ -121,6 +121,6 @@ class Player(object):
 			if json["cmd"] == "listResources":
 				return {"nanomaterial": self.nanomaterial, "bandwidth": self.bandwidth, "plutonium": self.plutonium}
 			if json["cmd"] == "debugMap":
-				return {"map": map(lambda tile: tile.toJson(), self.game.map.playable_tiles())}
+				return {"map": map(lambda tile: tile.toJson(), self.game.map.valuable_tiles())}
 
 		raise Exception("Command not known or not acceptable now: %s" % json["cmd"])
