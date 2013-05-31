@@ -93,6 +93,10 @@ class Player(object):
 			return nanite.immediate_or_schedule(nanite.mine,json["times"],1)
 		elif json["cmd"]=="duplicate":
 			return nanite.immediate_or_schedule(nanite.duplicate,json["times"],1,json["dir"])
+		elif json["cmd"]=="search":
+			return nanite.immediate_or_schedule(nanite.search,json["times"],2,json["resource"])
+		elif json["cmd"]=="clear":
+			return nanite.immediate_or_schedule(nanite.clear,1,0)
 		elif json["cmd"]=="count":
 			count = -1
 			if json["resource"]=="plutonium":

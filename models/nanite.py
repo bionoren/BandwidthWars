@@ -21,7 +21,7 @@ class require_not_moved(object):
 
     def __get__(self, instance, instancetype):
         import functools
-        """Implement the descriptor protocol to make decorating instance
+        """Implement the descriptor protocol to make decorating instance 
         method possible.
 
         """
@@ -76,6 +76,34 @@ class Nanite(object):
                 break
         return {"nanite":self.globalUUID,"special":"scan","scan_result":scan_result}
 
+
+    @require_not_moved()
+    def search(self,resource):
+        """ "2" spaces away (see #15) is somewhat nonintuitive.  What this implementation actually does is
+          X
+         XXX
+        XXNXX
+         XXX
+          X
+
+          Essentially this finds all squares reachable if the nanite has 2 turns to move.  Nonintuitively, this includes the space presently occupied by the nanite since the nanite can reach its current space in 2 steps."""
+        spaces = self.tile.walk_tiles(times=2,cardinal_only=True)
+        spaces = filter(lambda tile: getattr(tile,resource) >= self.player.threshold * 2,spaces)
+        from random import choice
+        if len(spaces) >= 1:
+            chosen_one = choice(spaces)
+        else:
+            chosen_one = None
+        if chosen_one:
+            x = chosen_one.x
+            y = chosen_one.y
+        else:
+            x = -1
+            y = -1
+        return {"nanite":self.globalUUID,"special":"search","x":x,"y":y,"resource":resource}
+
+
+
     @require_not_moved()
     def mine(self):
         self.player.bandwidth += random.normalvariate(mu = self.tile.bandwidth / 2.0, sigma = self.tile.bandwidth / 4.0)
@@ -111,6 +139,8 @@ class Nanite(object):
     def json(self):
         return {"uid": self.globalUUID, "tile": [self.tile.x, self.tile.y], "commands": self.commandQueue}
 
+    def clear(self):
+        self.commandQueue = []
 
 
 

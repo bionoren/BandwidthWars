@@ -54,6 +54,25 @@ class Tile(object):
 		elif str_dir=="SW":
 			return self.next("S").next("W")
 
+	def walk_tiles(self,times=1,cardinal_only=True):
+		assert cardinal_only #not supported ATM
+		results = [self.next("N"),self.next("E"),self.next("W"),self.next("S")]
+		for i in range(1,times):
+			for tile in list(results): #copy since we mutate the list
+				next = tile.walk_tiles(times=times-1,cardinal_only=cardinal_only)
+				next = filter(lambda t: t not in results,next)
+				results += next
+		return results
+
+	def distance_to(self,other):
+		return dist(self.x,self.y,other.x,other.y)
+
+	def direction_derivation(self,other):
+		if self.next("N")==other: return "N"
+		elif self.next("S")==other: return "S"
+		elif self.next("E")==other: return "E"
+		elif self.next("W")==other: return "W"
+
 
 
 class Map(object):
