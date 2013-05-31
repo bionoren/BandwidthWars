@@ -20,6 +20,9 @@ class Tile(object):
 	def __repr__(self):
 		return "<Tile %d, %d>" % (self.x,self.y)
 
+	def toJson(self):
+		return {"x": self.x, "y": self.y, "nanomaterial": self.nanomaterial, "bandwidth": self.bandwidth, "plutonium": self.plutonium}
+
 	"""Counts the specified resource in the immediate tile and also the 4 immediately reachable tiles."""
 	def immediate_count(self,resourcename):
 		dist = 0
@@ -105,7 +108,3 @@ class Map(object):
 				tile = self.get(x,y)
 				tile.plutonium = simplexnoise.scaled_octave_noise_2d(1, 1, 0.3, -30, 30, x, y)
 				if tile.plutonium < 0: tile.plutonium = 0 #clamp
-
-				
-
-
