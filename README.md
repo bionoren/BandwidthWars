@@ -172,7 +172,7 @@ Sample requests and responses for commands are also provided (assuming they are 
 {"y": -1, "x": 7, "nanite": "cd264700-b2ec-11e2-9e96-0800200c9a66", "resource": "bandwidth", "special": "search"}
 
 #count resource
-> {"cmd":"count","resource":"plutonium"}
+> {"cmd":"count","resource":"plutonium","special":"count"}
 {"count":25}
 
 #message
