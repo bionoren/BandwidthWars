@@ -79,12 +79,19 @@ A nanite may perform any of the following operations:
 * Scan.  The nanite may scan all 8 tiles (N,S,E,W,NE,NW,SE,SW).  If any nanites are present in these spaces, then exactly one will be reported to the bot.
 * Fire.  The nanite may fire a projectile in any of 8 directions.  This action consumes 1 plutonium.  The projectile moves at the rate of 1 square per tick infinitely far.  If at any time any nanite is in the space with the projectile, it is killed.
 * Duplicate.  The nanite spawns another nanite in any of 8 directions.  This action consumes 1 nanomaterial.  This operation fails silently if the requested space is obstructed by another nanite.
+* Search.  A search is conducted with an origin at your nanite and encompassing the 13 tiles that are reachable in 2 or fewer moves.  If a tile exceeds double the player's threshold in the particular specified resource, the tile is returned.  If there are multiple tiles, which one is returned is unspecified.  If there are no such tiles, the coordinate -1, -1 is returned.
+* Clear.  This command clears the current command queue without issuing a new command.  Note that this command is free and can be issued even for nanites that have already moved.
 
-A nanite may only perform one command per tick.
+A nanite may only perform one command per tick (except for clear).
 
-Each command has a "times" flag which will cause the action to be performed once (immediately), twice (immediately and on the subsequent tick), or three times (immediately and on the two subsequent ticks).  Regardless of the value of the "times" flag, sending a command to a nanite consumes 1 bandwidth.  If the command is "scan", it costs 2 bandwidth.
+Each command has a "times" flag which will cause the action to be performed once (immediately), twice (immediately and on the subsequent tick), or three times (immediately and on the two subsequent ticks).  Regardless of the value of the "times" flag, the following is the bandwidth cost:
 
-If the nanite currently has orders, providing a new command to the nanite replaces any previous orders.
+move, mine, duplicate: 1 bandwidth
+scan, search: 2 bandwidth
+clear: 0 bandwidth
+
+
+If the nanite currently has orders, providing a new command to the nanite has the effect of calling clear on the nanite followed by issuing the new orders (except that there is no output for calling clear).
 
 At each tick, one nanomaterial for each living nanite is deducted from the player's resources.  Following this, if the player has less than zero nanomaterial, a nanite is selected at random and is killed.  A dead nanite's commands fail silently.  If a nanite died during the previous tick, this fact is reported to you at the next tick.
 
@@ -160,6 +167,10 @@ Sample requests and responses for commands are also provided (assuming they are 
 > {"cmd":"duplicate","nanite":"cd264700-b2ec-11e2-9e96-0800200c9a66","dir":"N"}
 {"special":"duplicate","nanite":"631cc280-b634-11e2-9e96-0800200c9a66","x":25,"y":26,"oldNanite":"cd264700-b2ec-11e2-9e96-0800200c9a66"}
 
+#search
+> {"cmd":"search","nanite":"cd264700-b2ec-11e2-9e96-0800200c9a66","resource":"bandwidth"}
+{"y": -1, "x": 7, "nanite": "cd264700-b2ec-11e2-9e96-0800200c9a66", "resource": "bandwidth", "special": "search"}
+
 #count resource
 > {"cmd":"count","resource":"plutonium"}
 {"count":25}
@@ -174,5 +185,9 @@ Sample requests and responses for commands are also provided (assuming they are 
 
 #ready
 > {"cmd":"ready"}
+{}
+
+#clear
+> {"cmd":"clear"}
 {}
 ```

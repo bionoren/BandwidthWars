@@ -24,6 +24,14 @@ class TestSequence(unittest.TestCase):
 		result = g.process_raw_command('{"cmd":"bye"}',self)
 		print result
 
+	def test_walk_tiles(self):
+		g = models.game.Game()
+		immediately_reachable = g.map.get(0,0).walk_tiles()
+		self.assertEquals(len(immediately_reachable),4)
+
+		subsequently_reachable = g.map.get(0,0).walk_tiles(times=2)
+		self.assertEquals(len(subsequently_reachable),13)
+
 	def test_alter_command_Q(self):
 		g = models.game.Game(open_play=True,tokens=0)
 		result = g.process_raw_command('{"cmd":"hello","name":"TestBot","gameToken":"...","threshold":2}',self)
