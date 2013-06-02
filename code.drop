@@ -42,4 +42,4 @@ echo "Bob: Allright, wake up."
         echo "Success"
     fi
 )
-echo -e "Bob: ${{cc_green}}My work here is done.${{cc_normal}}
+echo -e "Bob: ${{cc_green}}My work here is done.${{cc_normal}}"

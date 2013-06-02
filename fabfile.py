@@ -24,3 +24,13 @@ def code_drop():
 
 def emergency_start():
 	scissors.emergency_start(WORKING_TREE)
+
+def get_logs():
+	scissors.get_logs(WORKING_TREE)
+	scissors.get_logs(WORKING_TREE+"game.log")
+
+def show_logs():
+	scissors.show_logs(WORKING_TREE)
+
+def show_gamelog():
+	run("tail -f %s/game.log" % WORKING_TREE)
