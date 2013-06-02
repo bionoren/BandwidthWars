@@ -1,0 +1,44 @@
+#!/bin/bash
+#actually need bash there for source to work
+cc_red="$\033[0;31m"
+cc_normal="\033[m\017"
+cc_green="\033[0;32m"
+set -e
+echo "Bob: Hello, I am Bob, and I will be your builder today."
+echo "Bob: If you have any trouble, check /tmp/bob.log."
+cd {GIT_REPO}
+GIT_WORK_TREE=../ git checkout -f
+cd ..
+virtualenv .
+source bin/activate
+echo "Bob: Hey pip, can you setup the deps pls?"
+pip install -r requirements.txt 1>>/tmp/bob.log
+echo "Pip: Sure bob."
+deactivate #we don't run supervisor in a virtulenv
+echo "Bob: Allright Joel, wake up."
+(
+    supervisord
+    if [ -n `supervisorctl status bandwidthwars | grep RUNNING`]; then
+        echo "bandwidthwars came up successfully"
+    else
+        echo "${{cc_red}}supervisor: bandwidthwars isn't; look at {WORKING_TREE}/log to find out why.${{cc_normal}}"
+        exit 7
+    fi
+    UP="NO"
+    for i in {{1..30}}
+    do
+        if nc -vz localhost 7171
+            then UP="YES"
+            break
+        fi
+        sleep 1;
+    done
+    if [ $UP == "NO" ]; then
+        echo "${{cc_red}}bandwidthwars is NOT running, trying to figure out why${{cc_normal}}"
+        tail ../log/spolsky*
+        exit 8
+    else
+        echo "Success"
+    fi
+)
+echo -e "Bob: ${{cc_green}}My work here is done.${{cc_normal}}
