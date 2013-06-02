@@ -35,7 +35,7 @@ echo "Bob: Allright, wake up."
     done
     if [ $UP == "NO" ]; then
         echo "${{cc_red}}bandwidthwars is NOT running, trying to figure out why${{cc_normal}}"
-        tail ../log/spolsky*
+        tail ../log/*
         exit 8
     else
         echo "Success"
