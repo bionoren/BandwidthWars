@@ -1,4 +1,14 @@
-Bandwidth Wars is a turn-based game that you play by writing a computer program to play it on your behalf.
+What is this?
+---
+
+Bandwidth Wars is a turn-based game that you play by writing a computer program to play it on your behalf.  Sometimes these games are called "programming-based games".  Some unique points about Bandwidth Wars:
+
+* It's language-agnostic: if you can open a socket, you can play!  Great for learning new languages or using your favorite one.
+* It's low commitment.  We play no more than one game a week to keep the [nerdsniping](http://xkcd.com/356/) at a minimum.
+* There are very few rules.  Want to team up with another player? Want to play as a human being?  Want to spin up an EC2 cluster?  Go wild.
+* We're constantly testing new game design ideas.  Want allied victory?  A market economy?  A different resource balance?  Join us in [Issues](http://github.com/drewcrawford/BandwidthWars/issues) to build the kind of game you want to play.
+
+**We're actively looking for new players**.  If this sounds like your cup of tea, [drop me an email](mailto:drew+bandwidthwars@sealedabstract.com) to join the next game.
 
 Policy
 ---
@@ -32,7 +42,7 @@ The planet is so far away that radio communication from your bot to your nanites
 
 Ticks
 ---
-There is one tick per hour.  Commands are executed in real time, but as a practical matter the number of legal commands you can perform in a tick is very limited.  If you wait until the last minute to execute your commands, you are at the mercy of server availability as far as executing your commands before the next tick.
+There is one tick per five minutes.  Commands are executed in real time, but as a practical matter the number of legal commands you can perform in a tick is very limited.  If you wait until the last minute to execute your commands, you are at the mercy of server availability as far as executing your commands before the next tick.
 
 
 Resources
