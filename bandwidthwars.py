@@ -33,12 +33,11 @@ if __name__=="__main__":
         def connectionMade(self):
             self.transport.write('{"msg":"Welcome to Bandwidth Wars","ver":0.1}\n')
         def lineReceived(self, data):
-            print "received line",data
             if hasattr(self,"player"):
                 player = self.player.gameToken
             else:
                 player = "???"
-            logging.info("from %s> %s" % (player,data))
+            logging.info("raw socket from %s> %s" % (player,data))
             result = game.process_raw_command(data, self)
 
             self.send_raw(result)
@@ -48,7 +47,7 @@ if __name__=="__main__":
                 player = self.player.gameToken
             else:
                 player = "???"
-            logging.info("to %s> %s" % (player,data))
+            logging.info("raw socket to %s> %s" % (player,data))
             self.transport.write(data+"\n")
 
     class BWFactory(protocol.Factory):
