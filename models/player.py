@@ -115,6 +115,9 @@ class Player(object):
         return transformed_result
 
     def __process_json_command(self,json,session):
+        if not json.has_key("times"):
+            json["times"] = 1
+        
         if json["cmd"]=="mail":
             value =  self.player_notifications
             self.player_notifications = []
