@@ -1,4 +1,14 @@
-Bandwidth Wars is a turn-based game that you play by writing a computer program to play it on your behalf.
+What is this?
+---
+
+Bandwidth Wars is a turn-based game that you play by writing a computer program to play it on your behalf.  Sometimes these games are called "programming-based games".  Some unique points about Bandwidth Wars:
+
+* It's language-agnostic: if you can open a socket, you can play!  Great for learning new languages or using your favorite one.
+* It's low commitment.  We play no more than one game a week to keep the [nerdsniping](http://xkcd.com/356/) at a minimum.
+* There are very few rules.  Want to team up with another player? Want to play as a human being?  Want to spin up an EC2 cluster?  Go wild.
+* We're constantly testing new game design ideas.  Want allied victory?  A market economy?  A different resource balance?  Join us in [Issues](http://github.com/drewcrawford/BandwidthWars/issues) to build the kind of game you want to play.
+
+**We're actively looking for new players**.  If this sounds like your cup of tea, [drop me an email](mailto:drew+bandwidthwars@sealedabstract.com) to join the next game.
 
 Policy
 ---
@@ -32,7 +42,7 @@ The planet is so far away that radio communication from your bot to your nanites
 
 Ticks
 ---
-There is one tick per hour.  Commands are executed in real time, but as a practical matter the number of legal commands you can perform in a tick is very limited.  If you wait until the last minute to execute your commands, you are at the mercy of server availability as far as executing your commands before the next tick.
+There is one tick per five minutes.  Commands are executed in real time, but as a practical matter the number of legal commands you can perform in a tick is very limited.  If you wait until the last minute to execute your commands, you are at the mercy of server availability as far as executing your commands before the next tick.
 
 
 Resources
@@ -79,7 +89,7 @@ A nanite may perform any of the following operations:
 * Scan.  The nanite may scan all 8 tiles (N,S,E,W,NE,NW,SE,SW).  If any nanites are present in these spaces, then exactly one will be reported to the bot.
 * Fire.  The nanite may fire a projectile in any of 8 directions.  This action consumes 1 plutonium.  The projectile moves at the rate of 1 square per tick infinitely far.  If at any time any nanite is in the space with the projectile, it is killed.
 * Duplicate.  The nanite spawns another nanite in any of 8 directions.  This action consumes 1 nanomaterial.  This operation fails silently if the requested space is obstructed by another nanite.
-* Search.  A search is conducted with an origin at your nanite and encompassing the 13 tiles that are reachable in 2 or fewer moves.  If a tile exceeds double the player's threshold in the particular specified resource, the tile is returned.  If there are multiple tiles, which one is returned is unspecified.  If there are no such tiles, the coordinate -1, -1 is returned.
+* Search.  A search is conducted with an origin at your nanite and encompassing the 13 tiles that are reachable in 2 or fewer moves.  If a tile exceeds double the player's threshold in the particular specified resource, the tile is returned.  If there are multiple tiles, which one is returned is unspecified.  If there are no such tiles, null is returned for the x and y coordinate.
 * Clear.  This command clears the current command queue without issuing a new command.  Note that this command is free and can be issued even for nanites that have already moved.
 
 A nanite may only perform one command per tick (except for clear).
@@ -182,7 +192,7 @@ Sample requests and responses for commands are also provided (assuming they are 
 {"y": -1, "x": 7, "nanite": "cd264700-b2ec-11e2-9e96-0800200c9a66", "resource": "bandwidth", "special": "search"}
 
 #count resource
-> {"cmd":"count","resource":"plutonium"}
+> {"cmd":"count","resource":"plutonium","special":"count"}
 {"count":25}
 
 #message

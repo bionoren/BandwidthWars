@@ -82,7 +82,7 @@ class Map(object):
 	def playable_tiles(self):
 		return (self.get(x,y) for x in range(-PLAY_AREA,PLAY_AREA) for y in range(-PLAY_AREA,PLAY_AREA))
 
-	def valuable_tiles(self):
+	def gen_area_tiles(self):
 		return (self.get(x,y) for x in range(-GEN_AREA,GEN_AREA) for y in range(-GEN_AREA,GEN_AREA))
 
 	def get_good_tile(self):
@@ -100,6 +100,12 @@ class Map(object):
 			row[y] = Tile(x,y,self)
 		return row[y]
 
+	def map_structure(self):
+		lyst = []
+		for tile in self.gen_area_tiles():
+			lyst.append({"x":tile.x,"y":tile.y,"bandwidth":tile.bandwidth,"plutonium":tile.plutonium,"nanomaterial":tile.nanomaterial})
+		return lyst
+
 
 	def distribute_resources(self):
 		import simplexnoise
@@ -107,7 +113,11 @@ class Map(object):
 		for x in range(-GEN_AREA,GEN_AREA):
 			for y in range(-GEN_AREA,GEN_AREA):
 				tile = self.get(x,y)
-				tile.nanomaterial = simplexnoise.scaled_octave_noise_2d(1, 1, 0.15, -100, 100, x, y)
+				#this range is computed via the following system of equations
+				#Solve[{(0 - l) / ((0 - l) + (0 - -1*h)) == .4, h == 100}, {l, h}]
+				#{{l -> -66.6667, h -> 100.}}
+
+				tile.nanomaterial = simplexnoise.scaled_octave_noise_2d(1, 1, 0.15, -67, 100, x, y)
 				#decay if we're far from the center
 				d = dist(x,y,0,0)
 				if d > CUTOFF_BEGIN:
@@ -121,7 +131,10 @@ class Map(object):
 		for x in range(-GEN_AREA,GEN_AREA):
 			for y in range(-GEN_AREA,GEN_AREA):
 				tile = self.get(x,y)
-				tile.bandwidth = simplexnoise.scaled_octave_noise_2d(1, 1, 0.15, -50, 50, x, y)
+				#this range is computed via the following system of equations
+				#Solve[{(0 - l) / ((0 - l) + (0 - -1*h)) == .4, h == 50}, {l, h}]
+				#{{l -> -33.333, h -> 50.}}
+				tile.bandwidth = simplexnoise.scaled_octave_noise_2d(1, 1, 0.15, -33, 50, x, y)
 				if tile.bandwidth < 0: tile.bandwidth = 0 #clamp
 		#plutonium
 		simplexnoise.reseed()
