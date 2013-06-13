@@ -15,8 +15,8 @@ class Game(object):
         self.players = []
         self.map = Map.Map()
         self.map.distribute_resources()
-        logging.info("The map's resources are as follows:")
-        logging.info(self.map.map_structure())
+        logging.debug("The map's resources are as follows:")
+        logging.debug(self.map.map_structure())
 
         self.max_interval=max_interval
         self.ticks = 0
