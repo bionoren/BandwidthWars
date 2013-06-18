@@ -1,5 +1,8 @@
 
 import logging
+import os.path, os
+if os.path.exists("game.log"):
+    os.remove("game.log")
 FORMAT = '%(asctime)-15s %(message)s'
 logging.basicConfig(level=logging.DEBUG,format=FORMAT)
 #set their handler to INFO
