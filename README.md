@@ -200,6 +200,6 @@ Sample requests and responses for commands are also provided (assuming they are 
 {}
 
 #clear
-> {"cmd":"clear"}
+> {"cmd":"clear","nanite":"cd264700-b2ec-11e2-9e96-0800200c9a66"}
 {}
 ```
