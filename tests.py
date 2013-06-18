@@ -33,6 +33,11 @@ class TestSequence(unittest.TestCase):
 		result = g.process_json_command({"cmd":"search","nanite":self.player.nanites[0].globalUUID,"resource":"bandwidth"}, self)
 		print result
 
+	def test_clear(self):
+		g = models.game.Game(open_play=True)
+		result = g.process_raw_command('{"cmd":"hello","name":"TestBot","gameToken":"...","threshold":2}',self)
+		result = g.process_json_command({"cmd":"clear","nanite":self.player.nanites[0].globalUUID}, self)
+
 
 	def test_walk_tiles(self):
 		g = models.game.Game()
