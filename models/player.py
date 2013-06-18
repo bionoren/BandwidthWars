@@ -45,9 +45,11 @@ class Player(object):
 
     def __confuddle(self,key,val):
         if key=="x":
-            return val + self.offsetx
+            if val is not None:
+                return val + self.offsetx
         if key=="y":
-            return val + self.offsety
+            if val is not None:
+                return val + self.offsety
         return val
 
     def __unfuddle(self,key,val):

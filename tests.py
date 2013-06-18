@@ -24,6 +24,16 @@ class TestSequence(unittest.TestCase):
 		result = g.process_raw_command('{"cmd":"bye"}',self)
 		print result
 
+	def test_search(self):
+		g = models.game.Game(open_play=True)
+		result = g.process_raw_command('{"cmd":"hello","name":"TestBot","gameToken":"...","threshold":2}',self)
+		#move our nanite off the board
+		self.player.nanites[0].tile = g.map.get(-100,-100)
+
+		result = g.process_json_command({"cmd":"search","nanite":self.player.nanites[0].globalUUID,"resource":"bandwidth"}, self)
+		print result
+
+
 	def test_walk_tiles(self):
 		g = models.game.Game()
 		immediately_reachable = g.map.get(0,0).walk_tiles()
