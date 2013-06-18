@@ -94,7 +94,7 @@ A nanite may perform any of the following operations:
 
 A nanite may only perform one command per tick (except for clear).
 
-Each command has a "times" flag which will cause the action to be performed once (immediately), twice (immediately and on the subsequent tick), or three times (immediately and on the two subsequent ticks).  Regardless of the value of the "times" flag, the following is the bandwidth cost:
+Each nanite command has a "times" flag which will cause the action to be performed once (immediately), twice (immediately and on the subsequent tick), or three times (immediately and on the two subsequent ticks).  Regardless of the value of the "times" flag, the following is the bandwidth cost:
 
 move, mine, duplicate: 1 bandwidth
 scan, search: 2 bandwidth
@@ -102,6 +102,8 @@ clear: 0 bandwidth
 
 
 If the nanite currently has orders, providing a new command to the nanite has the effect of calling clear on the nanite followed by issuing the new orders (except that there is no output for calling clear).
+
+The times flag can be omitted, in which case we assume you meant times=1.
 
 At each tick, one nanomaterial for each living nanite is deducted from the player's resources.  Following this, if the player has less than zero nanomaterial, a nanite is selected at random and is killed.  A dead nanite's commands fail silently.  If a nanite died during the previous tick, this fact is reported to you at the next tick.
 

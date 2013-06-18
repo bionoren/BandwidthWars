@@ -1,12 +1,15 @@
 
 import logging
 FORMAT = '%(asctime)-15s %(message)s'
-logging.basicConfig(level=logging.INFO,format=FORMAT)
+logging.basicConfig(level=logging.DEBUG,format=FORMAT)
+#set their handler to INFO
+logging.getLogger().handlers[0].level = logging.INFO
+
 hdlr = logging.FileHandler('game.log')
 hdlr.setFormatter(logging.Formatter(fmt=FORMAT))
+hdlr.setLevel(logging.DEBUG)
 logging.getLogger().addHandler(hdlr)
 logging.info("Writing to game.log")
-
 
 
 
