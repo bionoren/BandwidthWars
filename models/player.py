@@ -23,8 +23,12 @@ class Player(object):
         self.threshold = None
         self.has_signed_in = False
 
-        self.offsetx = random.randint(-10,10)
-        self.offsety = random.randint(-10,10)
+        if self.game.debug:
+            self.offsetx = 0
+            self.offsety = 0
+        else:
+            self.offsetx = random.randint(-10,10)
+            self.offsety = random.randint(-10,10)
         logging.info("cooperative consideration: player %s is offset by %d,%d" % (self.globalUUID,self.offsetx,self.offsety))
 
         #create an initial nanite
@@ -54,7 +58,6 @@ class Player(object):
         return val
 
     def __apply(self,struct,fn,**kwargs):
-        print "dbg ",struct
         if isinstance(struct, dict):
             transformDict = dict()
             for (key, val) in struct.iteritems():
@@ -106,18 +109,18 @@ class Player(object):
 
     def process_json_command(self,json,session):
         unfuddled_version = self.__apply(json,fn=self.__unfuddle)
-        logging.info("from %s> %s" % (self.globalUUID,unfuddled_version))
-        logging.info("confuddled version %s" % json)
+        if not json['cmd'] == 'debugMap':
+            logging.info("from %s> %s" % (self.globalUUID,unfuddled_version))
         result = self.__process_json_command(unfuddled_version, session)
-        logging.info("to %s> %s" % (self.globalUUID,result))
+        if not json['cmd'] == 'debugMap':
+            logging.info("to %s> %s" % (self.globalUUID,result))
         transformed_result =  self.__apply(result,fn=self.__confuddle)
-        logging.info("confuddled version %s" % transformed_result)
         return transformed_result
 
     def __process_json_command(self,json,session):
         if not json.has_key("times"):
             json["times"] = 1
-        
+
         if json["cmd"]=="mail":
             value =  self.player_notifications
             self.player_notifications = []
